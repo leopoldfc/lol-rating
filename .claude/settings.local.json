@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm create:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "Bash(node test-leaguepedia.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/data/exports/lck-cup-2026.json)"
+    ]
+  }
+}

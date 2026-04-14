@@ -1,0 +1,24 @@
+{
+  "name": "lol-esports-scraper",
+  "version": "1.0.0",
+  "description": "Scraper de stats joueurs LoL Esports depuis gol.gg",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "predev": "npx tsx scripts/scrape-lck-cup-2026.ts",
+    "dev": "npm run dev --prefix frontend"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "better-sqlite3": "^11.0.0",
+    "commander": "^12.0.0",
+    "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "tsx": "^4.0.0",
+    "@types/better-sqlite3": "^7.0.0",
+    "@types/node": "^22.0.0"
+  }
+}
