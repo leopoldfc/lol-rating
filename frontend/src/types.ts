@@ -25,6 +25,10 @@ export interface TournamentStats {
   fbVictim: number;
   pentaKills: number;
   soloKills: number;
+  // Optional LIR embedded in tournament entry (per-split rating)
+  rating?: number;
+  confidence?: number;
+  subscores?: LIRSubscores;
 }
 
 export interface LIRSubscores {

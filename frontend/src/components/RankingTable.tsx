@@ -66,13 +66,23 @@ export default function RankingTable({ players, tournament, tournamentName }: Pr
   const [selected, setSelected] = useState<Player | null>(null);
   const [search, setSearch] = useState('');
 
+  // When tournament entry has its own rating (per-split LIR), use it; otherwise fall back to player.rating
+  const effectiveRating = (p: Player): number | undefined => {
+    if (tournament) {
+      const t = p.tournaments[tournament];
+      if (t?.rating !== undefined) return t.rating;
+    }
+    return p.rating;
+  };
+
   const filtered = players
     .filter(p => role === 'ALL' || p.role === role)
     .filter(p => !search || p.name.toLowerCase().includes(search.toLowerCase()) || p.team.toLowerCase().includes(search.toLowerCase()))
     .map(p => ({ p, stats: getPlayerStats(p, tournament) }))
+    .filter(({ stats }) => !tournament || stats !== null)
     .sort((a, b) => {
       let va: number | string = 0, vb: number | string = 0;
-      if (sortKey === 'rating')    { va = a.p.rating ?? 0; vb = b.p.rating ?? 0; }
+      if (sortKey === 'rating')    { va = effectiveRating(a.p) ?? 0; vb = effectiveRating(b.p) ?? 0; }
       else if (sortKey === 'name') { va = a.p.name; vb = b.p.name; }
       else {
         va = (a.stats?.[sortKey as keyof TournamentStats] as number) ?? -999;
@@ -98,7 +108,7 @@ export default function RankingTable({ players, tournament, tournamentName }: Pr
   );
 
   const CARD_STATS = (p: Player, stats: ReturnType<typeof getPlayerStats>) => [
-    { label: 'Rating',   value: p.rating?.toFixed(1) ?? '—', cls: 'stat__value--gold'  },
+    { label: 'Rating',   value: effectiveRating(p)?.toFixed(1) ?? '—', cls: 'stat__value--gold'  },
     { label: 'KDA',      value: fmt(stats?.kda),              cls: 'stat__value--green' },
     { label: 'Win Rate', value: `${fmt(stats?.winRate)}%`,    cls: ''                   },
     { label: 'DPM',      value: fmt(stats?.dpm, 0),           cls: ''                   },
@@ -219,9 +229,9 @@ export default function RankingTable({ players, tournament, tournamentName }: Pr
                   </td>
 
                   <td>
-                    <div className={ratingClass(p.rating ?? 0)} style={{ position: 'relative', display: 'inline-block' }}>
-                      {p.rating?.toFixed(1) ?? '—'}
-                      <div className={ratingBarClass(p.rating ?? 0)} style={{ width: `${p.rating ?? 0}%` }} />
+                    <div className={ratingClass(effectiveRating(p) ?? 0)} style={{ position: 'relative', display: 'inline-block' }}>
+                      {effectiveRating(p)?.toFixed(1) ?? '—'}
+                      <div className={ratingBarClass(effectiveRating(p) ?? 0)} style={{ width: `${effectiveRating(p) ?? 0}%` }} />
                     </div>
                   </td>
 

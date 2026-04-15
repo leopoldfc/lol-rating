@@ -47,6 +47,11 @@ export default function PlayerModal({ player, onClose, tournament }: Props) {
   const stats = getPlayerStats(player, tournament);
   if (!stats) return null;
 
+  // Use per-split rating/subscores when available in the tournament entry
+  const tournamentEntry = tournament ? player.tournaments[tournament] : undefined;
+  const displayRating   = tournamentEntry?.rating   ?? player.rating;
+  const displaySubscores = tournamentEntry?.subscores ?? player.subscores;
+
   const roleColor = ROLE_CSS_VAR[player.role];
   const teamColor = TEAM_COLOR[player.team] ?? '#666';
 
@@ -69,9 +74,9 @@ export default function PlayerModal({ player, onClose, tournament }: Props) {
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
-            {player.rating !== undefined && (
+            {displayRating !== undefined && (
               <div style={{ textAlign: 'center' }}>
-                <div className="player-detail__big-rating">{player.rating.toFixed(1)}</div>
+                <div className="player-detail__big-rating">{displayRating.toFixed(1)}</div>
                 <div className="stat__label">Rating</div>
               </div>
             )}
@@ -80,7 +85,7 @@ export default function PlayerModal({ player, onClose, tournament }: Props) {
         </div>
 
         {/* LIR Subscores */}
-        {player.subscores && (
+        {displaySubscores && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, marginBottom: 20 }}>
             {([
               { key: 'laning',     label: 'Laning' },
@@ -88,10 +93,10 @@ export default function PlayerModal({ player, onClose, tournament }: Props) {
               { key: 'presence',   label: 'Presence' },
               { key: 'efficiency', label: 'Efficiency' },
             ] as { key: keyof LIRSubscores; label: string }[]).map(({ key, label }) => {
-              const val = player.subscores![key];
+              const val = displaySubscores[key];
               const isPos = val >= 0;
               return (
-                <div key={key} style={{ background: 'var(--surface-2)', borderRadius: 6, padding: '8px 10px', textAlign: 'center' }}>
+                <div key={key} style={{ background: 'var(--bg-secondary)', borderRadius: 6, padding: '8px 10px', textAlign: 'center' }}>
                   <div style={{ fontSize: 16, fontWeight: 700, color: isPos ? 'var(--green)' : 'var(--red)' }}>
                     {isPos ? '+' : ''}{val.toFixed(2)}
                   </div>

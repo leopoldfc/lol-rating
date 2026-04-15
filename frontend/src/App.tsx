@@ -3,7 +3,6 @@ import type { ExportData, Player } from './types';
 import { enrichPlayers } from './utils';
 import RankingTable from './components/RankingTable';
 import RosterPage from './components/RosterPage';
-import FALLBACK_PLAYERS from './fallback-data';
 import { LEAGUES, type LeagueConfig } from './leagues';
 
 type Page = 'rankings' | 'rosters';
@@ -27,13 +26,23 @@ function useExportData(league: LeagueConfig) {
 export default function App() {
   const [leagueId, setLeagueId] = useState(LEAGUES[0].id);
   const [page, setPage]         = useState<Page>('rankings');
+  const [splitId, setSplitId]   = useState<string | null>(null);
 
-  const league     = LEAGUES.find(l => l.id === leagueId) ?? LEAGUES[0];
+  const league = LEAGUES.find(l => l.id === leagueId) ?? LEAGUES[0];
   const { data, error } = useExportData(league);
 
-  const rawPlayers: Player[] = data?.players ?? (league.available ? FALLBACK_PLAYERS : []);
-  const tournament = data?.metadata.tournaments[0];
-  const players    = enrichPlayers(rawPlayers, tournament?.name);
+  // Reset split when changing league
+  const handleSetLeague = (id: string) => {
+    setLeagueId(id);
+    setSplitId(null);
+  };
+
+  const mainTournament    = data?.metadata.tournaments[0];
+  const activeSplit       = league.splits?.find(s => s.id === splitId) ?? league.splits?.[0] ?? null;
+  const activeTournament  = activeSplit?.tournament ?? mainTournament?.name;
+
+  const rawPlayers: Player[] = data?.players ?? [];
+  const players    = enrichPlayers(rawPlayers, activeTournament);
 
   return (
     <div>
@@ -83,7 +92,7 @@ export default function App() {
               {LEAGUES.map(l => (
                 <button
                   key={l.id}
-                  onClick={() => l.available && setLeagueId(l.id)}
+                  onClick={() => l.available && handleSetLeague(l.id)}
                   style={{
                     padding: '5px 14px',
                     borderRadius: 'var(--radius-sm)',
@@ -106,6 +115,37 @@ export default function App() {
             </div>
           </div>
 
+          {/* Sélecteur de split (LEC Versus etc.) */}
+          {league.splits && league.splits.length > 0 && (
+            <div style={{ display: 'flex', gap: 4, marginTop: 10 }}>
+              {league.splits.map(s => {
+                const active = (splitId ?? league.splits![0].id) === s.id;
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => setSplitId(s.id)}
+                    style={{
+                      padding: '4px 12px',
+                      borderRadius: 'var(--radius-sm)',
+                      border: `1px solid ${active ? 'var(--gold-border)' : 'var(--border-light)'}`,
+                      background: active ? 'var(--gold-ghost)' : 'transparent',
+                      color: active ? 'var(--gold)' : 'var(--text-muted)',
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: 11,
+                      fontWeight: 600,
+                      letterSpacing: '0.07em',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all var(--transition-fast)',
+                    }}
+                  >
+                    {s.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
           {error && (
             <p className="header__meta" style={{ marginTop: 8 }}>
               <span style={{ color: 'var(--red)' }}>JSON non trouvé</span>
@@ -117,7 +157,7 @@ export default function App() {
       <main className="page container">
         {!league.available ? (
           <div style={{ textAlign: 'center', padding: '80px 0', color: 'var(--text-dim)' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, color: 'var(--text-muted)', letterSpacing: 2, marginBottom: 12 }}>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: 24, fontWeight: 700, color: 'var(--text-secondary)', letterSpacing: 1, marginBottom: 12 }}>
               {league.label}
             </div>
             <div style={{ fontSize: 14, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -129,14 +169,14 @@ export default function App() {
             {page === 'rankings' && (
               <RankingTable
                 players={players}
-                tournament={tournament?.name}
-                tournamentName={tournament?.name}
+                tournament={activeTournament}
+                tournamentName={activeSplit?.label ?? mainTournament?.name}
               />
             )}
             {page === 'rosters' && (
               <RosterPage
                 players={players}
-                tournament={tournament?.name}
+                tournament={activeTournament}
               />
             )}
           </>

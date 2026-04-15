@@ -79,15 +79,17 @@ export default function RosterPage({ players, tournament }: Props) {
                 borderTop: `3px solid ${color}`,
               }}>
                 <span style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 20,
-                  letterSpacing: 1,
-                  color: '#fff',
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: 18,
+                  fontWeight: 700,
+                  letterSpacing: 0.5,
+                  color: 'var(--text-primary)',
                 }}>{teamName}</span>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 18,
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 16,
+                    fontWeight: 700,
                     color: teamWr >= 60 ? 'var(--green)' : teamWr >= 45 ? 'var(--text-primary)' : 'var(--red)',
                   }}>{fmt(teamWr)}%</div>
                   <div style={{ fontSize: 10, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Win Rate</div>
