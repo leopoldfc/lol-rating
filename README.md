@@ -2,14 +2,13 @@
 
 Système de ranking de joueurs professionnels League of Legends, inspiré de HLTV pour CS:GO.
 
-Démarre avec la **LCK Cup 2026** (52 joueurs, 10 équipes). Conçu pour supporter toutes les ligues majeures.
+Ligues supportées : **LCK Cup 2026**, **LEC Versus 2026** (à venir).
 
 ## Stack
 
 - **Scraper** — Node.js + TypeScript, source : [gol.gg](https://gol.gg)
-- **Base de données** — SQLite via better-sqlite3
 - **Frontend** — React + Vite 5
-- **Rating** — LIR (LoL Impact Rating) : note sur 100 basée sur 4 piliers pondérés par rôle
+- **Rating** — LIR (LoL Impact Rating) : note sur 100 basée sur des percentiles par rôle
 
 ## Lancer l'application
 
@@ -17,33 +16,104 @@ Démarre avec la **LCK Cup 2026** (52 joueurs, 10 équipes). Conçu pour support
 npm run dev
 ```
 
-Scrape les données fraîches depuis gol.gg puis lance le frontend sur http://localhost:5173.
+Demande si tu veux relancer les scrapers, puis lance le frontend sur http://localhost:5173.
 
 ## Commandes disponibles
 
 ```bash
-npm run dev       # scrape + frontend (développement)
-npm run scrape    # scraper uniquement
+npm run dev       # prompt scrape + frontend
+npm run scrape    # scraper LCK Cup 2026 uniquement
 ```
 
 ## Système de rating (LIR)
 
-Chaque joueur reçoit une note calculée par z-score par rapport aux joueurs du même rôle, combinant 4 piliers :
+### Principe
 
-| Pilier | Stats utilisées |
-|---|---|
-| Laning | GD@15, CSD@15, XPD@15 |
-| Damage | DPM, DMG% |
-| Presence | KP%, Win Rate, Assists |
-| Efficiency | KDA, GPM, Gold% |
+Chaque stat est convertie en **percentile (0–100)** parmi les joueurs du même rôle — pas de z-score, pas de scaling arbitraire. Un percentile de 80 signifie "ce joueur fait mieux que 80% des joueurs à son poste". La moyenne de tous les joueurs est toujours ~50.
 
-Les poids varient selon le rôle (ex : Laning pèse 35% pour un Top, 15% pour un Support).
+```
+percentile(valeur) = (joueurs_en_dessous + égaux × 0.5) / total × 100
+```
 
-Cible : top joueurs 80–95 · bons 65–80 · moyens 45–55 · faibles 25–45.
+Pour les stats où moins = mieux (morts), le percentile est inversé : `100 - percentile(deaths)`.
 
-## Ajouter un tournoi
+---
 
-1. Ajouter le tournoi dans [src/config/tournaments.ts](src/config/tournaments.ts)
-2. Ajouter le roster dans [data/roster.json](data/roster.json)
-3. Créer un script dans `scripts/` (copier `scrape-lck-cup-2026.ts`)
-4. Lancer `npm run scrape`
+### Les 4 piliers
+
+**Laning** — domination en early game
+```
+laning = (pct(GD@15) + pct(CSD@15) + pct(XPD@15)) / 3
+```
+- GD@15 : différentiel d'or à 15 min
+- CSD@15 : différentiel de CS à 15 min
+- XPD@15 : différentiel d'XP à 15 min
+
+**Damage** — production de dégâts
+```
+damage = 0.6 × pct(DPM) + 0.4 × pct(DMG% / Gold%)
+```
+- DPM : dégâts par minute (volume brut)
+- DMG%/Gold% : efficacité des dégâts par rapport aux ressources consommées
+
+**Presence** — implication dans le jeu
+```
+presence = pct(KP%)
+```
+- KP% : participation aux kills de l'équipe
+
+**Efficiency** — solidité individuelle
+```
+efficiency (non-SUP) = 0.35 × pct_inv(Deaths) + 0.35 × pct(KDA) + 0.3 × pct(CSM)
+efficiency (SUP)     = 0.5  × pct_inv(Deaths) + 0.5  × pct(KDA)
+```
+- Deaths : inversé (mourir peu = bon score)
+- KDA : ratio kills+assists/deaths
+- CSM : CS par minute (supprimé pour les supports)
+
+---
+
+### Poids par rôle
+
+| Rôle | Laning | Damage | Presence | Efficiency |
+|------|--------|--------|----------|------------|
+| TOP  | 35%    | 30%    | 10%      | 25%        |
+| JGL  | 15%    | 20%    | 35%      | 30%        |
+| MID  | 25%    | 30%    | 20%      | 25%        |
+| BOT  | 25%    | 35%    | 15%      | 25%        |
+| SUP  | 15%    | 10%    | 40%      | 35%        |
+
+```
+rating_brut = wL×laning + wD×damage + wP×presence + wE×efficiency
+```
+
+---
+
+### Facteur de confiance
+
+Un joueur avec peu de games est ramené vers 50 :
+
+```
+rating_final = 50 + (rating_brut - 50) × min(1, games / médiane_games)
+```
+
+Exemple : un joueur à 80 de rating brut avec la moitié des games du médian → `50 + (80-50) × 0.5 = 65`.
+
+---
+
+### Interprétation
+
+| Plage | Niveau |
+|-------|--------|
+| 75–100 | Élite |
+| 60–75  | Très bon |
+| 45–60  | Moyen |
+| 25–45  | En difficulté |
+| 0–25   | Faible |
+
+## Ajouter une ligue
+
+1. Copier `leagues/lck-cup-2026/scrape.ts` dans `leagues/<id>/scrape.ts`
+2. Modifier `TOURNAMENT`, `SEASON`, `league`, `split` en haut du script
+3. Ajouter la ligue dans `frontend/src/leagues.ts`
+4. Lancer `npx tsx leagues/<id>/scrape.ts`
