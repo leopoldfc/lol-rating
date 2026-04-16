@@ -3,7 +3,7 @@ import type { ExportData, Player } from './types';
 import { enrichPlayers } from './utils';
 import RankingTable from './components/RankingTable';
 import RosterPage from './components/RosterPage';
-import { LEAGUES, type LeagueConfig } from './leagues';
+import { LEAGUES, type LeagueConfig, type SplitConfig } from './leagues';
 
 type Page = 'rankings' | 'rosters';
 
@@ -69,6 +69,27 @@ const splitBtn = (active: boolean): React.CSSProperties => ({
   transition: 'all var(--t-fast)',
 });
 
+// Aplatit tous les splits (top-level + children) pour trouver le split actif
+function findSplit(splits: SplitConfig[], id: string | null): SplitConfig | null {
+  for (const s of splits) {
+    if (s.id === id) return s;
+    if (s.children) {
+      const found = s.children.find(c => c.id === id);
+      if (found) return found;
+    }
+  }
+  return splits[0] ?? null;
+}
+
+// Retourne le split top-level parent d'un id donné (ou lui-même)
+function parentSplit(splits: SplitConfig[], id: string | null): SplitConfig | null {
+  for (const s of splits) {
+    if (s.id === id) return s;
+    if (s.children?.some(c => c.id === id)) return s;
+  }
+  return splits[0] ?? null;
+}
+
 export default function App() {
   const [leagueId, setLeagueId] = useState(LEAGUES[0].id);
   const [page, setPage]         = useState<Page>('rankings');
@@ -80,7 +101,7 @@ export default function App() {
   const handleSetLeague = (id: string) => { setLeagueId(id); setSplitId(null); };
 
   const mainTournament   = data?.metadata.tournaments[0];
-  const activeSplit      = league.splits?.find(s => s.id === splitId) ?? league.splits?.[0] ?? null;
+  const activeSplit      = league.splits ? findSplit(league.splits, splitId) : null;
   const activeTournament = activeSplit?.tournament ?? mainTournament?.name;
 
   const rawPlayers: Player[] = data?.players ?? [];
@@ -110,42 +131,68 @@ export default function App() {
             </div>
           </div>
 
-          {/* Ligne 2 : leagues + splits */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-
-            {/* Leagues */}
-            <div style={{ display: 'flex', gap: 3 }}>
-              {LEAGUES.map(l => (
-                <button key={l.id} onClick={() => l.available && handleSetLeague(l.id)}
-                  style={leagueBtn(leagueId === l.id, l.available)}>
-                  {l.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Splits */}
-            {league.splits && league.splits.length > 0 && (
-              <>
-                <span style={{ width: 1, height: 14, background: 'var(--line)', display: 'block' }} />
-                <div style={{ display: 'flex', gap: 3 }}>
-                  {league.splits.map(s => {
-                    const active = (splitId ?? league.splits![0].id) === s.id;
-                    return (
-                      <button key={s.id} onClick={() => setSplitId(s.id)} style={splitBtn(active)}>
-                        {s.label}
-                      </button>
-                    );
-                  })}
-                </div>
-              </>
-            )}
-
+          {/* Ligne 2 : leagues */}
+          <div style={{ display: 'flex', gap: 3, flexWrap: 'wrap' }}>
+            {LEAGUES.map(l => (
+              <button key={l.id} onClick={() => l.available && handleSetLeague(l.id)}
+                style={leagueBtn(leagueId === l.id, l.available)}>
+                {l.label}
+              </button>
+            ))}
             {error && (
-              <span style={{ fontSize: 11, color: 'var(--red)', fontFamily: 'var(--font-mono)', marginLeft: 8 }}>
+              <span style={{ fontSize: 11, color: 'var(--red)', fontFamily: 'var(--font-mono)', marginLeft: 8, alignSelf: 'center' }}>
                 data unavailable
               </span>
             )}
           </div>
+
+          {/* Ligne 3 : splits */}
+          {league.splits && league.splits.length > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap', marginTop: 8 }}>
+              {league.splits.map(s => {
+                const activeParent = league.splits ? parentSplit(league.splits, splitId)?.id === s.id : false;
+                const active       = activeParent;
+
+                if (s.children && s.children.length > 0) {
+                  // Bouton avec dropdown <select> intégré
+                  const activeChild = s.children.find(c => c.id === splitId) ?? s.children[0];
+                  return (
+                    <span key={s.id} style={{ display: 'inline-flex', alignItems: 'center', position: 'relative' }}>
+                      <select
+                        value={activeChild.id}
+                        onChange={e => setSplitId(e.target.value)}
+                        style={{
+                          ...splitBtn(active),
+                          appearance: 'none' as const,
+                          WebkitAppearance: 'none' as const,
+                          paddingRight: 20,
+                          cursor: 'pointer',
+                          backgroundImage: 'none',
+                        }}
+                      >
+                        {s.children.map(c => (
+                          <option key={c.id} value={c.id}
+                            style={{ background: 'var(--bg-2)', color: 'var(--text-1)' }}>
+                            {s.label} · {c.label}
+                          </option>
+                        ))}
+                      </select>
+                      <span style={{
+                        position: 'absolute', right: 5, pointerEvents: 'none',
+                        fontSize: 7, color: active ? 'var(--accent)' : 'var(--text-3)',
+                      }}>▼</span>
+                    </span>
+                  );
+                }
+
+                return (
+                  <button key={s.id} onClick={() => setSplitId(s.id)} style={splitBtn(active)}>
+                    {s.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
         </div>
       </header>

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsc",
-    "scrape": "tsx leagues/lck-cup-2026/scrape.ts && tsx leagues/lec-versus-2026/scrape.ts",
+    "scrape": "tsx leagues/2026/lck-2026/scrape.ts && tsx leagues/2026/lpl-2026/scrape.ts && tsx leagues/2026/lec-2026/scrape.ts && tsx leagues/2026/lcs-2026/scrape.ts && tsx leagues/2026/first-stand-2026/scrape.ts",
     "predev": "node scripts/prompt-scrape.js",
     "dev": "npm run dev --prefix frontend"
   },

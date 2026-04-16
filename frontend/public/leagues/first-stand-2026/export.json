@@ -1,0 +1,2256 @@
+{
+  "metadata": {
+    "exportedAt": "2026-04-16T19:53:16.152Z",
+    "tournaments": [
+      {
+        "name": "2026 First Stand",
+        "league": "International",
+        "year": 2026,
+        "split": "First Stand",
+        "scrapedAt": "2026-04-16T19:53:16.153Z"
+      }
+    ]
+  },
+  "players": [
+    {
+      "id": 3322,
+      "name": "Berserker",
+      "country": "KR",
+      "team": "LYON",
+      "role": "BOT",
+      "rating": 71.5,
+      "confidence": 1,
+      "subscores": {
+        "laning": 91.7,
+        "damage": 86.3,
+        "presence": 31.3,
+        "efficiency": 55
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 12,
+          "winRate": 33.3,
+          "kda": 2.3,
+          "avgKills": 3.3,
+          "avgDeaths": 2.4,
+          "avgAssists": 2.3,
+          "csm": 10.2,
+          "gpm": 456,
+          "kp": 57.5,
+          "dmgPct": 30.7,
+          "goldPct": 24.6,
+          "vsPct": 11.8,
+          "dpm": 793,
+          "vspm": 1.07,
+          "avgWpm": 0.39,
+          "avgWcpm": 0.26,
+          "avgVwpm": 0.1,
+          "gd15": 280,
+          "csd15": 6,
+          "xpd15": 333,
+          "fbPct": 8.3,
+          "fbVictim": 8.3,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 71.5,
+          "confidence": 1,
+          "subscores": {
+            "laning": 91.7,
+            "damage": 86.3,
+            "presence": 31.3,
+            "efficiency": 55
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 12,
+        "avgWinRate": 33.3,
+        "avgKda": 2.3
+      }
+    },
+    {
+      "id": 1461,
+      "name": "Bie",
+      "country": "VN",
+      "team": "Team Secret Whales",
+      "role": "SUP",
+      "rating": 35.6,
+      "confidence": 0.52,
+      "subscores": {
+        "laning": 43.8,
+        "damage": 6.3,
+        "presence": 18.8,
+        "efficiency": 21.9
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 6,
+          "winRate": 0,
+          "kda": 2.1,
+          "avgKills": 0.7,
+          "avgDeaths": 3.5,
+          "avgAssists": 6.8,
+          "csm": 1.1,
+          "gpm": 243,
+          "kp": 54.1,
+          "dmgPct": 6.6,
+          "goldPct": 13.5,
+          "vsPct": 42.7,
+          "dpm": 188,
+          "vspm": 3.98,
+          "avgWpm": 1.89,
+          "avgWcpm": 0.44,
+          "avgVwpm": 0.26,
+          "gd15": -154,
+          "csd15": 5,
+          "xpd15": -310,
+          "fbPct": 16.7,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 35.6,
+          "confidence": 0.52,
+          "subscores": {
+            "laning": 43.8,
+            "damage": 6.3,
+            "presence": 18.8,
+            "efficiency": 21.9
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 6,
+        "avgWinRate": 0,
+        "avgKda": 2.1
+      }
+    },
+    {
+      "id": 2606,
+      "name": "Bin",
+      "country": "CN",
+      "team": "Bilibili Gaming",
+      "role": "TOP",
+      "rating": 73.9,
+      "confidence": 1,
+      "subscores": {
+        "laning": 81.3,
+        "damage": 58.8,
+        "presence": 43.8,
+        "efficiency": 93.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 15,
+          "winRate": 80,
+          "kda": 5,
+          "avgKills": 4.1,
+          "avgDeaths": 1.9,
+          "avgAssists": 5.3,
+          "csm": 9.3,
+          "gpm": 446,
+          "kp": 50.1,
+          "dmgPct": 24.1,
+          "goldPct": 21.5,
+          "vsPct": 12.5,
+          "dpm": 776,
+          "vspm": 1.24,
+          "avgWpm": 0.38,
+          "avgWcpm": 0.16,
+          "avgVwpm": 0.1,
+          "gd15": 493,
+          "csd15": 12,
+          "xpd15": 331,
+          "fbPct": 20,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 4,
+          "rating": 73.9,
+          "confidence": 1,
+          "subscores": {
+            "laning": 81.3,
+            "damage": 58.8,
+            "presence": 43.8,
+            "efficiency": 93.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 15,
+        "avgWinRate": 80,
+        "avgKda": 5
+      }
+    },
+    {
+      "id": 1310,
+      "name": "Brokenblade",
+      "country": "DE",
+      "team": "G2 Esports",
+      "role": "TOP",
+      "rating": 36.4,
+      "confidence": 1,
+      "subscores": {
+        "laning": 18.8,
+        "damage": 38.8,
+        "presence": 31.3,
+        "efficiency": 60.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 16,
+          "winRate": 62.5,
+          "kda": 3.5,
+          "avgKills": 2.8,
+          "avgDeaths": 2.3,
+          "avgAssists": 5.4,
+          "csm": 8.3,
+          "gpm": 389,
+          "kp": 49.8,
+          "dmgPct": 22,
+          "goldPct": 19.7,
+          "vsPct": 13.2,
+          "dpm": 668,
+          "vspm": 1.33,
+          "avgWpm": 0.41,
+          "avgWcpm": 0.17,
+          "avgVwpm": 0.14,
+          "gd15": -462,
+          "csd15": -12,
+          "xpd15": -206,
+          "fbPct": 0,
+          "fbVictim": 12.5,
+          "pentaKills": 0,
+          "soloKills": 5,
+          "rating": 36.4,
+          "confidence": 1,
+          "subscores": {
+            "laning": 18.8,
+            "damage": 38.8,
+            "presence": 31.3,
+            "efficiency": 60.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 16,
+        "avgWinRate": 62.5,
+        "avgKda": 3.5
+      }
+    },
+    {
+      "id": 3438,
+      "name": "Bull",
+      "country": "KR",
+      "team": "LOUD",
+      "role": "BOT",
+      "rating": 24.2,
+      "confidence": 0.7,
+      "subscores": {
+        "laning": 10.4,
+        "damage": 6.3,
+        "presence": 6.3,
+        "efficiency": 28.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 8,
+          "winRate": 25,
+          "kda": 1.3,
+          "avgKills": 0.8,
+          "avgDeaths": 2.5,
+          "avgAssists": 2.5,
+          "csm": 10,
+          "gpm": 395,
+          "kp": 29.9,
+          "dmgPct": 20.3,
+          "goldPct": 22.4,
+          "vsPct": 12,
+          "dpm": 443,
+          "vspm": 1.02,
+          "avgWpm": 0.36,
+          "avgWcpm": 0.27,
+          "avgVwpm": 0.05,
+          "gd15": -1026,
+          "csd15": -16,
+          "xpd15": -736,
+          "fbPct": 0,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 24.2,
+          "confidence": 0.7,
+          "subscores": {
+            "laning": 10.4,
+            "damage": 6.3,
+            "presence": 6.3,
+            "efficiency": 28.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 8,
+        "avgWinRate": 25,
+        "avgKda": 1.3
+      }
+    },
+    {
+      "id": 1909,
+      "name": "Canyon",
+      "country": "KR",
+      "team": "Gen.G",
+      "role": "JGL",
+      "rating": 48,
+      "confidence": 0.78,
+      "subscores": {
+        "laning": 56.3,
+        "damage": 6.3,
+        "presence": 31.3,
+        "efficiency": 89.4
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 9,
+          "winRate": 66.7,
+          "kda": 5.4,
+          "avgKills": 2.4,
+          "avgDeaths": 1.7,
+          "avgAssists": 6.6,
+          "csm": 7.7,
+          "gpm": 406,
+          "kp": 66.8,
+          "dmgPct": 12.5,
+          "goldPct": 19.6,
+          "vsPct": 16.7,
+          "dpm": 352,
+          "vspm": 1.66,
+          "avgWpm": 0.44,
+          "avgWcpm": 0.26,
+          "avgVwpm": 0.34,
+          "gd15": 61,
+          "csd15": 0,
+          "xpd15": 86,
+          "fbPct": 11.1,
+          "fbVictim": 11.1,
+          "pentaKills": 0,
+          "soloKills": 1,
+          "rating": 48,
+          "confidence": 0.78,
+          "subscores": {
+            "laning": 56.3,
+            "damage": 6.3,
+            "presence": 31.3,
+            "efficiency": 89.4
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 9,
+        "avgWinRate": 66.7,
+        "avgKda": 5.4
+      }
+    },
+    {
+      "id": 802,
+      "name": "Caps",
+      "country": "DK",
+      "team": "G2 Esports",
+      "role": "MID",
+      "rating": 70.7,
+      "confidence": 1,
+      "subscores": {
+        "laning": 60.4,
+        "damage": 93.8,
+        "presence": 81.3,
+        "efficiency": 45
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 16,
+          "winRate": 62.5,
+          "kda": 4,
+          "avgKills": 4.6,
+          "avgDeaths": 2.6,
+          "avgAssists": 6.1,
+          "csm": 8.3,
+          "gpm": 403,
+          "kp": 67.2,
+          "dmgPct": 26.7,
+          "goldPct": 20.5,
+          "vsPct": 12.4,
+          "dpm": 785,
+          "vspm": 1.25,
+          "avgWpm": 0.34,
+          "avgWcpm": 0.25,
+          "avgVwpm": 0.17,
+          "gd15": 72,
+          "csd15": 0,
+          "xpd15": 244,
+          "fbPct": 25,
+          "fbVictim": 6.3,
+          "pentaKills": 0,
+          "soloKills": 6,
+          "rating": 70.7,
+          "confidence": 1,
+          "subscores": {
+            "laning": 60.4,
+            "damage": 93.8,
+            "presence": 81.3,
+            "efficiency": 45
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 16,
+        "avgWinRate": 62.5,
+        "avgKda": 4
+      }
+    },
+    {
+      "id": 1629,
+      "name": "Chovy",
+      "country": "KR",
+      "team": "Gen.G",
+      "role": "MID",
+      "rating": 73.1,
+      "confidence": 0.78,
+      "subscores": {
+        "laning": 93.8,
+        "damage": 46.3,
+        "presence": 93.8,
+        "efficiency": 93.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 9,
+          "winRate": 66.7,
+          "kda": 6.5,
+          "avgKills": 3.8,
+          "avgDeaths": 1.4,
+          "avgAssists": 5.6,
+          "csm": 10.1,
+          "gpm": 461,
+          "kp": 72,
+          "dmgPct": 25.4,
+          "goldPct": 22.4,
+          "vsPct": 14,
+          "dpm": 687,
+          "vspm": 1.39,
+          "avgWpm": 0.47,
+          "avgWcpm": 0.33,
+          "avgVwpm": 0.12,
+          "gd15": 519,
+          "csd15": 16,
+          "xpd15": 288,
+          "fbPct": 11.1,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 73.1,
+          "confidence": 0.78,
+          "subscores": {
+            "laning": 93.8,
+            "damage": 46.3,
+            "presence": 93.8,
+            "efficiency": 93.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 9,
+        "avgWinRate": 66.7,
+        "avgKda": 6.5
+      }
+    },
+    {
+      "id": 3421,
+      "name": "Clear",
+      "country": "KR",
+      "team": "BNK FearX",
+      "role": "TOP",
+      "rating": 41.6,
+      "confidence": 0.96,
+      "subscores": {
+        "laning": 31.3,
+        "damage": 56.3,
+        "presence": 56.3,
+        "efficiency": 31.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 11,
+          "winRate": 45.5,
+          "kda": 1.9,
+          "avgKills": 3.4,
+          "avgDeaths": 4.4,
+          "avgAssists": 4.8,
+          "csm": 8.4,
+          "gpm": 398,
+          "kp": 53.6,
+          "dmgPct": 24.4,
+          "goldPct": 20.8,
+          "vsPct": 12.5,
+          "dpm": 753,
+          "vspm": 1.15,
+          "avgWpm": 0.42,
+          "avgWcpm": 0.15,
+          "avgVwpm": 0.1,
+          "gd15": -215,
+          "csd15": -2,
+          "xpd15": -381,
+          "fbPct": 9.1,
+          "fbVictim": 9.1,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 41.6,
+          "confidence": 0.96,
+          "subscores": {
+            "laning": 31.3,
+            "damage": 56.3,
+            "presence": 56.3,
+            "efficiency": 31.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 11,
+        "avgWinRate": 45.5,
+        "avgKda": 1.9
+      }
+    },
+    {
+      "id": 1135,
+      "name": "Dhokla",
+      "country": "US",
+      "team": "LYON",
+      "role": "TOP",
+      "rating": 17.8,
+      "confidence": 1,
+      "subscores": {
+        "laning": 10.4,
+        "damage": 21.3,
+        "presence": 6.3,
+        "efficiency": 28.4
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 12,
+          "winRate": 33.3,
+          "kda": 1.2,
+          "avgKills": 1.8,
+          "avgDeaths": 3.3,
+          "avgAssists": 2.3,
+          "csm": 8.5,
+          "gpm": 364,
+          "kp": 41,
+          "dmgPct": 20.7,
+          "goldPct": 19.7,
+          "vsPct": 11,
+          "dpm": 545,
+          "vspm": 0.99,
+          "avgWpm": 0.37,
+          "avgWcpm": 0.14,
+          "avgVwpm": 0.07,
+          "gd15": -517,
+          "csd15": -5,
+          "xpd15": -433,
+          "fbPct": 8.3,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 4,
+          "rating": 17.8,
+          "confidence": 1,
+          "subscores": {
+            "laning": 10.4,
+            "damage": 21.3,
+            "presence": 6.3,
+            "efficiency": 28.4
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 12,
+        "avgWinRate": 33.3,
+        "avgKda": 1.2
+      }
+    },
+    {
+      "id": 4943,
+      "name": "Diable",
+      "country": "KR",
+      "team": "BNK FearX",
+      "role": "BOT",
+      "rating": 46.5,
+      "confidence": 0.96,
+      "subscores": {
+        "laning": 54.2,
+        "damage": 51.3,
+        "presence": 43.8,
+        "efficiency": 33.1
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 11,
+          "winRate": 45.5,
+          "kda": 2.4,
+          "avgKills": 4,
+          "avgDeaths": 3.4,
+          "avgAssists": 4.2,
+          "csm": 10,
+          "gpm": 477,
+          "kp": 58.4,
+          "dmgPct": 24.5,
+          "goldPct": 24.8,
+          "vsPct": 13.8,
+          "dpm": 741,
+          "vspm": 1.27,
+          "avgWpm": 0.51,
+          "avgWcpm": 0.29,
+          "avgVwpm": 0.2,
+          "gd15": -87,
+          "csd15": 1,
+          "xpd15": 200,
+          "fbPct": 9.1,
+          "fbVictim": 0,
+          "pentaKills": 2,
+          "soloKills": 0,
+          "rating": 46.5,
+          "confidence": 0.96,
+          "subscores": {
+            "laning": 54.2,
+            "damage": 51.3,
+            "presence": 43.8,
+            "efficiency": 33.1
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 11,
+        "avgWinRate": 45.5,
+        "avgKda": 2.4
+      }
+    },
+    {
+      "id": 5961,
+      "name": "Dire",
+      "country": "VN",
+      "team": "Team Secret Whales",
+      "role": "MID",
+      "rating": 31,
+      "confidence": 0.52,
+      "subscores": {
+        "laning": 10.4,
+        "damage": 18.8,
+        "presence": 18.8,
+        "efficiency": 6.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 6,
+          "winRate": 0,
+          "kda": 1.3,
+          "avgKills": 4.2,
+          "avgDeaths": 5.8,
+          "avgAssists": 3.5,
+          "csm": 7.7,
+          "gpm": 371,
+          "kp": 56.7,
+          "dmgPct": 23,
+          "goldPct": 20.6,
+          "vsPct": 12.4,
+          "dpm": 654,
+          "vspm": 1.14,
+          "avgWpm": 0.37,
+          "avgWcpm": 0.17,
+          "avgVwpm": 0.21,
+          "gd15": -402,
+          "csd15": -15,
+          "xpd15": -599,
+          "fbPct": 0,
+          "fbVictim": 16.7,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 31,
+          "confidence": 0.52,
+          "subscores": {
+            "laning": 10.4,
+            "damage": 18.8,
+            "presence": 18.8,
+            "efficiency": 6.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 6,
+        "avgWinRate": 0,
+        "avgKda": 1.3
+      }
+    },
+    {
+      "id": 4259,
+      "name": "Duro",
+      "country": "KR",
+      "team": "Gen.G",
+      "role": "SUP",
+      "rating": 66.9,
+      "confidence": 0.78,
+      "subscores": {
+        "laning": 22.9,
+        "damage": 43.8,
+        "presence": 93.8,
+        "efficiency": 75
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 9,
+          "winRate": 66.7,
+          "kda": 4,
+          "avgKills": 0.8,
+          "avgDeaths": 2.4,
+          "avgAssists": 9,
+          "csm": 0.9,
+          "gpm": 269,
+          "kp": 77.4,
+          "dmgPct": 8.1,
+          "goldPct": 13.1,
+          "vsPct": 40.8,
+          "dpm": 223,
+          "vspm": 4.04,
+          "avgWpm": 1.93,
+          "avgWcpm": 0.44,
+          "avgVwpm": 0.38,
+          "gd15": -82,
+          "csd15": -6,
+          "xpd15": -124,
+          "fbPct": 33.3,
+          "fbVictim": 22.2,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 66.9,
+          "confidence": 0.78,
+          "subscores": {
+            "laning": 22.9,
+            "damage": 43.8,
+            "presence": 93.8,
+            "efficiency": 75
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 9,
+        "avgWinRate": 66.7,
+        "avgKda": 4
+      }
+    },
+    {
+      "id": 3245,
+      "name": "Eddie",
+      "country": "VN",
+      "team": "Team Secret Whales",
+      "role": "BOT",
+      "rating": 32.1,
+      "confidence": 0.52,
+      "subscores": {
+        "laning": 14.6,
+        "damage": 18.8,
+        "presence": 18.8,
+        "efficiency": 10.6
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 6,
+          "winRate": 0,
+          "kda": 2,
+          "avgKills": 2.2,
+          "avgDeaths": 3.5,
+          "avgAssists": 5,
+          "csm": 9.7,
+          "gpm": 438,
+          "kp": 50.4,
+          "dmgPct": 22.1,
+          "goldPct": 24.3,
+          "vsPct": 14.5,
+          "dpm": 655,
+          "vspm": 1.34,
+          "avgWpm": 0.43,
+          "avgWcpm": 0.37,
+          "avgVwpm": 0.12,
+          "gd15": -932,
+          "csd15": -17,
+          "xpd15": -582,
+          "fbPct": 16.7,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 32.1,
+          "confidence": 0.52,
+          "subscores": {
+            "laning": 14.6,
+            "damage": 18.8,
+            "presence": 18.8,
+            "efficiency": 10.6
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 6,
+        "avgWinRate": 0,
+        "avgKda": 2
+      }
+    },
+    {
+      "id": 833,
+      "name": "Envy",
+      "country": "BR",
+      "team": "LOUD",
+      "role": "MID",
+      "rating": 33,
+      "confidence": 0.7,
+      "subscores": {
+        "laning": 14.6,
+        "damage": 31.3,
+        "presence": 6.3,
+        "efficiency": 45.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 8,
+          "winRate": 25,
+          "kda": 1.9,
+          "avgKills": 3,
+          "avgDeaths": 2.4,
+          "avgAssists": 1.6,
+          "csm": 8.9,
+          "gpm": 377,
+          "kp": 52.3,
+          "dmgPct": 25.6,
+          "goldPct": 21.3,
+          "vsPct": 11.1,
+          "dpm": 542,
+          "vspm": 0.95,
+          "avgWpm": 0.44,
+          "avgWcpm": 0.11,
+          "avgVwpm": 0.13,
+          "gd15": -941,
+          "csd15": -13,
+          "xpd15": -351,
+          "fbPct": 0,
+          "fbVictim": 37.5,
+          "pentaKills": 0,
+          "soloKills": 4,
+          "rating": 33,
+          "confidence": 0.7,
+          "subscores": {
+            "laning": 14.6,
+            "damage": 31.3,
+            "presence": 6.3,
+            "efficiency": 45.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 8,
+        "avgWinRate": 25,
+        "avgKda": 1.9
+      }
+    },
+    {
+      "id": 1931,
+      "name": "GALA",
+      "country": "CN",
+      "team": "JD Gaming",
+      "role": "BOT",
+      "rating": 64.7,
+      "confidence": 1,
+      "subscores": {
+        "laning": 47.9,
+        "damage": 58.8,
+        "presence": 81.3,
+        "efficiency": 80
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 13,
+          "winRate": 46.2,
+          "kda": 5.5,
+          "avgKills": 3.7,
+          "avgDeaths": 1.5,
+          "avgAssists": 4.7,
+          "csm": 10.1,
+          "gpm": 468,
+          "kp": 69.6,
+          "dmgPct": 27.8,
+          "goldPct": 24.5,
+          "vsPct": 11.6,
+          "dpm": 707,
+          "vspm": 1.19,
+          "avgWpm": 0.34,
+          "avgWcpm": 0.36,
+          "avgVwpm": 0.09,
+          "gd15": 197,
+          "csd15": 5,
+          "xpd15": -30,
+          "fbPct": 15.4,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 1,
+          "rating": 64.7,
+          "confidence": 1,
+          "subscores": {
+            "laning": 47.9,
+            "damage": 58.8,
+            "presence": 81.3,
+            "efficiency": 80
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 13,
+        "avgWinRate": 46.2,
+        "avgKda": 5.5
+      }
+    },
+    {
+      "id": 732,
+      "name": "Hans Sama",
+      "country": "FR",
+      "team": "G2 Esports",
+      "role": "BOT",
+      "rating": 56.5,
+      "confidence": 1,
+      "subscores": {
+        "laning": 66.7,
+        "damage": 63.8,
+        "presence": 56.3,
+        "efficiency": 36.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 16,
+          "winRate": 62.5,
+          "kda": 3.5,
+          "avgKills": 4.5,
+          "avgDeaths": 2.8,
+          "avgAssists": 5.3,
+          "csm": 9.9,
+          "gpm": 495,
+          "kp": 59.4,
+          "dmgPct": 25.2,
+          "goldPct": 25.2,
+          "vsPct": 15.5,
+          "dpm": 749,
+          "vspm": 1.58,
+          "avgWpm": 0.42,
+          "avgWcpm": 0.48,
+          "avgVwpm": 0.19,
+          "gd15": 232,
+          "csd15": 1,
+          "xpd15": 101,
+          "fbPct": 25,
+          "fbVictim": 6.3,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 56.5,
+          "confidence": 1,
+          "subscores": {
+            "laning": 66.7,
+            "damage": 63.8,
+            "presence": 56.3,
+            "efficiency": 36.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 16,
+        "avgWinRate": 62.5,
+        "avgKda": 3.5
+      }
+    },
+    {
+      "id": 5960,
+      "name": "Hizto",
+      "country": "VN",
+      "team": "Team Secret Whales",
+      "role": "JGL",
+      "rating": 59.9,
+      "confidence": 0.52,
+      "subscores": {
+        "laning": 47.9,
+        "damage": 93.8,
+        "presence": 93.8,
+        "efficiency": 34.1
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 6,
+          "winRate": 0,
+          "kda": 3.4,
+          "avgKills": 3.7,
+          "avgDeaths": 3.2,
+          "avgAssists": 7,
+          "csm": 6.6,
+          "gpm": 375,
+          "kp": 77.2,
+          "dmgPct": 19.5,
+          "goldPct": 20.8,
+          "vsPct": 16.5,
+          "dpm": 560,
+          "vspm": 1.52,
+          "avgWpm": 0.44,
+          "avgWcpm": 0.22,
+          "avgVwpm": 0.38,
+          "gd15": 33,
+          "csd15": -3,
+          "xpd15": 92,
+          "fbPct": 16.7,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 59.9,
+          "confidence": 0.52,
+          "subscores": {
+            "laning": 47.9,
+            "damage": 93.8,
+            "presence": 93.8,
+            "efficiency": 34.1
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 6,
+        "avgWinRate": 0,
+        "avgKda": 3.4
+      }
+    },
+    {
+      "id": 5904,
+      "name": "HongQ",
+      "country": "TW",
+      "team": "JD Gaming",
+      "role": "MID",
+      "rating": 52.9,
+      "confidence": 1,
+      "subscores": {
+        "laning": 43.8,
+        "damage": 58.8,
+        "presence": 31.3,
+        "efficiency": 72.5
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 13,
+          "winRate": 46.2,
+          "kda": 3.1,
+          "avgKills": 2.8,
+          "avgDeaths": 2.2,
+          "avgAssists": 4.2,
+          "csm": 9.3,
+          "gpm": 409,
+          "kp": 57.6,
+          "dmgPct": 26.1,
+          "goldPct": 21.4,
+          "vsPct": 15.2,
+          "dpm": 661,
+          "vspm": 1.56,
+          "avgWpm": 0.6,
+          "avgWcpm": 0.26,
+          "avgVwpm": 0.32,
+          "gd15": -108,
+          "csd15": 1,
+          "xpd15": -36,
+          "fbPct": 15.4,
+          "fbVictim": 15.4,
+          "pentaKills": 0,
+          "soloKills": 4,
+          "rating": 52.9,
+          "confidence": 1,
+          "subscores": {
+            "laning": 43.8,
+            "damage": 58.8,
+            "presence": 31.3,
+            "efficiency": 72.5
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 13,
+        "avgWinRate": 46.2,
+        "avgKda": 3.1
+      }
+    },
+    {
+      "id": 1501,
+      "name": "Inspired",
+      "country": "PL",
+      "team": "LYON",
+      "role": "JGL",
+      "rating": 42.3,
+      "confidence": 1,
+      "subscores": {
+        "laning": 93.8,
+        "damage": 31.3,
+        "presence": 6.3,
+        "efficiency": 65.9
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 12,
+          "winRate": 33.3,
+          "kda": 2.9,
+          "avgKills": 2.4,
+          "avgDeaths": 2.3,
+          "avgAssists": 4.2,
+          "csm": 7.6,
+          "gpm": 385,
+          "kp": 62.8,
+          "dmgPct": 15.5,
+          "goldPct": 20.7,
+          "vsPct": 17.8,
+          "dpm": 403,
+          "vspm": 1.62,
+          "avgWpm": 0.29,
+          "avgWcpm": 0.36,
+          "avgVwpm": 0.16,
+          "gd15": 141,
+          "csd15": 9,
+          "xpd15": 523,
+          "fbPct": 50,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 42.3,
+          "confidence": 1,
+          "subscores": {
+            "laning": 93.8,
+            "damage": 31.3,
+            "presence": 6.3,
+            "efficiency": 65.9
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 12,
+        "avgWinRate": 33.3,
+        "avgKda": 2.9
+      }
+    },
+    {
+      "id": 2358,
+      "name": "Isles",
+      "country": "AU",
+      "team": "LYON",
+      "role": "SUP",
+      "rating": 38.1,
+      "confidence": 1,
+      "subscores": {
+        "laning": 47.9,
+        "damage": 31.3,
+        "presence": 31.3,
+        "efficiency": 43.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 12,
+          "winRate": 33.3,
+          "kda": 2.3,
+          "avgKills": 0.6,
+          "avgDeaths": 3.2,
+          "avgAssists": 6.6,
+          "csm": 1,
+          "gpm": 255,
+          "kp": 72.8,
+          "dmgPct": 7.9,
+          "goldPct": 13.8,
+          "vsPct": 43.1,
+          "dpm": 202,
+          "vspm": 3.9,
+          "avgWpm": 1.94,
+          "avgWcpm": 0.41,
+          "avgVwpm": 0.36,
+          "gd15": 32,
+          "csd15": -1,
+          "xpd15": -47,
+          "fbPct": 16.7,
+          "fbVictim": 16.7,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 38.1,
+          "confidence": 1,
+          "subscores": {
+            "laning": 47.9,
+            "damage": 31.3,
+            "presence": 31.3,
+            "efficiency": 43.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 12,
+        "avgWinRate": 33.3,
+        "avgKda": 2.3
+      }
+    },
+    {
+      "id": 2907,
+      "name": "JunJia",
+      "country": "TW",
+      "team": "JD Gaming",
+      "role": "JGL",
+      "rating": 38,
+      "confidence": 1,
+      "subscores": {
+        "laning": 31.3,
+        "damage": 18.8,
+        "presence": 56.3,
+        "efficiency": 32.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 13,
+          "winRate": 46.2,
+          "kda": 2.6,
+          "avgKills": 2.9,
+          "avgDeaths": 3.2,
+          "avgAssists": 5.3,
+          "csm": 7,
+          "gpm": 385,
+          "kp": 70,
+          "dmgPct": 15,
+          "goldPct": 20.3,
+          "vsPct": 19.1,
+          "dpm": 374,
+          "vspm": 1.93,
+          "avgWpm": 0.42,
+          "avgWcpm": 0.37,
+          "avgVwpm": 0.33,
+          "gd15": -7,
+          "csd15": -1,
+          "xpd15": -132,
+          "fbPct": 15.4,
+          "fbVictim": 15.4,
+          "pentaKills": 0,
+          "soloKills": 1,
+          "rating": 38,
+          "confidence": 1,
+          "subscores": {
+            "laning": 31.3,
+            "damage": 18.8,
+            "presence": 56.3,
+            "efficiency": 32.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 13,
+        "avgWinRate": 46.2,
+        "avgKda": 2.6
+      }
+    },
+    {
+      "id": 1971,
+      "name": "Kellin",
+      "country": "KR",
+      "team": "BNK FearX",
+      "role": "SUP",
+      "rating": 53.8,
+      "confidence": 0.96,
+      "subscores": {
+        "laning": 37.5,
+        "damage": 71.3,
+        "presence": 81.3,
+        "efficiency": 25
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 11,
+          "winRate": 45.5,
+          "kda": 2.8,
+          "avgKills": 0.6,
+          "avgDeaths": 4,
+          "avgAssists": 10.6,
+          "csm": 1,
+          "gpm": 269,
+          "kp": 75.8,
+          "dmgPct": 8.7,
+          "goldPct": 14,
+          "vsPct": 43.2,
+          "dpm": 254,
+          "vspm": 3.97,
+          "avgWpm": 2.03,
+          "avgWcpm": 0.43,
+          "avgVwpm": 0.49,
+          "gd15": -171,
+          "csd15": 2,
+          "xpd15": -120,
+          "fbPct": 18.2,
+          "fbVictim": 18.2,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 53.8,
+          "confidence": 0.96,
+          "subscores": {
+            "laning": 37.5,
+            "damage": 71.3,
+            "presence": 81.3,
+            "efficiency": 25
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 11,
+        "avgWinRate": 45.5,
+        "avgKda": 2.8
+      }
+    },
+    {
+      "id": 1115,
+      "name": "Kiin",
+      "country": "KR",
+      "team": "Gen.G",
+      "role": "TOP",
+      "rating": 72.9,
+      "confidence": 0.78,
+      "subscores": {
+        "laning": 85.4,
+        "damage": 86.3,
+        "presence": 68.8,
+        "efficiency": 66.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 9,
+          "winRate": 66.7,
+          "kda": 3.1,
+          "avgKills": 2.8,
+          "avgDeaths": 2.6,
+          "avgAssists": 5.2,
+          "csm": 8.8,
+          "gpm": 412,
+          "kp": 59.7,
+          "dmgPct": 29.5,
+          "goldPct": 20,
+          "vsPct": 14.2,
+          "dpm": 796,
+          "vspm": 1.39,
+          "avgWpm": 0.53,
+          "avgWcpm": 0.15,
+          "avgVwpm": 0.14,
+          "gd15": 858,
+          "csd15": 11,
+          "xpd15": 535,
+          "fbPct": 11.1,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 7,
+          "rating": 72.9,
+          "confidence": 0.78,
+          "subscores": {
+            "laning": 85.4,
+            "damage": 86.3,
+            "presence": 68.8,
+            "efficiency": 66.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 9,
+        "avgWinRate": 66.7,
+        "avgKda": 3.1
+      }
+    },
+    {
+      "id": 1270,
+      "name": "Knight",
+      "country": "CN",
+      "team": "Bilibili Gaming",
+      "role": "MID",
+      "rating": 58.6,
+      "confidence": 1,
+      "subscores": {
+        "laning": 75,
+        "damage": 43.8,
+        "presence": 56.3,
+        "efficiency": 61.9
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 15,
+          "winRate": 80,
+          "kda": 5.3,
+          "avgKills": 4.9,
+          "avgDeaths": 2.3,
+          "avgAssists": 7,
+          "csm": 8.6,
+          "gpm": 415,
+          "kp": 63.5,
+          "dmgPct": 21.9,
+          "goldPct": 20,
+          "vsPct": 12.4,
+          "dpm": 701,
+          "vspm": 1.23,
+          "avgWpm": 0.36,
+          "avgWcpm": 0.28,
+          "avgVwpm": 0.15,
+          "gd15": 503,
+          "csd15": 4,
+          "xpd15": 37,
+          "fbPct": 33.3,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 8,
+          "rating": 58.6,
+          "confidence": 1,
+          "subscores": {
+            "laning": 75,
+            "damage": 43.8,
+            "presence": 56.3,
+            "efficiency": 61.9
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 15,
+        "avgWinRate": 80,
+        "avgKda": 5.3
+      }
+    },
+    {
+      "id": 2887,
+      "name": "Labrov",
+      "country": "GR",
+      "team": "G2 Esports",
+      "role": "SUP",
+      "rating": 56.4,
+      "confidence": 1,
+      "subscores": {
+        "laning": 43.8,
+        "damage": 48.8,
+        "presence": 68.8,
+        "efficiency": 50
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 16,
+          "winRate": 62.5,
+          "kda": 3.8,
+          "avgKills": 0.8,
+          "avgDeaths": 3.3,
+          "avgAssists": 11.9,
+          "csm": 0.9,
+          "gpm": 275,
+          "kp": 75.4,
+          "dmgPct": 7.9,
+          "goldPct": 14,
+          "vsPct": 39.6,
+          "dpm": 236,
+          "vspm": 3.99,
+          "avgWpm": 1.82,
+          "avgWcpm": 0.47,
+          "avgVwpm": 0.35,
+          "gd15": 71,
+          "csd15": -4,
+          "xpd15": -109,
+          "fbPct": 31.3,
+          "fbVictim": 12.5,
+          "pentaKills": 0,
+          "soloKills": 1,
+          "rating": 56.4,
+          "confidence": 1,
+          "subscores": {
+            "laning": 43.8,
+            "damage": 48.8,
+            "presence": 68.8,
+            "efficiency": 50
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 16,
+        "avgWinRate": 62.5,
+        "avgKda": 3.8
+      }
+    },
+    {
+      "id": 3353,
+      "name": "ON",
+      "country": "CN",
+      "team": "Bilibili Gaming",
+      "role": "SUP",
+      "rating": 63.1,
+      "confidence": 1,
+      "subscores": {
+        "laning": 72.9,
+        "damage": 83.8,
+        "presence": 43.8,
+        "efficiency": 75
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 15,
+          "winRate": 80,
+          "kda": 4.6,
+          "avgKills": 1.1,
+          "avgDeaths": 3.1,
+          "avgAssists": 12.9,
+          "csm": 1,
+          "gpm": 288,
+          "kp": 73.5,
+          "dmgPct": 9,
+          "goldPct": 13.8,
+          "vsPct": 42,
+          "dpm": 290,
+          "vspm": 4.17,
+          "avgWpm": 2.09,
+          "avgWcpm": 0.45,
+          "avgVwpm": 0.49,
+          "gd15": 104,
+          "csd15": 0,
+          "xpd15": 240,
+          "fbPct": 33.3,
+          "fbVictim": 20,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 63.1,
+          "confidence": 1,
+          "subscores": {
+            "laning": 72.9,
+            "damage": 83.8,
+            "presence": 43.8,
+            "efficiency": 75
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 15,
+        "avgWinRate": 80,
+        "avgKda": 4.6
+      }
+    },
+    {
+      "id": 2799,
+      "name": "Pun",
+      "country": "VN",
+      "team": "Team Secret Whales",
+      "role": "TOP",
+      "rating": 58.1,
+      "confidence": 0.52,
+      "subscores": {
+        "laning": 77.1,
+        "damage": 88.8,
+        "presence": 81.3,
+        "efficiency": 15
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 6,
+          "winRate": 0,
+          "kda": 1.8,
+          "avgKills": 3,
+          "avgDeaths": 4.7,
+          "avgAssists": 5.3,
+          "csm": 7.6,
+          "gpm": 374,
+          "kp": 61,
+          "dmgPct": 28.8,
+          "goldPct": 20.8,
+          "vsPct": 13.9,
+          "dpm": 828,
+          "vspm": 1.29,
+          "avgWpm": 0.49,
+          "avgWcpm": 0.13,
+          "avgVwpm": 0.22,
+          "gd15": 481,
+          "csd15": 7,
+          "xpd15": 669,
+          "fbPct": 50,
+          "fbVictim": 16.7,
+          "pentaKills": 0,
+          "soloKills": 5,
+          "rating": 58.1,
+          "confidence": 0.52,
+          "subscores": {
+            "laning": 77.1,
+            "damage": 88.8,
+            "presence": 81.3,
+            "efficiency": 15
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 6,
+        "avgWinRate": 0,
+        "avgKda": 1.8
+      }
+    },
+    {
+      "id": 4233,
+      "name": "Raptor",
+      "country": "KR",
+      "team": "BNK FearX",
+      "role": "JGL",
+      "rating": 33.9,
+      "confidence": 0.96,
+      "subscores": {
+        "laning": 47.9,
+        "damage": 81.3,
+        "presence": 18.8,
+        "efficiency": 10.6
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 11,
+          "winRate": 45.5,
+          "kda": 2.3,
+          "avgKills": 3.1,
+          "avgDeaths": 4.2,
+          "avgAssists": 6.4,
+          "csm": 6.3,
+          "gpm": 376,
+          "kp": 63.8,
+          "dmgPct": 18.3,
+          "goldPct": 19.6,
+          "vsPct": 18.9,
+          "dpm": 555,
+          "vspm": 1.73,
+          "avgWpm": 0.4,
+          "avgWcpm": 0.33,
+          "avgVwpm": 0.32,
+          "gd15": -104,
+          "csd15": 5,
+          "xpd15": -60,
+          "fbPct": 9.1,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 33.9,
+          "confidence": 0.96,
+          "subscores": {
+            "laning": 47.9,
+            "damage": 81.3,
+            "presence": 18.8,
+            "efficiency": 10.6
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 11,
+        "avgWinRate": 45.5,
+        "avgKda": 2.3
+      }
+    },
+    {
+      "id": 1011,
+      "name": "RedBert",
+      "country": "BR",
+      "team": "LOUD",
+      "role": "SUP",
+      "rating": 28.9,
+      "confidence": 0.7,
+      "subscores": {
+        "laning": 45.8,
+        "damage": 48.8,
+        "presence": 6.3,
+        "efficiency": 15.6
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 8,
+          "winRate": 25,
+          "kda": 1.2,
+          "avgKills": 0.1,
+          "avgDeaths": 3.5,
+          "avgAssists": 4,
+          "csm": 1,
+          "gpm": 236,
+          "kp": 42.3,
+          "dmgPct": 9.2,
+          "goldPct": 13.4,
+          "vsPct": 39.8,
+          "dpm": 192,
+          "vspm": 3.41,
+          "avgWpm": 1.66,
+          "avgWcpm": 0.31,
+          "avgVwpm": 0.33,
+          "gd15": -362,
+          "csd15": 2,
+          "xpd15": 34,
+          "fbPct": 0,
+          "fbVictim": 12.5,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 28.9,
+          "confidence": 0.7,
+          "subscores": {
+            "laning": 45.8,
+            "damage": 48.8,
+            "presence": 6.3,
+            "efficiency": 15.6
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 8,
+        "avgWinRate": 25,
+        "avgKda": 1.2
+      }
+    },
+    {
+      "id": 685,
+      "name": "Ruler",
+      "country": "KR",
+      "team": "Gen.G",
+      "role": "BOT",
+      "rating": 54.8,
+      "confidence": 0.78,
+      "subscores": {
+        "laning": 43.8,
+        "damage": 31.3,
+        "presence": 93.8,
+        "efficiency": 80.6
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 9,
+          "winRate": 66.7,
+          "kda": 4.9,
+          "avgKills": 4,
+          "avgDeaths": 1.8,
+          "avgAssists": 4.8,
+          "csm": 10.3,
+          "gpm": 515,
+          "kp": 71.5,
+          "dmgPct": 24.5,
+          "goldPct": 24.9,
+          "vsPct": 14.2,
+          "dpm": 687,
+          "vspm": 1.4,
+          "avgWpm": 0.46,
+          "avgWcpm": 0.32,
+          "avgVwpm": 0.17,
+          "gd15": 200,
+          "csd15": -2,
+          "xpd15": 60,
+          "fbPct": 44.4,
+          "fbVictim": 11.1,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 54.8,
+          "confidence": 0.78,
+          "subscores": {
+            "laning": 43.8,
+            "damage": 31.3,
+            "presence": 93.8,
+            "efficiency": 80.6
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 9,
+        "avgWinRate": 66.7,
+        "avgKda": 4.9
+      }
+    },
+    {
+      "id": 5123,
+      "name": "Saint",
+      "country": "KR",
+      "team": "LYON",
+      "role": "MID",
+      "rating": 44.2,
+      "confidence": 1,
+      "subscores": {
+        "laning": 52.1,
+        "damage": 41.3,
+        "presence": 43.8,
+        "efficiency": 40.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 12,
+          "winRate": 33.3,
+          "kda": 1.9,
+          "avgKills": 2.2,
+          "avgDeaths": 3.4,
+          "avgAssists": 4.3,
+          "csm": 9,
+          "gpm": 392,
+          "kp": 62.5,
+          "dmgPct": 25.1,
+          "goldPct": 21.1,
+          "vsPct": 16.3,
+          "dpm": 659,
+          "vspm": 1.48,
+          "avgWpm": 0.36,
+          "avgWcpm": 0.36,
+          "avgVwpm": 0.15,
+          "gd15": 142,
+          "csd15": -5,
+          "xpd15": 10,
+          "fbPct": 50,
+          "fbVictim": 8.3,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 44.2,
+          "confidence": 1,
+          "subscores": {
+            "laning": 52.1,
+            "damage": 41.3,
+            "presence": 43.8,
+            "efficiency": 40.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 12,
+        "avgWinRate": 33.3,
+        "avgKda": 1.9
+      }
+    },
+    {
+      "id": 4946,
+      "name": "SkewMond",
+      "country": "FR",
+      "team": "G2 Esports",
+      "role": "JGL",
+      "rating": 66.6,
+      "confidence": 1,
+      "subscores": {
+        "laning": 77.1,
+        "damage": 61.3,
+        "presence": 68.8,
+        "efficiency": 62.5
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 16,
+          "winRate": 62.5,
+          "kda": 4.5,
+          "avgKills": 3.8,
+          "avgDeaths": 2.6,
+          "avgAssists": 8.1,
+          "csm": 7.1,
+          "gpm": 408,
+          "kp": 71.2,
+          "dmgPct": 18.3,
+          "goldPct": 20.7,
+          "vsPct": 19.4,
+          "dpm": 544,
+          "vspm": 1.97,
+          "avgWpm": 0.35,
+          "avgWcpm": 0.45,
+          "avgVwpm": 0.29,
+          "gd15": 82,
+          "csd15": 2,
+          "xpd15": 150,
+          "fbPct": 37.5,
+          "fbVictim": 12.5,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 66.6,
+          "confidence": 1,
+          "subscores": {
+            "laning": 77.1,
+            "damage": 61.3,
+            "presence": 68.8,
+            "efficiency": 62.5
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 16,
+        "avgWinRate": 62.5,
+        "avgKda": 4.5
+      }
+    },
+    {
+      "id": 5359,
+      "name": "Vampire",
+      "country": "CN",
+      "team": "JD Gaming",
+      "role": "SUP",
+      "rating": 74.8,
+      "confidence": 1,
+      "subscores": {
+        "laning": 85.4,
+        "damage": 66.3,
+        "presence": 56.3,
+        "efficiency": 93.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 13,
+          "winRate": 46.2,
+          "kda": 4.7,
+          "avgKills": 0.4,
+          "avgDeaths": 1.9,
+          "avgAssists": 8.6,
+          "csm": 1.1,
+          "gpm": 267,
+          "kp": 74.5,
+          "dmgPct": 9.4,
+          "goldPct": 14.1,
+          "vsPct": 41.1,
+          "dpm": 229,
+          "vspm": 4.2,
+          "avgWpm": 1.83,
+          "avgWcpm": 0.54,
+          "avgVwpm": 0.44,
+          "gd15": 260,
+          "csd15": 4,
+          "xpd15": 209,
+          "fbPct": 15.4,
+          "fbVictim": 7.7,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 74.8,
+          "confidence": 1,
+          "subscores": {
+            "laning": 85.4,
+            "damage": 66.3,
+            "presence": 56.3,
+            "efficiency": 93.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 13,
+        "avgWinRate": 46.2,
+        "avgKda": 4.7
+      }
+    },
+    {
+      "id": 3326,
+      "name": "Vicla",
+      "country": "KR",
+      "team": "BNK FearX",
+      "role": "MID",
+      "rating": 54.7,
+      "confidence": 0.96,
+      "subscores": {
+        "laning": 50,
+        "damage": 66.3,
+        "presence": 68.8,
+        "efficiency": 35
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 11,
+          "winRate": 45.5,
+          "kda": 2.5,
+          "avgKills": 3.5,
+          "avgDeaths": 3.9,
+          "avgAssists": 6.2,
+          "csm": 8.7,
+          "gpm": 398,
+          "kp": 63.8,
+          "dmgPct": 24.1,
+          "goldPct": 20.7,
+          "vsPct": 11.7,
+          "dpm": 742,
+          "vspm": 1.08,
+          "avgWpm": 0.4,
+          "avgWcpm": 0.18,
+          "avgVwpm": 0.13,
+          "gd15": -338,
+          "csd15": 4,
+          "xpd15": -27,
+          "fbPct": 0,
+          "fbVictim": 45.5,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 54.7,
+          "confidence": 0.96,
+          "subscores": {
+            "laning": 50,
+            "damage": 66.3,
+            "presence": 68.8,
+            "efficiency": 35
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 11,
+        "avgWinRate": 45.5,
+        "avgKda": 2.5
+      }
+    },
+    {
+      "id": 1228,
+      "name": "Viper",
+      "country": "KR",
+      "team": "Bilibili Gaming",
+      "role": "BOT",
+      "rating": 76.2,
+      "confidence": 1,
+      "subscores": {
+        "laning": 70.8,
+        "damage": 83.8,
+        "presence": 68.8,
+        "efficiency": 75.6
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 15,
+          "winRate": 80,
+          "kda": 6.3,
+          "avgKills": 5.2,
+          "avgDeaths": 1.9,
+          "avgAssists": 7.1,
+          "csm": 10.1,
+          "gpm": 527,
+          "kp": 63.8,
+          "dmgPct": 28.5,
+          "goldPct": 25.3,
+          "vsPct": 16.5,
+          "dpm": 912,
+          "vspm": 1.64,
+          "avgWpm": 0.63,
+          "avgWcpm": 0.39,
+          "avgVwpm": 0.26,
+          "gd15": 221,
+          "csd15": 6,
+          "xpd15": 95,
+          "fbPct": 20,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 1,
+          "rating": 76.2,
+          "confidence": 1,
+          "subscores": {
+            "laning": 70.8,
+            "damage": 83.8,
+            "presence": 68.8,
+            "efficiency": 75.6
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 15,
+        "avgWinRate": 80,
+        "avgKda": 6.3
+      }
+    },
+    {
+      "id": 3330,
+      "name": "XUN",
+      "country": "CN",
+      "team": "Bilibili Gaming",
+      "role": "JGL",
+      "rating": 53.5,
+      "confidence": 1,
+      "subscores": {
+        "laning": 39.6,
+        "damage": 58.8,
+        "presence": 43.8,
+        "efficiency": 68.4
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 15,
+          "winRate": 80,
+          "kda": 5.9,
+          "avgKills": 3.9,
+          "avgDeaths": 2.3,
+          "avgAssists": 9.5,
+          "csm": 6.8,
+          "gpm": 403,
+          "kp": 69.3,
+          "dmgPct": 16.5,
+          "goldPct": 19.4,
+          "vsPct": 16.6,
+          "dpm": 550,
+          "vspm": 1.65,
+          "avgWpm": 0.31,
+          "avgWcpm": 0.32,
+          "avgVwpm": 0.27,
+          "gd15": 69,
+          "csd15": -5,
+          "xpd15": -65,
+          "fbPct": 46.7,
+          "fbVictim": 6.7,
+          "pentaKills": 0,
+          "soloKills": 2,
+          "rating": 53.5,
+          "confidence": 1,
+          "subscores": {
+            "laning": 39.6,
+            "damage": 58.8,
+            "presence": 43.8,
+            "efficiency": 68.4
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 15,
+        "avgWinRate": 80,
+        "avgKda": 5.9
+      }
+    },
+    {
+      "id": 4918,
+      "name": "Xiaoxu",
+      "country": "CN",
+      "team": "JD Gaming",
+      "role": "TOP",
+      "rating": 33.4,
+      "confidence": 1,
+      "subscores": {
+        "laning": 43.8,
+        "damage": 18.8,
+        "presence": 18.8,
+        "efficiency": 42.2
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 13,
+          "winRate": 46.2,
+          "kda": 1.7,
+          "avgKills": 1.8,
+          "avgDeaths": 3.3,
+          "avgAssists": 3.8,
+          "csm": 8.8,
+          "gpm": 375,
+          "kp": 47,
+          "dmgPct": 21.7,
+          "goldPct": 19.7,
+          "vsPct": 12.9,
+          "dpm": 539,
+          "vspm": 1.33,
+          "avgWpm": 0.5,
+          "avgWcpm": 0.11,
+          "avgVwpm": 0.1,
+          "gd15": -181,
+          "csd15": -2,
+          "xpd15": -86,
+          "fbPct": 0,
+          "fbVictim": 30.8,
+          "pentaKills": 0,
+          "soloKills": 4,
+          "rating": 33.4,
+          "confidence": 1,
+          "subscores": {
+            "laning": 43.8,
+            "damage": 18.8,
+            "presence": 18.8,
+            "efficiency": 42.2
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 13,
+        "avgWinRate": 46.2,
+        "avgKda": 1.7
+      }
+    },
+    {
+      "id": 3198,
+      "name": "YoungJae",
+      "country": "KR",
+      "team": "LOUD",
+      "role": "JGL",
+      "rating": 50,
+      "confidence": 0.7,
+      "subscores": {
+        "laning": 6.3,
+        "damage": 48.8,
+        "presence": 81.3,
+        "efficiency": 36.3
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 8,
+          "winRate": 25,
+          "kda": 2,
+          "avgKills": 2.8,
+          "avgDeaths": 3.1,
+          "avgAssists": 3.5,
+          "csm": 7.1,
+          "gpm": 393,
+          "kp": 74.5,
+          "dmgPct": 19.6,
+          "goldPct": 22.3,
+          "vsPct": 22.8,
+          "dpm": 430,
+          "vspm": 1.95,
+          "avgWpm": 0.42,
+          "avgWcpm": 0.43,
+          "avgVwpm": 0.35,
+          "gd15": -445,
+          "csd15": -12,
+          "xpd15": -831,
+          "fbPct": 25,
+          "fbVictim": 25,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 50,
+          "confidence": 0.7,
+          "subscores": {
+            "laning": 6.3,
+            "damage": 48.8,
+            "presence": 81.3,
+            "efficiency": 36.3
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 8,
+        "avgWinRate": 25,
+        "avgKda": 2
+      }
+    },
+    {
+      "id": 5347,
+      "name": "xyno",
+      "country": "BR",
+      "team": "LOUD",
+      "role": "TOP",
+      "rating": 51.9,
+      "confidence": 0.7,
+      "subscores": {
+        "laning": 52.1,
+        "damage": 31.3,
+        "presence": 93.8,
+        "efficiency": 62.8
+      },
+      "tournaments": {
+        "2026 First Stand": {
+          "games": 8,
+          "winRate": 25,
+          "kda": 2.3,
+          "avgKills": 1.5,
+          "avgDeaths": 2.3,
+          "avgAssists": 3.6,
+          "csm": 8.7,
+          "gpm": 360,
+          "kp": 70.2,
+          "dmgPct": 25.4,
+          "goldPct": 20.6,
+          "vsPct": 14.3,
+          "dpm": 515,
+          "vspm": 1.21,
+          "avgWpm": 0.35,
+          "avgWcpm": 0.18,
+          "avgVwpm": 0.13,
+          "gd15": 41,
+          "csd15": -2,
+          "xpd15": 0,
+          "fbPct": 12.5,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 3,
+          "rating": 51.9,
+          "confidence": 0.7,
+          "subscores": {
+            "laning": 52.1,
+            "damage": 31.3,
+            "presence": 93.8,
+            "efficiency": 62.8
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 8,
+        "avgWinRate": 25,
+        "avgKda": 2.3
+      }
+    }
+  ]
+}

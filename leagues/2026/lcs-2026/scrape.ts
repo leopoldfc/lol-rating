@@ -1,8 +1,10 @@
 /**
- * Scrape LEC Versus 2026 depuis gol.gg
- * Deux splits : Season + Playoffs
+ * Scrape LCS 2026 depuis gol.gg
+ * Deux splits : Lock-In + Spring
  * Calcule le LIR pour chaque split + les deux réunis
- * Export → leagues/lec-versus-2026/export.json
+ * Export → frontend/public/leagues/lcs-2026/export.json
+ *
+ * Usage : npx tsx leagues/lcs-2026/scrape.ts
  */
 
 import fetch from 'node-fetch';
@@ -10,16 +12,16 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { computeAllRatings } from '../../src/rating/engine.js';
-import type { PlayerStats } from '../../src/rating/engine.js';
+import { computeAllRatings } from '../../../src/rating/engine.js';
+import type { PlayerStats } from '../../../src/rating/engine.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const SPLITS = [
-  { key: 'season',   name: 'LEC 2026 Versus Season',   season: 'ALL' },
-  { key: 'playoffs', name: 'LEC 2026 Versus Playoffs', season: 'ALL' },
+  { key: 'lockin', name: 'LCS 2026 Lock-In', season: 'ALL' },
+  { key: 'spring', name: 'LCS 2026 Spring',  season: 'ALL' },
 ];
-const COMBINED_NAME = 'LEC Versus 2026';
+const COMBINED_NAME = 'LCS 2026';
 const BASE          = 'https://gol.gg';
 const HEADERS       = { 'User-Agent': 'lol-esports-scraper/1.0 (stats research bot)', 'Accept': 'text/html' };
 const VALID_ROLES   = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
@@ -60,7 +62,7 @@ function toLirInput(p: any): PlayerStats {
   };
 }
 
-// ─── 1. Rosters (union des deux splits) ──────────────────────────────────────
+// ─── 1. Rosters (union des splits) ────────────────────────────────────────────
 
 const roleMap = new Map<string, { role: string; team: string }>();
 
@@ -99,7 +101,6 @@ for (const split of SPLITS) {
 
 // ─── 2. Stats par split ───────────────────────────────────────────────────────
 
-// golggId → { meta, rows: { splitKey, ...stats } }
 const byPlayer = new Map<number, { name: string; country: string; team: string; role: string | null; rows: Record<string, any> }>();
 
 for (const split of SPLITS) {
@@ -124,7 +125,7 @@ for (const split of SPLITS) {
       return isNaN(v) ? 0 : v;
     };
 
-    const row_data = {
+    const rowData = {
       games: n(2), winRate: n(3), kda: n(4),
       avgKills: n(5), avgDeaths: n(6), avgAssists: n(7),
       csm: n(8), gpm: n(9), kp: n(10),
@@ -143,7 +144,7 @@ for (const split of SPLITS) {
         rows: {},
       });
     }
-    byPlayer.get(golggId)!.rows[split.key] = row_data;
+    byPlayer.get(golggId)!.rows[split.key] = rowData;
     count++;
   });
 
@@ -183,17 +184,14 @@ function computeRatingsForGroup(group: any[], getStats: (p: any) => any) {
   return computeAllRatings(lirInputs);
 }
 
-// Season
-const seasonPlayers  = players.filter(p => p.rows.season);
-const seasonResults  = computeRatingsForGroup(seasonPlayers, p => p.rows.season);
-seasonPlayers.forEach((p, i) => { p.lirSeason = seasonResults[i]; });
+const lockinPlayers = players.filter(p => p.rows.lockin);
+const lockinResults = computeRatingsForGroup(lockinPlayers, p => p.rows.lockin);
+lockinPlayers.forEach((p, i) => { p.lirLockin = lockinResults[i]; });
 
-// Playoffs
-const playoffsPlayers = players.filter(p => p.rows.playoffs);
-const playoffsResults = computeRatingsForGroup(playoffsPlayers, p => p.rows.playoffs);
-playoffsPlayers.forEach((p, i) => { p.lirPlayoffs = playoffsResults[i]; });
+const springPlayers = players.filter(p => p.rows.spring);
+const springResults = computeRatingsForGroup(springPlayers, p => p.rows.spring);
+springPlayers.forEach((p, i) => { p.lirSpring = springResults[i]; });
 
-// Combined
 const combinedResults = computeRatingsForGroup(players, p => p.combined);
 players.forEach((p, i) => { p.lirCombined = combinedResults[i]; });
 
@@ -202,32 +200,22 @@ players.forEach((p, i) => { p.lirCombined = combinedResults[i]; });
 const exportData = {
   metadata: {
     exportedAt: new Date().toISOString(),
-    tournaments: [{ name: COMBINED_NAME, league: 'LEC', year: 2026, split: 'Versus', scrapedAt: new Date().toISOString() }],
+    tournaments: [{ name: COMBINED_NAME, league: 'LCS', year: 2026, split: 'Spring', scrapedAt: new Date().toISOString() }],
   },
   players: players.map(p => {
     const tournaments: Record<string, any> = {};
 
-    if (p.rows.season) {
-      tournaments[SPLITS[0].name] = {
-        ...toStats(p.rows.season),
-        ...(p.lirSeason ?? {}),
-      };
+    if (p.rows.lockin) {
+      tournaments[SPLITS[0].name] = { ...toStats(p.rows.lockin), ...(p.lirLockin ?? {}) };
     }
-    if (p.rows.playoffs) {
-      tournaments[SPLITS[1].name] = {
-        ...toStats(p.rows.playoffs),
-        ...(p.lirPlayoffs ?? {}),
-      };
+    if (p.rows.spring) {
+      tournaments[SPLITS[1].name] = { ...toStats(p.rows.spring), ...(p.lirSpring ?? {}) };
     }
-    tournaments[COMBINED_NAME] = {
-      ...toStats(p.combined),
-      ...(p.lirCombined ?? {}),
-    };
+    tournaments[COMBINED_NAME] = { ...toStats(p.combined), ...(p.lirCombined ?? {}) };
 
     return {
       id: p.golggId, name: p.name, country: p.country, team: p.team,
       role: p.role ?? 'UNK',
-      // rating par défaut = combined
       rating:     p.lirCombined?.rating,
       confidence: p.lirCombined?.confidence,
       subscores:  p.lirCombined?.subscores,
@@ -238,5 +226,5 @@ const exportData = {
 };
 
 const withRole = players.filter(p => p.role).length;
-fs.writeFileSync(path.join(__dirname, '../../frontend/public/leagues/lec-versus-2026/export.json'), JSON.stringify(exportData, null, 2));
+fs.writeFileSync(path.join(__dirname, '../../../frontend/public/leagues/lcs-2026/export.json'), JSON.stringify(exportData, null, 2));
 console.log(`✓ export     ${COMBINED_NAME} (${players.length} joueurs, ${withRole} avec rôle)`);

@@ -1,8 +1,10 @@
 /**
- * Scrape LCK Cup 2026 depuis gol.gg
+ * Scrape 2026 First Stand depuis gol.gg
  * — Rosters (rôles) depuis les pages équipes
  * — Stats joueurs depuis la page liste joueurs
- * — Calcul LIR + export leagues/lck-cup-2026/export.json
+ * — Calcul LIR + export frontend/public/leagues/first-stand-2026/export.json
+ *
+ * Usage : npx tsx leagues/first-stand-2026/scrape.ts
  */
 
 import fetch from 'node-fetch';
@@ -10,12 +12,12 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { computeAllRatings } from '../../src/rating/engine.js';
+import { computeAllRatings } from '../../../src/rating/engine.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const TOURNAMENT  = 'LCK Cup 2026';
-const SEASON      = 'S16';
+const TOURNAMENT  = '2026 First Stand';
+const SEASON      = 'ALL';
 const BASE        = 'https://gol.gg';
 const HEADERS     = { 'User-Agent': 'lol-esports-scraper/1.0 (stats research bot)', 'Accept': 'text/html' };
 const VALID_ROLES = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
@@ -24,7 +26,7 @@ const ROLE_MAP: Record<string, string> = { TOP: 'TOP', JUNGLE: 'JGL', MID: 'MID'
 const sleep = (ms: number) => new Promise(r => setTimeout(r, ms));
 const enc   = (s: string)  => encodeURIComponent(s);
 
-// ─── 1. Liste des équipes ─────────────────────────────────────────────────
+// ─── 1. Liste des équipes ─────────────────────────────────────────────────────
 
 const teamsHtml = await fetch(`${BASE}/teams/list/season-${SEASON}/split-ALL/tournament-${enc(TOURNAMENT)}/`, { headers: HEADERS }).then(r => r.text());
 const $t = cheerio.load(teamsHtml);
@@ -36,17 +38,15 @@ $t('table.table_list tbody tr').each((_, row) => {
   if (match && link.text().trim()) teams.push({ id: match[1], name: link.text().trim() });
 });
 
-// ─── 2. Rosters par équipe ────────────────────────────────────────────────
+// ─── 2. Rosters ───────────────────────────────────────────────────────────────
 
 const roleMap = new Map<string, { role: string; team: string }>();
-
 process.stdout.write(`[roster] ${TOURNAMENT} — 0/${teams.length} équipes`);
 
 for (const [i, team] of teams.entries()) {
   await sleep(600);
   const html = await fetch(`${BASE}/teams/team-stats/${team.id}/split-ALL/tournament-${enc(TOURNAMENT)}/`, { headers: HEADERS }).then(r => r.text());
-  const $  = cheerio.load(html);
-  const roleCount: Record<string, number> = {};
+  const $ = cheerio.load(html);
 
   $('table.table_list tbody tr').each((_, row) => {
     const cells    = $(row).find('td');
@@ -55,42 +55,31 @@ for (const [i, team] of teams.entries()) {
     if (!roleName) return;
     const name = ($(cells[1]).find('a').first().text() || $(cells[1]).text()).trim();
     if (!name) return;
-    roleCount[roleName] = (roleCount[roleName] ?? 0) + 1;
     roleMap.set(name.toLowerCase(), { role: roleName, team: team.name });
   });
 
   process.stdout.write(`\r[roster] ${TOURNAMENT} — ${i + 1}/${teams.length} équipes`);
 }
-
 console.log(`\r✓ roster     ${TOURNAMENT} (${teams.length} équipes, ${roleMap.size} joueurs)`);
 
-// ─── 3. Stats joueurs ─────────────────────────────────────────────────────
+// ─── 3. Stats joueurs ─────────────────────────────────────────────────────────
 
-const statsUrl  = `${BASE}/players/list/season-${SEASON}/split-ALL/tournament-${enc(TOURNAMENT)}/`;
-const statsHtml = await fetch(statsUrl, { headers: HEADERS }).then(r => r.text());
-const $s        = cheerio.load(statsHtml);
+const statsHtml = await fetch(`${BASE}/players/list/season-${SEASON}/split-ALL/tournament-${enc(TOURNAMENT)}/`, { headers: HEADERS }).then(r => r.text());
+const $s = cheerio.load(statsHtml);
 const players: any[] = [];
-
-// Colonnes gol.gg player list (vérifié LCK Cup 2026) :
-// 0=nom 1=pays 2=games 3=wr% 4=kda 5=k 6=d 7=a 8=csm 9=gpm
-// 10=kp% 11=dmg% 12=gold% 13=vs% 14=dpm 15=vspm 16=wpm 17=wcpm 18=vwpm
-// 19=gd15 20=csd15 21=xpd15 22=fb% 23=fbVictim% 24=penta 25=solo
 
 $s('table.table_list tbody tr').each((_, row) => {
   const cells = $s(row).find('td');
   if (cells.length < 10) return;
 
   const link    = $s(cells[0]).find('a').first();
-  const href    = link.attr('href') ?? '';
-  const idMatch = href.match(/player-stats\/(\d+)/);
+  const idMatch = (link.attr('href') ?? '').match(/player-stats\/(\d+)/);
   const golggId = idMatch ? parseInt(idMatch[1]) : 0;
   const name    = link.text().trim();
   if (!name || !golggId) return;
 
   const country     = $s(cells[1]).find('img').first().attr('alt')?.trim() ?? '';
   const rosterEntry = roleMap.get(name.toLowerCase());
-  const role        = rosterEntry?.role ?? null;
-  const team        = rosterEntry?.team ?? '';
 
   const n = (i: number) => {
     const v = parseFloat($s(cells[i]).text().replace('%', '').replace(',', '.').trim());
@@ -98,7 +87,9 @@ $s('table.table_list tbody tr').each((_, row) => {
   };
 
   players.push({
-    golggId, name, country, team, role,
+    golggId, name, country,
+    team: rosterEntry?.team ?? '',
+    role: rosterEntry?.role ?? null,
     games: n(2), winRate: n(3), kda: n(4),
     avgKills: n(5), avgDeaths: n(6), avgAssists: n(7),
     csm: n(8), gpm: n(9), kp: n(10),
@@ -110,7 +101,7 @@ $s('table.table_list tbody tr').each((_, row) => {
   });
 });
 
-// ─── 4. Calcul LIR ───────────────────────────────────────────────────────
+// ─── 4. Calcul LIR ────────────────────────────────────────────────────────────
 
 const lirResults = computeAllRatings(players.map(p => ({
   role: (VALID_ROLES.includes(p.role) ? p.role : 'MID') as any,
@@ -129,12 +120,12 @@ players.forEach((p, i) => {
   }
 });
 
-// ─── 5. Export ────────────────────────────────────────────────────────────
+// ─── 5. Export ────────────────────────────────────────────────────────────────
 
 const exportData = {
   metadata: {
     exportedAt: new Date().toISOString(),
-    tournaments: [{ name: TOURNAMENT, league: 'LCK', year: 2026, split: 'Cup', scrapedAt: new Date().toISOString() }],
+    tournaments: [{ name: TOURNAMENT, league: 'International', year: 2026, split: 'First Stand', scrapedAt: new Date().toISOString() }],
   },
   players: players.map(p => ({
     id: p.golggId, name: p.name, country: p.country, team: p.team,
@@ -149,6 +140,7 @@ const exportData = {
         avgWpm: p.avgWpm, avgWcpm: p.avgWcpm, avgVwpm: p.avgVwpm,
         gd15: p.gd15, csd15: p.csd15, xpd15: p.xpd15,
         fbPct: p.fbPct, fbVictim: p.fbVictim, pentaKills: p.pentaKills, soloKills: p.soloKills,
+        rating: p.rating, confidence: p.confidence, subscores: p.subscores,
       },
     },
     aggregated: { totalGames: p.games, avgWinRate: p.winRate, avgKda: p.kda },
@@ -156,6 +148,6 @@ const exportData = {
 };
 
 const withRole = players.filter(p => p.role).length;
-const outPath  = path.join(__dirname, '../../frontend/public/leagues/lck-cup-2026/export.json');
+const outPath  = path.join(__dirname, '../../../frontend/public/leagues/first-stand-2026/export.json');
 fs.writeFileSync(outPath, JSON.stringify(exportData, null, 2));
 console.log(`✓ stats      ${TOURNAMENT} (${players.length} joueurs, ${withRole} avec rôle)`);

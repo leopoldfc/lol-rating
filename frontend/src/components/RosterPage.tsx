@@ -20,14 +20,8 @@ export default function RosterPage({ players, tournament }: Props) {
     teamMap.get(p.team)!.push(p);
   }
 
-  /* Sort teams by avg win rate */
-  const teams = Array.from(teamMap.entries()).sort((a, b) => {
-    const avg = (ps: Player[]) => {
-      const vals = ps.map(p => getPlayerStats(p, tournament)?.winRate ?? 0);
-      return vals.reduce((s, v) => s + v, 0) / vals.length;
-    };
-    return avg(b[1]) - avg(a[1]);
-  });
+  /* Sort teams alphabetically */
+  const teams = Array.from(teamMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
 
   return (
     <>
