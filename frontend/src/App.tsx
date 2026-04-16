@@ -3,9 +3,10 @@ import type { ExportData, Player } from './types';
 import { enrichPlayers } from './utils';
 import RankingTable from './components/RankingTable';
 import RosterPage from './components/RosterPage';
+import YearOverview from './components/YearOverview';
 import { YEARS, type LeagueConfig, type SplitConfig } from './leagues';
 
-type Page = 'rankings' | 'rosters';
+type Page = 'overview' | 'rankings' | 'rosters';
 
 function useExportData(league: LeagueConfig) {
   const [data, setData]   = useState<ExportData | null>(null);
@@ -105,7 +106,7 @@ function parentSplit(splits: SplitConfig[], id: string | null): SplitConfig | nu
 }
 
 export default function App() {
-  const [page, setPage]     = useState<Page>('rankings');
+  const [page, setPage]     = useState<Page>('overview');
   const [splitId, setSplitId] = useState<string | null>(null);
   const defaultYear = YEARS[YEARS.length - 1];
   const [selection, setSelection] = useState({ year: defaultYear.year, leagueId: defaultYear.leagues[0].id });
@@ -120,11 +121,13 @@ export default function App() {
     const yc = YEARS.find(x => x.year === y) ?? YEARS[0];
     setSelection({ year: y, leagueId: yc.leagues[0].id });
     setSplitId(null);
+    setPage('overview');
   };
 
   const handleSetLeague = (id: string) => {
     setSelection(s => ({ ...s, leagueId: id }));
     setSplitId(null);
+    setPage('rankings');
   };
 
   const mainTournament   = data?.metadata.tournaments[0];
@@ -142,11 +145,14 @@ export default function App() {
           {/* Ligne 1 : titre + page */}
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-              <h1 className="header__title">{league.title}</h1>
+              <h1 className="header__title">
+                {page === 'overview' ? `${selection.year} Season` : league.title}
+              </h1>
               <span className="header__subtitle">
-                {page === 'rankings' ? 'Rankings' : 'Rosters'}
+                {page === 'overview' ? 'Overview' : page === 'rankings' ? 'Rankings' : 'Rosters'}
               </span>
             </div>
+
 
             {/* Année + Pages */}
             <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -168,11 +174,15 @@ export default function App() {
             </div>
           </div>
 
-          {/* Ligne 2 : leagues */}
+          {/* Ligne 2 : overview + leagues */}
           <div style={{ display: 'flex', gap: 3, flexWrap: 'wrap' }}>
+            <button onClick={() => setPage('overview')} style={leagueBtn(page === 'overview', true)}>
+              Overview
+            </button>
+            <div style={{ width: 1, background: 'var(--line)', margin: '0 4px', alignSelf: 'stretch' }} />
             {leagues.map(l => (
               <button key={l.id} onClick={() => l.available && handleSetLeague(l.id)}
-                style={leagueBtn(selection.leagueId === l.id, l.available)}>
+                style={leagueBtn(page !== 'overview' && selection.leagueId === l.id, l.available)}>
                 {l.label}
               </button>
             ))}
@@ -232,7 +242,9 @@ export default function App() {
       </header>
 
       <main className="page container">
-        {!league.available ? (
+        {page === 'overview' ? (
+          <YearOverview yearConfig={yearConfig} onSelectLeague={handleSetLeague} />
+        ) : !league.available ? (
           <div style={{ textAlign: 'center', padding: '100px 0' }}>
             <div style={{
               fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 800,
