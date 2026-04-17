@@ -16,7 +16,7 @@ Ligues supportées : **LCK**, **LPL**, **LEC**, **LCS**, **First Stand**, **MSI*
 npm run dev
 ```
 
-Lance le frontend sur http://localhost:5173. Pour mettre à jour les données, utiliser `npm run scrape` séparément.
+Lance le frontend sur http://localhost:5173. Pour mettre à jour les données, utiliser `npm run scrape:2026` ou `npm run scrape:2025` séparément.
 
 ## Commandes disponibles
 
@@ -109,7 +109,7 @@ Mets aussi à jour le chemin de sortie en bas du fichier :
 
 ```ts
 fs.writeFileSync(
-  path.join(__dirname, '../../../frontend/public/leagues/lcs-2025/export.json'),
+  path.join(__dirname, '../../../frontend/public/leagues/2025/lcs-2025/export.json'),
   JSON.stringify(exportData, null, 2)
 );
 ```
@@ -119,7 +119,7 @@ fs.writeFileSync(
 ### Étape 3 — Créer le dossier de sortie
 
 ```bash
-mkdir frontend/public/leagues/lcs-2025
+mkdir frontend/public/leagues/2025/lcs-2025
 ```
 
 ---
@@ -130,7 +130,7 @@ mkdir frontend/public/leagues/lcs-2025
 npx tsx leagues/2025/lcs-2025/scrape.ts
 ```
 
-Le scraper affiche sa progression équipe par équipe. À la fin, vérifie que `frontend/public/leagues/lcs-2025/export.json` a bien été créé.
+Le scraper affiche sa progression équipe par équipe. À la fin, vérifie que `frontend/public/leagues/2025/lcs-2025/export.json` a bien été créé.
 
 ---
 
@@ -143,7 +143,7 @@ Ouvre `frontend/src/leagues.ts` et ajoute la ligue dans le bon bloc `year` :
   id:        'lcs-2025',
   label:     'LCS',           // affiché dans la sidebar
   title:     'LCS 2025',      // titre de la page
-  file:      'lcs-2025/export.json',
+  file:      '2025/lcs-2025/export.json',
   available: true,
   splits: [
     // "Combined" agrège tous les splits — son tournament = COMBINED_NAME du scraper

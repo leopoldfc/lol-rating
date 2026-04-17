@@ -27,7 +27,7 @@ export const YEARS: YearConfig[] = [
         id:        'lck-2025',
         label:     'LCK',
         title:     'LCK 2025',
-        file:      'lck-2025/export.json',
+        file:      '2025/lck-2025/export.json',
         available: true,
         splits: [
           { id: 'combined',  label: 'Combined',         tournament: 'LCK 2025'                  },
@@ -43,7 +43,7 @@ export const YEARS: YearConfig[] = [
         id:        'lpl-2025',
         label:     'LPL',
         title:     'LPL 2025',
-        file:      'lpl-2025/export.json',
+        file:      '2025/lpl-2025/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LPL 2025' },
@@ -70,7 +70,7 @@ export const YEARS: YearConfig[] = [
         id:        'lec-2025',
         label:     'LEC',
         title:     'LEC 2025',
-        file:      'lec-2025/export.json',
+        file:      '2025/lec-2025/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LEC 2025' },
@@ -95,21 +95,21 @@ export const YEARS: YearConfig[] = [
         id:        'first-stand-2025',
         label:     'First Stand',
         title:     'First Stand 2025',
-        file:      'first-stand-2025/export.json',
+        file:      '2025/first-stand-2025/export.json',
         available: true,
       },
       {
         id:        'msi-2025',
         label:     'MSI',
         title:     'MSI 2025',
-        file:      'msi-2025/export.json',
+        file:      '2025/msi-2025/export.json',
         available: true,
       },
       {
         id:        'worlds-2025',
         label:     'Worlds',
         title:     'Worlds 2025',
-        file:      'worlds-2025/export.json',
+        file:      '2025/worlds-2025/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined',   tournament: 'Worlds 2025'            },
@@ -126,7 +126,7 @@ export const YEARS: YearConfig[] = [
         id:        'lck-2026',
         label:     'LCK',
         title:     'LCK 2026',
-        file:      'lck-2026/export.json',
+        file:      '2026/lck-2026/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined',   tournament: 'LCK 2026'              },
@@ -138,7 +138,7 @@ export const YEARS: YearConfig[] = [
         id:        'lpl-2026',
         label:     'LPL',
         title:     'LPL 2026',
-        file:      'lpl-2026/export.json',
+        file:      '2026/lpl-2026/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LPL 2026' },
@@ -154,7 +154,7 @@ export const YEARS: YearConfig[] = [
         id:        'lec-2026',
         label:     'LEC',
         title:     'LEC 2026',
-        file:      'lec-2026/export.json',
+        file:      '2026/lec-2026/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined',      tournament: 'LEC Versus 2026' },
@@ -170,7 +170,7 @@ export const YEARS: YearConfig[] = [
         id:        'lcs-2026',
         label:     'LCS',
         title:     'LCS 2026',
-        file:      'lcs-2026/export.json',
+        file:      '2026/lcs-2026/export.json',
         available: true,
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LCS 2026'         },
@@ -182,7 +182,7 @@ export const YEARS: YearConfig[] = [
         id:        'first-stand-2026',
         label:     'First Stand',
         title:     'First Stand 2026',
-        file:      'first-stand-2026/export.json',
+        file:      '2026/first-stand-2026/export.json',
         available: true,
       },
     ],

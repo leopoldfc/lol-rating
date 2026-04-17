@@ -49,7 +49,21 @@ const PAGE_ICONS: Record<Page, string> = {
   rosters:  '⊞',
 };
 
+function useTheme() {
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    return (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  return { theme, toggle: () => setTheme(t => t === 'dark' ? 'light' : 'dark') };
+}
+
 export default function App() {
+  const { theme: currentTheme, toggle: toggleTheme } = useTheme();
   const [page, setPage]       = useState<Page>('overview');
   const [splitId, setSplitId] = useState<string | null>(null);
   const [navOpen, setNavOpen] = useState(false);
@@ -232,7 +246,19 @@ export default function App() {
         {/* Footer */}
         <div className="sidebar__footer">
           <div>Data · <strong style={{ color: 'var(--text-3)' }}>gol.gg</strong></div>
-          <div>LIR rating by role</div>
+          <button
+            onClick={toggleTheme}
+            style={{
+              marginTop: 10, width: '100%', padding: '6px 0',
+              background: 'var(--bg-3)', border: '1px solid var(--line)',
+              borderRadius: 'var(--r-sm)', cursor: 'pointer',
+              color: 'var(--text-3)', fontFamily: 'var(--font-mono)',
+              fontSize: 9, letterSpacing: '0.10em', textTransform: 'uppercase',
+              transition: 'all var(--t-fast)',
+            }}
+          >
+            {currentTheme === 'dark' ? '☀ Light' : '☾ Dark'}
+          </button>
         </div>
       </nav>
 
