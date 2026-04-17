@@ -1475,5 +1475,30 @@
         "avgKda": 5
       }
     }
-  ]
+  ],
+  "playerImages": {
+    "369": "/player-images/369.png",
+    "APA": "/player-images/apa.png",
+    "Caliste": "/player-images/caliste.png",
+    "Canna": "/player-images/canna.png",
+    "CoreJJ": "/player-images/corejj.png",
+    "Creme": "/player-images/creme.png",
+    "Delight": "/player-images/delight.PNG",
+    "Doggo": "/player-images/doggo.png",
+    "HongQ": "/player-images/hongq.png",
+    "Impact": "/player-images/impact.png",
+    "JackeyLove": "/player-images/jackeylove.png",
+    "JunJia": "/player-images/junjia.png",
+    "Kaiwing": "/player-images/kaiwing.png",
+    "Kanavi": "/player-images/kanavi.PNG",
+    "Peanut": "/player-images/peanut.png",
+    "Rest": "/player-images/rest.png",
+    "Targamas": "/player-images/targamas.png",
+    "Viper": "/player-images/viper.png",
+    "Vladi": "/player-images/vladi.png",
+    "Yeon": "/player-images/yeon.png",
+    "Yike": "/player-images/yike.png",
+    "Zeka": "/player-images/zeka.PNG",
+    "Zeus": "/player-images/zeus.PNG"
+  }
 }

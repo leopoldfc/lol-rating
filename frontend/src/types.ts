@@ -68,5 +68,6 @@ export interface ExportData {
     }[];
   };
   players: Player[];
-  teamLogos?: Record<string, string>; // team name → absolute URL
+  teamLogos?:    Record<string, string>; // team name → local path
+  playerImages?: Record<string, string>; // player name → local path
 }

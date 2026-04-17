@@ -6,9 +6,9 @@ import PlayerModal from './PlayerModal';
 const ROLE_ORDER: Role[]               = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
 const ROLE_LABEL: Record<Role, string> = { TOP: 'Top', JGL: 'Jgl', MID: 'Mid', BOT: 'Bot', SUP: 'Sup' };
 
-interface Props { players: Player[]; tournament?: string; teamLogos?: Record<string, string>; }
+interface Props { players: Player[]; tournament?: string; teamLogos?: Record<string, string>; playerImages?: Record<string, string>; }
 
-export default function RosterPage({ players, tournament, teamLogos = {} }: Props) {
+export default function RosterPage({ players, tournament, teamLogos = {}, playerImages = {} }: Props) {
   const [selected, setSelected] = useState<Player | null>(null);
 
   // Collect all teams a player played for in the active tournament context
@@ -125,7 +125,7 @@ export default function RosterPage({ players, tournament, teamLogos = {} }: Prop
       </div>
 
       {selected && (
-        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} teamLogos={teamLogos} />
+        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} teamLogos={teamLogos} playerImages={playerImages} />
       )}
     </>
   );

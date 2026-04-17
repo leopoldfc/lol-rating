@@ -2262,5 +2262,47 @@
         "avgKda": 2.3
       }
     }
-  ]
+  ],
+  "playerImages": {
+    "Berserker": "/player-images/berserker.png",
+    "Bie": "/player-images/bie.png",
+    "Bin": "/player-images/bin.png",
+    "Brokenblade": "/player-images/brokenblade.png",
+    "Bull": "/player-images/bull.png",
+    "Canyon": "/player-images/canyon.PNG",
+    "Caps": "/player-images/caps.png",
+    "Chovy": "/player-images/chovy.PNG",
+    "Clear": "/player-images/clear.png",
+    "Dhokla": "/player-images/dhokla.png",
+    "Diable": "/player-images/diable.PNG",
+    "Dire": "/player-images/dire.png",
+    "Duro": "/player-images/duro.PNG",
+    "Eddie": "/player-images/eddie.png",
+    "Envy": "/player-images/envy.png",
+    "GALA": "/player-images/gala.png",
+    "Hans Sama": "/player-images/hans_sama.png",
+    "Hizto": "/player-images/hizto.png",
+    "HongQ": "/player-images/hongq.png",
+    "Inspired": "/player-images/inspired.png",
+    "Isles": "/player-images/isles.png",
+    "JunJia": "/player-images/junjia.png",
+    "Kellin": "/player-images/kellin.PNG",
+    "Kiin": "/player-images/kiin.PNG",
+    "Knight": "/player-images/knight.png",
+    "Labrov": "/player-images/labrov.png",
+    "ON": "/player-images/on.png",
+    "Pun": "/player-images/pun.png",
+    "Raptor": "/player-images/raptor.PNG",
+    "RedBert": "/player-images/redbert.png",
+    "Ruler": "/player-images/ruler.PNG",
+    "Saint": "/player-images/saint.png",
+    "SkewMond": "/player-images/skewmond.png",
+    "Vampire": "/player-images/vampire.png",
+    "Vicla": "/player-images/vicla.PNG",
+    "Viper": "/player-images/viper.png",
+    "XUN": "/player-images/xun.png",
+    "Xiaoxu": "/player-images/xiaoxu.png",
+    "YoungJae": "/player-images/youngjae.png",
+    "xyno": "/player-images/xyno.png"
+  }
 }

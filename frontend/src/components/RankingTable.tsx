@@ -57,9 +57,10 @@ interface Props {
   tournament?: string;
   tournamentName?: string;
   teamLogos?: Record<string, string>;
+  playerImages?: Record<string, string>;
 }
 
-export default function RankingTable({ players, tournament, tournamentName, teamLogos = {} }: Props) {
+export default function RankingTable({ players, tournament, tournamentName, teamLogos = {}, playerImages = {} }: Props) {
   const [role, setRole]         = useState<Role | 'ALL'>('ALL');
   const [sortKey, setSortKey]   = useState<SortKey>('rating');
   const [sortDir, setSortDir]   = useState<'asc' | 'desc'>('desc');
@@ -263,7 +264,7 @@ export default function RankingTable({ players, tournament, tournamentName, team
       </div>
 
       {selected && (
-        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} teamLogos={teamLogos} />
+        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} teamLogos={teamLogos} playerImages={playerImages} />
       )}
     </>
   );

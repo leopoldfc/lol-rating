@@ -12960,5 +12960,42 @@
         "avgKda": 3.131034482758621
       }
     }
-  ]
+  ],
+  "playerImages": {
+    "3XA": "/player-images/3xa.png",
+    "Backlund": "/player-images/backlund.png",
+    "Comp": "/player-images/comp.png",
+    "Deadly": "/player-images/deadly.png",
+    "Decay": "/player-images/decay.png",
+    "Empyros": "/player-images/empyros.png",
+    "Erdote": "/player-images/erdote.png",
+    "Fleshy": "/player-images/fleshy.png",
+    "Jezu": "/player-images/jezu.png",
+    "Jopa": "/player-images/jopa.png",
+    "Kryze": "/player-images/kryze.png",
+    "Lurox": "/player-images/lurox.png",
+    "Markoon": "/player-images/markoon.png",
+    "Maynter": "/player-images/maynter.png",
+    "Mersa": "/player-images/mersa.png",
+    "Mishi": "/player-images/mishi.png",
+    "PapiTeero": "/player-images/papiteero.png",
+    "Piero": "/player-images/piero.png",
+    "Prime": "/player-images/prime.png",
+    "Ragner": "/player-images/ragner.png",
+    "Rames": "/player-images/rames.png",
+    "Rhilech": "/player-images/rhilech.png",
+    "SamD": "/player-images/samd.png",
+    "Serin": "/player-images/serin.png",
+    "SlowQ": "/player-images/slowq.png",
+    "Toffe": "/player-images/toffe.png",
+    "Twiizt": "/player-images/twiizt.png",
+    "Vertigo": "/player-images/vertigo.png",
+    "Yukino": "/player-images/yukino.png",
+    "Zest": "/player-images/zest.png",
+    "Zoelys": "/player-images/zoelys.png",
+    "Dekap": "/player-images/dekap.png",
+    "Harpoon": "/player-images/harpoon.png",
+    "Jenax": "/player-images/jenax.png",
+    "XnS": "/player-images/xns.png"
+  }
 }

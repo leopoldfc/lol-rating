@@ -108,7 +108,8 @@ export default function App() {
 
   const rawPlayers: Player[] = data?.players ?? [];
   const players = enrichPlayers(rawPlayers, activeTournament);
-  const teamLogos: Record<string, string> = data?.teamLogos ?? {};
+  const teamLogos:    Record<string, string> = data?.teamLogos    ?? {};
+  const playerImages: Record<string, string> = data?.playerImages ?? {};
 
   const pageTitle = page === 'overview'
     ? `${selection.year} Season`
@@ -317,10 +318,11 @@ export default function App() {
                   tournament={activeTournament}
                   tournamentName={activeSplit?.label ?? mainTournament?.name}
                   teamLogos={teamLogos}
+                  playerImages={playerImages}
                 />
               )}
               {page === 'rosters' && (
-                <RosterPage players={players} tournament={activeTournament} teamLogos={teamLogos} />
+                <RosterPage players={players} tournament={activeTournament} teamLogos={teamLogos} playerImages={playerImages} />
               )}
             </>
           )}
