@@ -129,7 +129,7 @@ export default function PlayerSheet({ player, onClose, tournament }: Props) {
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 5 }}>
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: 30, color: 'var(--text-1)', letterSpacing: '0.04em', lineHeight: 1 }}>
+                  <span className="player-name" style={{ fontFamily: 'var(--font-display)', fontSize: 30, color: 'var(--text-1)', letterSpacing: '0.04em', lineHeight: 1 }}>
                     {player.name}
                   </span>
                   <RoleTag role={player.role} />
@@ -141,7 +141,7 @@ export default function PlayerSheet({ player, onClose, tournament }: Props) {
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
                 {displayRating !== undefined && (
                   <div style={{ textAlign: 'right' }}>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 40, fontWeight: 700, color: roleColor, letterSpacing: '-0.04em', lineHeight: 1 }}>
+                    <div className="player-rating" style={{ fontFamily: 'var(--font-mono)', fontSize: 40, fontWeight: 700, color: roleColor, letterSpacing: '-0.04em', lineHeight: 1 }}>
                       {displayRating.toFixed(1)}
                     </div>
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'right' }}>LIR</div>
@@ -159,8 +159,8 @@ export default function PlayerSheet({ player, onClose, tournament }: Props) {
                 { label: 'KDA',   value: fmt(stats.kda) },
                 { label: 'KP%',   value: `${fmt(stats.kp)}%` },
               ].map(s => (
-                <div key={s.label} style={{ background: 'var(--bg-1)', padding: '12px 8px', textAlign: 'center' }}>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 700, color: 'var(--text-1)', letterSpacing: '-0.03em' }}>{s.value}</div>
+                <div key={s.label} className="sheet-hero-stat" style={{ background: 'var(--bg-1)', padding: '12px 8px', textAlign: 'center' }}>
+                  <div className="sheet-hero-val" style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 700, color: 'var(--text-1)', letterSpacing: '-0.03em' }}>{s.value}</div>
                   <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 3 }}>{s.label}</div>
                 </div>
               ))}

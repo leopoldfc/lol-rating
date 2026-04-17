@@ -1338,24 +1338,38 @@ a:hover { opacity: 0.75; }
   .sheet-body {
     grid-template-columns: 1fr;
     overflow-y: auto;
-    /* Radar section first on mobile, stats below */
   }
 
   .sheet-left {
-    padding: 14px 14px 10px;
+    padding: 12px 14px 8px;
     border-right: none;
     overflow-y: visible;
-    gap: 12px;
+    gap: 10px;
     order: 1;
   }
 
   .sheet-right {
-    padding: 14px 14px 10px;
+    padding: 12px 14px 20px;
     border-top: 1px solid var(--line);
     overflow-y: visible;
     justify-content: flex-start;
     order: 2;
   }
+
+  /* Nom joueur + rating plus compacts */
+  .sheet-left .player-name   { font-size: 22px !important; }
+  .sheet-left .player-rating { font-size: 28px !important; }
+
+  /* Hero 4 stats : padding réduit */
+  .sheet-hero-stat { padding: 8px 4px !important; }
+  .sheet-hero-val  { font-size: 14px !important; }
+
+  /* Barres stats : label + valeur plus petits */
+  .sheet-statbar-label { font-size: 8px !important; }
+  .sheet-statbar-value { font-size: 10px !important; }
+
+  /* Radar plus petit */
+  .sheet-right .recharts-wrapper { max-height: 180px; }
 }
 
 
