@@ -114,8 +114,7 @@ export default function PlayerSheet({ player, onClose, tournament }: Props) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-backdrop" />
       <div
-        className="modal"
-        style={{ maxWidth: 720, padding: 0, overflow: 'hidden' }}
+        className="modal sheet-modal"
         onClick={e => e.stopPropagation()}
       >
         {/* Barre rôle en haut */}
