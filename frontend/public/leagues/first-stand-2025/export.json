@@ -1,15 +1,22 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T20:47:38.167Z",
+    "exportedAt": "2026-04-17T09:38:13.600Z",
     "tournaments": [
       {
         "name": "First Stand 2025",
         "league": "International",
         "year": 2025,
         "split": "First Stand",
-        "scrapedAt": "2026-04-16T20:47:38.168Z"
+        "scrapedAt": "2026-04-17T09:38:13.601Z"
       }
     ]
+  },
+  "teamLogos": {
+    "CTBC Flying Oyster": "/logos/ctbc_flying_oyster.webp",
+    "Hanwha Life eSports": "/logos/hanwha_life_esports.png",
+    "Karmine Corp": "/logos/karmine_corp.webp",
+    "Team Liquid": "/logos/team_liquid.webp",
+    "Top Esports": "/logos/top_esports.png"
   },
   "players": [
     {

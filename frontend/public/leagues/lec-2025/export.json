@@ -1,15 +1,27 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T20:47:27.928Z",
+    "exportedAt": "2026-04-17T09:38:09.203Z",
     "tournaments": [
       {
         "name": "LEC 2025",
         "league": "LEC",
         "year": 2025,
         "split": "Full Year",
-        "scrapedAt": "2026-04-16T20:47:27.929Z"
+        "scrapedAt": "2026-04-17T09:38:09.203Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Fnatic": "/logos/fnatic.png",
+    "G2 Esports": "/logos/g2_esports.webp",
+    "GIANTX": "/logos/giantx.webp",
+    "Karmine Corp": "/logos/karmine_corp.webp",
+    "Movistar KOI": "/logos/movistar_koi.webp",
+    "Rogue": "/logos/rogue.webp",
+    "Team BDS": "/logos/team_bds.webp",
+    "Team Heretics": "/logos/team_heretics.webp",
+    "Team Vitality": "/logos/team_vitality.webp",
+    "Natus Vincere": "/logos/natus_vincere.webp"
   },
   "players": [
     {

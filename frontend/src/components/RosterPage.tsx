@@ -6,9 +6,9 @@ import PlayerModal from './PlayerModal';
 const ROLE_ORDER: Role[]               = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
 const ROLE_LABEL: Record<Role, string> = { TOP: 'Top', JGL: 'Jgl', MID: 'Mid', BOT: 'Bot', SUP: 'Sup' };
 
-interface Props { players: Player[]; tournament?: string; }
+interface Props { players: Player[]; tournament?: string; teamLogos?: Record<string, string>; }
 
-export default function RosterPage({ players, tournament }: Props) {
+export default function RosterPage({ players, tournament, teamLogos = {} }: Props) {
   const [selected, setSelected] = useState<Player | null>(null);
 
   const teamMap = new Map<string, Player[]>();
@@ -41,7 +41,16 @@ export default function RosterPage({ players, tournament }: Props) {
           return (
             <div key={teamName} className="team-card">
               <div className="team-card__header">
-                <span className="team-card__name">{teamName}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  {teamLogos[teamName] && (
+                    <img
+                      src={teamLogos[teamName]}
+                      alt={teamName}
+                      style={{ width: 28, height: 28, objectFit: 'contain', flexShrink: 0 }}
+                    />
+                  )}
+                  <span className="team-card__name">{teamName}</span>
+                </div>
                 <div style={{ textAlign: 'right' }}>
                   <div className="team-card__wr" style={{ color: wrColor }}>{fmt(teamWr)}%</div>
                   <div className="team-card__wr-label">Win Rate</div>
@@ -102,7 +111,7 @@ export default function RosterPage({ players, tournament }: Props) {
       </div>
 
       {selected && (
-        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} />
+        <PlayerModal player={selected} onClose={() => setSelected(null)} tournament={tournament} teamLogos={teamLogos} />
       )}
     </>
   );

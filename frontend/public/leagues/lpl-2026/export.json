@@ -1,15 +1,31 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T19:52:32.969Z",
+    "exportedAt": "2026-04-17T09:43:11.481Z",
     "tournaments": [
       {
         "name": "LPL 2026",
         "league": "LPL",
         "year": 2026,
         "split": "Full Year",
-        "scrapedAt": "2026-04-16T19:52:32.969Z"
+        "scrapedAt": "2026-04-17T09:43:11.481Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Anyone s Legend": "/logos/anyone_s_legend.webp",
+    "Bilibili Gaming": "/logos/bilibili_gaming.png",
+    "EDward Gaming": "/logos/edward_gaming.webp",
+    "Invictus Gaming": "/logos/invictus_gaming.png",
+    "JD Gaming": "/logos/jd_gaming.webp",
+    "LGD Gaming": "/logos/lgd_gaming.webp",
+    "LNG Esports": "/logos/lng_esports.webp",
+    "Ninjas in Pyjamas": "/logos/ninjas_in_pyjamas.webp",
+    "Oh My God": "/logos/oh_my_god.webp",
+    "Team WE": "/logos/team_we.webp",
+    "ThunderTalk Gaming": "/logos/thundertalk_gaming.webp",
+    "Top Esports": "/logos/top_esports.png",
+    "Ultra Prime": "/logos/ultra_prime.webp",
+    "Weibo Gaming": "/logos/weibo_gaming.webp"
   },
   "players": [
     {

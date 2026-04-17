@@ -64,7 +64,8 @@ function toLirInput(p: any): PlayerStats {
 
 // ─── 1. Rosters (union des splits) ────────────────────────────────────────────
 
-const roleMap = new Map<string, { role: string; team: string }>();
+const roleMap   = new Map<string, { role: string; team: string }>();
+const teamLogos = new Map<string, string>();
 
 for (const split of SPLITS) {
   const teamsHtml = await fetch(`${BASE}/teams/list/season-${split.season}/split-ALL/tournament-${enc(split.name)}/`, { headers: HEADERS }).then(r => r.text());
@@ -83,6 +84,14 @@ for (const split of SPLITS) {
     await sleep(600);
     const html = await fetch(`${BASE}/teams/team-stats/${team.id}/split-ALL/tournament-${enc(split.name)}/`, { headers: HEADERS }).then(r => r.text());
     const $ = cheerio.load(html);
+
+    if (!teamLogos.has(team.name)) {
+
+      const logoSrc = $('img[src*="teams_icon"]').first().attr('src');
+
+      if (logoSrc) teamLogos.set(team.name, `${BASE}/${logoSrc.replace(/^\.\.\//, '')}`);
+
+    }
 
     $('table.table_list tbody tr').each((_, row) => {
       const cells    = $(row).find('td');
@@ -202,6 +211,8 @@ const exportData = {
     exportedAt: new Date().toISOString(),
     tournaments: [{ name: COMBINED_NAME, league: 'LCS', year: 2026, split: 'Spring', scrapedAt: new Date().toISOString() }],
   },
+  teamLogos: Object.fromEntries(teamLogos),
+
   players: players.map(p => {
     const tournaments: Record<string, any> = {};
 
@@ -226,5 +237,6 @@ const exportData = {
 };
 
 const withRole = players.filter(p => p.role).length;
+console.log(`✓ logos      ${teamLogos.size} équipes avec logo`);
 fs.writeFileSync(path.join(__dirname, '../../../frontend/public/leagues/lcs-2026/export.json'), JSON.stringify(exportData, null, 2));
 console.log(`✓ export     ${COMBINED_NAME} (${players.length} joueurs, ${withRole} avec rôle)`);

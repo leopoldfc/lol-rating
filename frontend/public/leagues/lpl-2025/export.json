@@ -1,15 +1,33 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T20:46:48.147Z",
+    "exportedAt": "2026-04-17T09:37:29.567Z",
     "tournaments": [
       {
         "name": "LPL 2025",
         "league": "LPL",
         "year": 2025,
         "split": "Full Year",
-        "scrapedAt": "2026-04-16T20:46:48.148Z"
+        "scrapedAt": "2026-04-17T09:37:29.567Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Anyone s Legend": "/logos/anyone_s_legend.webp",
+    "Bilibili Gaming": "/logos/bilibili_gaming.png",
+    "Edward Gaming": "https://gol.gg/_img/teams_icon/edward-gaming-2017.png",
+    "Funplus Phoenix": "https://gol.gg/_img/teams_icon/funplus-phoenix-2021.png",
+    "Invictus Gaming": "/logos/invictus_gaming.png",
+    "JD Gaming": "/logos/jd_gaming.webp",
+    "LGD Gaming": "/logos/lgd_gaming.webp",
+    "LNG Esports": "/logos/lng_esports.webp",
+    "Ninjas in Pyjamas": "/logos/ninjas_in_pyjamas.webp",
+    "OMG": "https://gol.gg/_img/teams_icon/Oh_My_Godlogo_square.webp",
+    "Royal Never Give Up": "https://gol.gg/_img/teams_icon/royal-never-give-up-2020.png",
+    "Team WE": "/logos/team_we.webp",
+    "Top Esports": "/logos/top_esports.png",
+    "TT": "https://gol.gg/_img/teams_icon/tt-2020.png",
+    "Ultra Prime": "/logos/ultra_prime.webp",
+    "Weibo Gaming": "/logos/weibo_gaming.webp"
   },
   "players": [
     {

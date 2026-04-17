@@ -1,15 +1,27 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T20:47:46.332Z",
+    "exportedAt": "2026-04-17T09:38:21.781Z",
     "tournaments": [
       {
         "name": "2025 Mid-Season Invitational",
         "league": "International",
         "year": 2025,
         "split": "MSI",
-        "scrapedAt": "2026-04-16T20:47:46.333Z"
+        "scrapedAt": "2026-04-17T09:38:21.782Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Anyone s Legend": "/logos/anyone_s_legend.webp",
+    "Bilibili Gaming": "/logos/bilibili_gaming.png",
+    "CTBC Flying Oyster": "/logos/ctbc_flying_oyster.webp",
+    "FlyQuest": "/logos/flyquest.png",
+    "FURIA": "/logos/furia.webp",
+    "G2 Esports": "/logos/g2_esports.webp",
+    "GAM Esports": "/logos/gam_esports.webp",
+    "Gen.G eSports": "/logos/gen_g_esports.webp",
+    "Movistar KOI": "/logos/movistar_koi.webp",
+    "T1": "/logos/t1.png"
   },
   "players": [
     {

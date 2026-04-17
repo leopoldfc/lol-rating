@@ -1,15 +1,22 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T19:53:09.391Z",
+    "exportedAt": "2026-04-17T09:43:46.840Z",
     "tournaments": [
       {
         "name": "LCS 2026",
         "league": "LCS",
         "year": 2026,
         "split": "Spring",
-        "scrapedAt": "2026-04-16T19:53:09.391Z"
+        "scrapedAt": "2026-04-17T09:43:46.840Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Cloud9": "/logos/cloud9.webp",
+    "Disguised": "/logos/disguised.webp",
+    "FlyQuest": "/logos/flyquest.png",
+    "LYON": "/logos/lyon.webp",
+    "Team Liquid": "/logos/team_liquid.webp"
   },
   "players": [
     {

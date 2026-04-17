@@ -85,6 +85,7 @@ export default function App() {
 
   const rawPlayers: Player[] = data?.players ?? [];
   const players = enrichPlayers(rawPlayers, activeTournament);
+  const teamLogos: Record<string, string> = data?.teamLogos ?? {};
 
   const pageTitle = page === 'overview'
     ? `${selection.year} Season`
@@ -264,10 +265,11 @@ export default function App() {
                   players={players}
                   tournament={activeTournament}
                   tournamentName={activeSplit?.label ?? mainTournament?.name}
+                  teamLogos={teamLogos}
                 />
               )}
               {page === 'rosters' && (
-                <RosterPage players={players} tournament={activeTournament} />
+                <RosterPage players={players} tournament={activeTournament} teamLogos={teamLogos} />
               )}
             </>
           )}

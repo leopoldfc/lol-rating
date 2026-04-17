@@ -91,9 +91,10 @@ interface Props {
   player: Player;
   onClose: () => void;
   tournament?: string;
+  teamLogos?: Record<string, string>;
 }
 
-export default function PlayerSheet({ player, onClose, tournament }: Props) {
+export default function PlayerSheet({ player, onClose, tournament, teamLogos = {} }: Props) {
   const stats = getPlayerStats(player, tournament);
   if (!stats) return null;
 
@@ -134,7 +135,10 @@ export default function PlayerSheet({ player, onClose, tournament }: Props) {
                   </span>
                   <RoleTag role={player.role} />
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--text-3)' }}>
+                <div style={{ fontSize: 11, color: 'var(--text-3)', display: 'flex', alignItems: 'center', gap: 6 }}>
+                  {teamLogos[player.team] && (
+                    <img src={teamLogos[player.team]} alt={player.team} style={{ width: 16, height: 16, objectFit: 'contain' }} />
+                  )}
                   {player.team}{player.country ? ` · ${player.country}` : ''}
                 </div>
               </div>

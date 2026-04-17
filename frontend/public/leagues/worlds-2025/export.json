@@ -1,15 +1,34 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-16T20:48:00.578Z",
+    "exportedAt": "2026-04-17T09:38:35.911Z",
     "tournaments": [
       {
         "name": "Worlds 2025",
         "league": "International",
         "year": 2025,
         "split": "Worlds",
-        "scrapedAt": "2026-04-16T20:48:00.578Z"
+        "scrapedAt": "2026-04-17T09:38:35.912Z"
       }
     ]
+  },
+  "teamLogos": {
+    "Invictus Gaming": "/logos/invictus_gaming.png",
+    "T1": "/logos/t1.png",
+    "100 Thieves": "/logos/100_thieves.webp",
+    "Anyone s Legend": "/logos/anyone_s_legend.webp",
+    "Bilibili Gaming": "/logos/bilibili_gaming.png",
+    "CTBC Flying Oyster": "/logos/ctbc_flying_oyster.webp",
+    "FlyQuest": "/logos/flyquest.png",
+    "Fnatic": "/logos/fnatic.png",
+    "G2 Esports": "/logos/g2_esports.webp",
+    "Gen.G eSports": "/logos/gen_g_esports.webp",
+    "Hanwha Life eSports": "/logos/hanwha_life_esports.png",
+    "KT Rolster": "/logos/kt_rolster.png",
+    "Movistar KOI": "/logos/movistar_koi.webp",
+    "PSG Talon": "/logos/psg_talon.webp",
+    "Team Secret Whales": "/logos/team_secret_whales.webp",
+    "Top Esports": "/logos/top_esports.png",
+    "Vivo Keyd Stars": "/logos/vivo_keyd_stars.webp"
   },
   "players": [
     {

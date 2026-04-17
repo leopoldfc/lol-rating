@@ -38,13 +38,22 @@ $t('table.table_list tbody tr').each((_, row) => {
 
 // ─── 2. Rosters ───────────────────────────────────────────────────────────────
 
-const roleMap = new Map<string, { role: string; team: string }>();
+const roleMap   = new Map<string, { role: string; team: string }>();
+const teamLogos = new Map<string, string>();
 process.stdout.write(`[roster] ${TOURNAMENT} — 0/${teams.length} équipes`);
 
 for (const [i, team] of teams.entries()) {
   await sleep(600);
   const html = await fetch(`${BASE}/teams/team-stats/${team.id}/split-ALL/tournament-${enc(TOURNAMENT)}/`, { headers: HEADERS }).then(r => r.text());
   const $ = cheerio.load(html);
+
+  if (!teamLogos.has(team.name)) {
+
+    const logoSrc = $('img[src*="teams_icon"]').first().attr('src');
+
+    if (logoSrc) teamLogos.set(team.name, `${BASE}/${logoSrc.replace(/^\.\.\//, '')}`);
+
+  }
 
   $('table.table_list tbody tr').each((_, row) => {
     const cells    = $(row).find('td');
@@ -125,6 +134,8 @@ const exportData = {
     exportedAt: new Date().toISOString(),
     tournaments: [{ name: TOURNAMENT, league: 'International', year: 2025, split: 'MSI', scrapedAt: new Date().toISOString() }],
   },
+  teamLogos: Object.fromEntries(teamLogos),
+
   players: players.map(p => ({
     id: p.golggId, name: p.name, country: p.country, team: p.team,
     role: p.role ?? 'UNK', rating: p.rating, confidence: p.confidence, subscores: p.subscores,
@@ -146,5 +157,6 @@ const exportData = {
 };
 
 const withRole = players.filter(p => p.role).length;
+console.log(`✓ logos      ${teamLogos.size} équipes avec logo`);
 fs.writeFileSync(path.join(__dirname, '../../../frontend/public/leagues/msi-2025/export.json'), JSON.stringify(exportData, null, 2));
 console.log(`✓ stats      ${TOURNAMENT} (${players.length} joueurs, ${withRole} avec rôle)`);
