@@ -4,9 +4,10 @@ import { enrichPlayers } from './utils';
 import RankingTable from './components/RankingTable';
 import RosterPage from './components/RosterPage';
 import YearOverview from './components/YearOverview';
+import AboutPage from './components/AboutPage';
 import { YEARS, type LeagueConfig, type SplitConfig } from './leagues';
 
-type Page = 'overview' | 'rankings' | 'rosters';
+type Page = 'overview' | 'rankings' | 'rosters' | 'about';
 
 function useExportData(league: LeagueConfig) {
   const [data, setData]   = useState<ExportData | null>(null);
@@ -47,6 +48,7 @@ const PAGE_ICONS: Record<Page, string> = {
   overview: '◈',
   rankings: '▤',
   rosters:  '⊞',
+  about:    '?',
 };
 
 function useTheme() {
@@ -103,11 +105,14 @@ export default function App() {
 
   const pageTitle = page === 'overview'
     ? `${selection.year} Season`
+    : page === 'about' ? 'Rating.GG'
     : league.title;
 
   const pageEyebrow = page === 'overview'
     ? 'Year Overview'
-    : page === 'rankings' ? 'Player Rankings' : 'Team Rosters';
+    : page === 'rankings' ? 'Player Rankings'
+    : page === 'rosters' ? 'Team Rosters'
+    : 'How it works';
 
   return (
     <div className="app-shell">
@@ -121,7 +126,7 @@ export default function App() {
         {/* Logo */}
         <div className="sidebar__logo">
           <div className="sidebar__logo-title">
-            LOL<span style={{ color: 'var(--accent)' }}>.</span>GG
+            RATING<span style={{ color: 'var(--accent)' }}>.</span>GG
           </div>
           <div className="sidebar__logo-sub">Esports Rankings</div>
         </div>
@@ -163,6 +168,13 @@ export default function App() {
           >
             <span className="nav-item__icon">{PAGE_ICONS.rosters}</span>
             Rosters
+          </button>
+          <button
+            className={`nav-item${page === 'about' ? ' nav-item--active' : ''}`}
+            onClick={() => { setPage('about'); closeNav(); }}
+          >
+            <span className="nav-item__icon">{PAGE_ICONS.about}</span>
+            How it works
           </button>
         </div>
 
@@ -277,7 +289,9 @@ export default function App() {
         </div>
 
         <main className="page">
-          {page === 'overview' ? (
+          {page === 'about' ? (
+            <AboutPage />
+          ) : page === 'overview' ? (
             <YearOverview yearConfig={yearConfig} onSelectLeague={handleSetLeague} />
           ) : !league.available ? (
             <div className="state-center">
