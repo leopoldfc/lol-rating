@@ -1327,7 +1327,8 @@ a:hover { opacity: 0.75; }
 @media (max-width: 600px) {
   .sheet-modal {
     max-width: 100%;
-    max-height: 92vh;
+    height: 85vh;
+    max-height: 85vh;
     border-radius: var(--r-lg) var(--r-lg) 0 0;
   }
   .modal-overlay {
@@ -1338,6 +1339,8 @@ a:hover { opacity: 0.75; }
   .sheet-body {
     grid-template-columns: 1fr;
     overflow-y: auto;
+    flex: 1;
+    min-height: 0;
   }
 
   .sheet-left {
