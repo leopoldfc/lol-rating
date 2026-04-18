@@ -72,7 +72,7 @@ function pct(val: number, min: number, max: number) {
 
 function StatBar({ label, value, barPct, color }: { label: string; value: string; barPct: number; color: string }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '76px 1fr 58px', alignItems: 'center', gap: 10, padding: '5px 0', borderBottom: '1px solid var(--separator)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr auto', alignItems: 'center', gap: 10, padding: '5px 0', borderBottom: '1px solid var(--separator)' }}>
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
         {label}
       </span>
@@ -171,7 +171,7 @@ export default function PlayerSheet({ player, onClose, tournament, teamLogos = {
                     <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-3)', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'right' }}>LIR</div>
                   </div>
                 )}
-                <button className="modal__close" onClick={onClose} aria-label="Close">✕</button>
+                <button className="modal__close" onClick={onClose} aria-label="Close player details">×</button>
               </div>
             </div>
 

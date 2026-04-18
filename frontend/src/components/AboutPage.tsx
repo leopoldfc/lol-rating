@@ -16,11 +16,11 @@ const ROLE_LABEL: Record<Role, string> = {
 };
 
 const TIERS = [
-  { range: '75 – 100', label: 'Elite',          color: '#f59e0b', desc: 'Meilleur joueur de la compétition à son poste.' },
-  { range: '60 – 75',  label: 'Très bon',        color: '#3b82f6', desc: 'Solide, dominante dans la plupart des métriques.' },
-  { range: '45 – 60',  label: 'Moyen',           color: '#a1a1aa', desc: 'Dans la moyenne du plateau.' },
-  { range: '25 – 45',  label: 'En difficulté',   color: '#f87171', desc: 'Sous-performe face à ses pairs.' },
-  { range: '0 – 25',   label: 'Faible',          color: '#7f1d1d', desc: 'Niveau nettement inférieur.' },
+  { range: '75 – 100', label: 'Elite',          color: 'var(--tier-elite)',  desc: 'Meilleur joueur de la compétition à son poste.' },
+  { range: '60 – 75',  label: 'Très bon',        color: 'var(--accent)',      desc: 'Solide, dominante dans la plupart des métriques.' },
+  { range: '45 – 60',  label: 'Moyen',           color: 'var(--text-3)',      desc: 'Dans la moyenne du plateau.' },
+  { range: '25 – 45',  label: 'En difficulté',   color: 'var(--red)',         desc: 'Sous-performe face à ses pairs.' },
+  { range: '0 – 25',   label: 'Faible',          color: 'var(--tier-weak)',   desc: 'Niveau nettement inférieur.' },
 ];
 
 const PILLARS = [
@@ -28,7 +28,7 @@ const PILLARS = [
     id: 'laning',
     label: 'Laning',
     icon: '⚔',
-    color: '#f59e0b',
+    color: 'var(--pillar-laning)',
     desc: 'Mesure la domination en early game, avant les 15 premières minutes de la partie.',
     stats: [
       { name: 'GD@15',  full: 'Gold Diff à 15 min',  tip: 'Avance en or par rapport à l\'adversaire direct en lane à la 15e minute.' },
@@ -42,7 +42,7 @@ const PILLARS = [
     id: 'damage',
     label: 'Damage',
     icon: '💥',
-    color: '#ef4444',
+    color: 'var(--pillar-damage)',
     desc: 'Mesure la production de dégâts, en tenant compte du volume mais aussi de l\'efficacité.',
     stats: [
       { name: 'DPM',       full: 'Damage Per Minute',     tip: 'Dégâts infligés aux champions ennemis par minute de jeu.' },
@@ -55,7 +55,7 @@ const PILLARS = [
     id: 'presence',
     label: 'Presence',
     icon: '🌐',
-    color: '#8b5cf6',
+    color: 'var(--pillar-presence)',
     desc: 'Mesure l\'implication dans les combats d\'équipe et les kills.',
     stats: [
       { name: 'KP%', full: 'Kill Participation', tip: 'Pourcentage des kills de l\'équipe auxquels le joueur a participé (kill ou assist).' },
@@ -67,7 +67,7 @@ const PILLARS = [
     id: 'efficiency',
     label: 'Efficiency',
     icon: '🛡',
-    color: '#10b981',
+    color: 'var(--pillar-efficiency)',
     desc: 'Mesure la solidité individuelle : survivre, avoir un bon ratio, et farmer.',
     stats: [
       { name: 'Deaths', full: 'Morts par partie',  tip: 'Inversé : mourir peu = meilleur score.' },
@@ -192,19 +192,19 @@ export default function AboutPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '6px 16px' }}>
                   <div>
                     <div style={{ fontSize: 10, color: 'var(--text-4)', fontFamily: 'var(--font-mono)', marginBottom: 3 }}>LANING</div>
-                    <WeightBar value={w.laning} color="#f59e0b" />
+                    <WeightBar value={w.laning} color="var(--pillar-laning)" />
                   </div>
                   <div>
                     <div style={{ fontSize: 10, color: 'var(--text-4)', fontFamily: 'var(--font-mono)', marginBottom: 3 }}>DAMAGE</div>
-                    <WeightBar value={w.damage} color="#ef4444" />
+                    <WeightBar value={w.damage} color="var(--pillar-damage)" />
                   </div>
                   <div>
                     <div style={{ fontSize: 10, color: 'var(--text-4)', fontFamily: 'var(--font-mono)', marginBottom: 3 }}>PRESENCE</div>
-                    <WeightBar value={w.presence} color="#8b5cf6" />
+                    <WeightBar value={w.presence} color="var(--pillar-presence)" />
                   </div>
                   <div>
                     <div style={{ fontSize: 10, color: 'var(--text-4)', fontFamily: 'var(--font-mono)', marginBottom: 3 }}>EFFICIENCY</div>
-                    <WeightBar value={w.efficiency} color="#10b981" />
+                    <WeightBar value={w.efficiency} color="var(--pillar-efficiency)" />
                   </div>
                 </div>
               </div>

@@ -9,8 +9,20 @@ import RoleTag from './RoleTag';
 
 const ROLES: Role[] = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
 const ROLE_LABEL: Record<Role, string> = { TOP: 'Top', JGL: 'Jungle', MID: 'Mid', BOT: 'Bot', SUP: 'Support' };
-const COLOR_A = '#60A5FA';
-const COLOR_B = '#FB923C';
+function useCSSVar(name: string, fallback: string) {
+  const [val, setVal] = useState(fallback);
+  useEffect(() => {
+    const update = () => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      if (v) setVal(v);
+    };
+    update();
+    const obs = new MutationObserver(update);
+    obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => obs.disconnect();
+  }, [name]);
+  return val;
+}
 
 function usePolarTickColor() {
   const [color, setColor] = useState('rgba(240,238,232,0.4)');
@@ -115,8 +127,8 @@ function CompareTooltip({ active, payload }: {
   return (
     <div style={{ background: 'var(--bg-3)', border: '1px solid var(--line-med)', borderRadius: 4, padding: '5px 10px', fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-1)' }}>
       <div style={{ marginBottom: 2, color: 'var(--text-3)', fontSize: 9, letterSpacing: '0.08em', textTransform: 'uppercase' }}>{d.axis}</div>
-      {d.a !== undefined && <div style={{ color: COLOR_A }}>P1 · {d.a.toFixed(0)}</div>}
-      {d.b !== undefined && <div style={{ color: COLOR_B }}>P2 · {d.b.toFixed(0)}</div>}
+      {d.a !== undefined && <div style={{ color: 'var(--compare-a)' }}>P1 · {d.a.toFixed(0)}</div>}
+      {d.b !== undefined && <div style={{ color: 'var(--compare-b)' }}>P2 · {d.b.toFixed(0)}</div>}
     </div>
   );
 }
@@ -155,7 +167,7 @@ function StatDuelRow({ label, a, b, statKey, fmt: fmtFn = v => fmt(v), invert = 
         <div className="cduel-bar-wrap cduel-bar-wrap--a">
           <div className="cduel-bar" style={{
             width: `${aPct}%`,
-            background: aWins ? COLOR_A : 'var(--line-med)',
+            background: aWins ? 'var(--compare-a)' : 'var(--line-med)',
           }} />
         </div>
       </div>
@@ -168,7 +180,7 @@ function StatDuelRow({ label, a, b, statKey, fmt: fmtFn = v => fmt(v), invert = 
         <div className="cduel-bar-wrap cduel-bar-wrap--b">
           <div className="cduel-bar" style={{
             width: `${bPct}%`,
-            background: bWins ? COLOR_B : 'var(--line-med)',
+            background: bWins ? 'var(--compare-b)' : 'var(--line-med)',
           }} />
         </div>
         <span className={`cduel-val cduel-val--b${bWins ? ' cduel-val--win' : aWins ? ' cduel-val--lose' : ''}`}>{fmtFn(b)}</span>
@@ -369,6 +381,8 @@ function PlayerHero({ player, pool, color, align }: { player: Player; pool: Leag
 export default function ComparePage() {
   const pools = useAllPlayers();
   const tickColor = usePolarTickColor();
+  const colorA = useCSSVar('--compare-a', '#60A5FA');
+  const colorB = useCSSVar('--compare-b', '#FB923C');
 
   const [playerA, setPlayerA] = useState<Player | null>(null);
   const [poolA, setPoolA]     = useState<LeaguePlayerPool | null>(null);
@@ -399,7 +413,7 @@ export default function ComparePage() {
         <PlayerSelector
           pools={pools} selectedPlayer={playerA}
           onSelect={(p, pool) => { setPlayerA(p); setPoolA(pool); }}
-          color={COLOR_A} slot="a"
+          color={colorA} slot="a"
           teamLogos={poolA?.teamLogos ?? {}} playerImages={poolA?.playerImages ?? {}}
         />
 
@@ -409,9 +423,9 @@ export default function ComparePage() {
             <>
               {/* Hero row */}
               <div className="cpage__heroes">
-                <PlayerHero player={playerA} pool={poolA!} color={COLOR_A} align="left" />
+                <PlayerHero player={playerA} pool={poolA!} color={colorA} align="left" />
                 <div className="cpage__vs">VS</div>
-                <PlayerHero player={playerB} pool={poolB!} color={COLOR_B} align="right" />
+                <PlayerHero player={playerB} pool={poolB!} color={colorB} align="right" />
               </div>
 
               {/* Radar */}
@@ -422,16 +436,16 @@ export default function ComparePage() {
                     <PolarAngleAxis dataKey="axis"
                       tick={{ fontFamily: 'Space Mono, monospace', fontSize: 9, fill: tickColor, fontWeight: 700 }}
                       tickLine={false} />
-                    <Radar dataKey="a" stroke={COLOR_A} fill={COLOR_A} fillOpacity={0.18} strokeWidth={2} dot={false} />
-                    <Radar dataKey="b" stroke={COLOR_B} fill={COLOR_B} fillOpacity={0.18} strokeWidth={2} dot={false} />
+                    <Radar dataKey="a" stroke={colorA} fill={colorA} fillOpacity={0.18} strokeWidth={2} dot={false} />
+                    <Radar dataKey="b" stroke={colorB} fill={colorB} fillOpacity={0.18} strokeWidth={2} dot={false} />
                     <Tooltip content={<CompareTooltip />} />
                     <Tooltip content={<CompareTooltip />} />
                   </RadarChart>
                 </ResponsiveContainer>
               </div>
               <div className="cpage__radar-legend">
-                <span style={{ color: COLOR_A }}>■</span>{playerA.name}
-                <span style={{ color: COLOR_B }}>■</span>{playerB.name}
+                <span style={{ color: 'var(--compare-a)' }}>■</span>{playerA.name}
+                <span style={{ color: 'var(--compare-b)' }}>■</span>{playerB.name}
               </div>
 
               {/* Stats */}
@@ -476,7 +490,7 @@ export default function ComparePage() {
         <PlayerSelector
           pools={pools} selectedPlayer={playerB}
           onSelect={(p, pool) => { setPlayerB(p); setPoolB(pool); }}
-          color={COLOR_B} slot="b"
+          color={colorB} slot="b"
           teamLogos={poolB?.teamLogos ?? {}} playerImages={poolB?.playerImages ?? {}}
         />
       </div>

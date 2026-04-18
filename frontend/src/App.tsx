@@ -153,7 +153,7 @@ export default function App() {
             </div>
             <div>
               <div className="sidebar__logo-title">
-                RATING<span style={{ color: 'var(--accent)' }}>.</span>GG
+                RATING<span className="sidebar__logo-dot">.</span>GG
               </div>
               <div className="sidebar__logo-sub">Esports Rankings</div>
             </div>
@@ -242,7 +242,7 @@ export default function App() {
                 <span className="nav-item__region">{l.region}</span>
               ) : null}
               {error && selection.leagueId === l.id && (
-                <span className="nav-item__badge" style={{ color: 'var(--red)', borderColor: 'rgba(248,113,113,0.2)' }}>ERR</span>
+                <span className="nav-item__badge nav-item__badge--error">ERR</span>
               )}
             </button>
           ))}
@@ -310,7 +310,7 @@ export default function App() {
 
         {/* Footer */}
         <div className="sidebar__footer">
-          <div>Data · <strong style={{ color: 'var(--text-3)' }}>gol.gg</strong></div>
+          <div>Data · <strong className="sidebar__footer-source">gol.gg</strong></div>
         </div>
       </nav>
 
@@ -348,6 +348,7 @@ export default function App() {
             <button
               className="page-header__icon-btn"
               onClick={toggleTheme}
+              aria-label={currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={currentTheme === 'dark' ? 'Light mode' : 'Dark mode'}
             >
               {currentTheme === 'dark' ? '☀' : '☾'}
