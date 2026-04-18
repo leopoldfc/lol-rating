@@ -192,7 +192,7 @@ interface SelectorProps {
 function PlayerSelector({ pools, selectedPlayer, onSelect, color, slot, teamLogos }: SelectorProps) {
   const [search, setSearch] = useState('');
   const availableYears = useMemo(() => [...new Set(pools.map(p => p.year))].sort((a, b) => b - a), [pools]);
-  const [filterYear, setFilterYear] = useState<number | null>(availableYears[0] ?? null);
+  const [filterYear, setFilterYear] = useState<number | null>(Math.max(...YEARS.map(y => y.year)));
   const [filterLeague, setFilterLeague] = useState<string | null>(null);
   const [filterRole, setFilterRole] = useState<Role | null>(null);
   const [open, setOpen] = useState(false);
@@ -300,7 +300,7 @@ function PlayerSelector({ pools, selectedPlayer, onSelect, color, slot, teamLogo
           </div>
 
           <div className="csel__list">
-            {allPlayers.slice(0, 100).map(({ player: p, pool }) => {
+            {allPlayers.map(({ player: p, pool }) => {
               const isActive = selectedPlayer?.id === p.id && selectedPlayer?.team === p.team;
               return (
                 <button key={`${pool.leagueId}-${p.id}`}
@@ -352,13 +352,13 @@ function PlayerHero({ player, pool, color, align }: { player: Player; pool: Leag
               <img src={pool.teamLogos[player.team]} alt={player.team} style={{ width: 14, height: 14, objectFit: 'contain' }} />
             )}
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-2)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{player.team}</span>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-4)', whiteSpace: 'nowrap' }}>· {pool.leagueLabel} {pool.year}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-3)', whiteSpace: 'nowrap' }}>· {pool.leagueLabel} {pool.year}</span>
           </div>
         </div>
       </div>
       <div style={{ fontFamily: 'var(--font-mono)', fontSize: 34, fontWeight: 700, color, letterSpacing: '-0.04em', lineHeight: 1, marginTop: 10 }}>
         {(player.rating ?? 0).toFixed(1)}
-        <span style={{ fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.10em', textTransform: 'uppercase', marginLeft: 5, fontWeight: 400 }}>LIR</span>
+        <span style={{ fontSize: 9, color: 'var(--text-3)', letterSpacing: '0.08em', textTransform: 'uppercase', marginLeft: 5, fontWeight: 400 }}>LIR</span>
       </div>
     </div>
   );

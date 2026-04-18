@@ -73,7 +73,7 @@ function pct(val: number, min: number, max: number) {
 function StatBar({ label, value, barPct, color }: { label: string; value: string; barPct: number; color: string }) {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '76px 1fr 58px', alignItems: 'center', gap: 10, padding: '5px 0', borderBottom: '1px solid var(--separator)' }}>
-      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-4)', letterSpacing: '0.07em', textTransform: 'uppercase' }}>
+      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
         {label}
       </span>
       <div style={{ height: 3, background: 'var(--bar-track)', borderRadius: 2, overflow: 'hidden' }}>
@@ -94,7 +94,7 @@ function SubTile({ label, value, color }: { label: string; value: number; color:
       <div style={{ fontFamily: 'var(--font-mono)', fontSize: 16, fontWeight: 700, color, letterSpacing: '-0.03em' }}>
         {value.toFixed(1)}
       </div>
-      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.10em', textTransform: 'uppercase', marginTop: 3 }}>
+      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-3)', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: 3 }}>
         {label}
       </div>
     </div>
@@ -168,7 +168,7 @@ export default function PlayerSheet({ player, onClose, tournament, teamLogos = {
                     <div className="player-rating" style={{ fontFamily: 'var(--font-mono)', fontSize: 40, fontWeight: 700, color: roleColor, letterSpacing: '-0.04em', lineHeight: 1 }}>
                       {displayRating.toFixed(1)}
                     </div>
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'right' }}>LIR</div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-3)', letterSpacing: '0.08em', textTransform: 'uppercase', textAlign: 'right' }}>LIR</div>
                   </div>
                 )}
                 <button className="modal__close" onClick={onClose} aria-label="Close">✕</button>
@@ -185,7 +185,7 @@ export default function PlayerSheet({ player, onClose, tournament, teamLogos = {
               ].map(s => (
                 <div key={s.label} className="sheet-hero-stat" style={{ background: 'var(--bg-1)', padding: '12px 8px', textAlign: 'center' }}>
                   <div className="sheet-hero-val" style={{ fontFamily: 'var(--font-mono)', fontSize: 17, fontWeight: 700, color: 'var(--text-1)', letterSpacing: '-0.03em' }}>{s.value}</div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.12em', textTransform: 'uppercase', marginTop: 3 }}>{s.label}</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-3)', letterSpacing: '0.07em', textTransform: 'uppercase', marginTop: 3 }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -225,7 +225,7 @@ export default function PlayerSheet({ player, onClose, tournament, teamLogos = {
               <img src={playerImages[player.name]} alt={player.name} style={{ width: '100%', aspectRatio: '1/1', objectFit: 'cover', objectPosition: 'top', borderRadius: 6, background: 'var(--bg-3)' }} />
             )}
 
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: 'var(--text-4)', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: 'var(--text-3)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Performance Profile
             </div>
 

@@ -1,10 +1,26 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { Player, Role, TournamentStats } from '../types';
 import { fmt, fmtSign, getPlayerStats } from '../utils';
 import RoleTag from './RoleTag';
 import PlayerModal from './PlayerModal';
 
 type SortKey = 'rating' | keyof TournamentStats | 'name';
+
+const COL_TIPS: Partial<Record<SortKey, string>> = {
+  rating:     'LIR — LoL Impact Rating. Percentile score (0–100) based on role-specific weighted stats.',
+  games:      'Games played in this tournament/split.',
+  winRate:    'Win rate % across all games.',
+  kda:        'Kill/Death/Assist ratio. (K+A) / D.',
+  avgKills:   'Average kills per game.',
+  avgDeaths:  'Average deaths per game.',
+  avgAssists: 'Average assists per game.',
+  kp:         'Kill Participation % — share of team kills the player was involved in.',
+  dpm:        'Damage Per Minute dealt to champions.',
+  csm:        'Creep Score per Minute (minions + monsters).',
+  gpm:        'Gold earned Per Minute.',
+  gd15:       'Gold Difference at 15 minutes vs lane opponent.',
+  csd15:      'CS Difference at 15 minutes vs lane opponent.',
+};
 
 const ROLES: Role[] = ['TOP', 'JGL', 'MID', 'BOT', 'SUP'];
 const ROLE_LABEL: Record<Role, string> = { TOP: 'Top', JGL: 'Jungle', MID: 'Mid', BOT: 'Bot', SUP: 'Support' };
@@ -61,6 +77,15 @@ interface Props {
 }
 
 export default function RankingTable({ players, tournament, tournamentName, teamLogos = {}, playerImages = {} }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrolledEnd, setScrolledEnd] = useState(false);
+
+  const handleScroll = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setScrolledEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+  };
+
   const [role, setRole]         = useState<Role | 'ALL'>('ALL');
   const [sortKey, setSortKey]   = useState<SortKey>('rating');
   const [sortDir, setSortDir]   = useState<'asc' | 'desc'>('desc');
@@ -112,7 +137,6 @@ export default function RankingTable({ players, tournament, tournamentName, team
     fontSize: 13,
   };
 
-  // Style d'une cellule header numérique
   const numHead = (key: SortKey): React.CSSProperties => ({
     padding: CELL_PAD,
     textAlign: 'right',
@@ -125,6 +149,7 @@ export default function RankingTable({ players, tournament, tournamentName, team
     color: sortKey === key ? 'var(--accent)' : 'var(--text-3)',
     userSelect: 'none' as const,
     whiteSpace: 'nowrap' as const,
+    position: 'relative' as const,
   });
 
   const sortIcon = (key: SortKey) => (
@@ -161,7 +186,8 @@ export default function RankingTable({ players, tournament, tournamentName, team
       </div>
 
       {/* ── Grid table ────────────────────────── */}
-      <div style={{ overflowX: 'auto' }}>
+      <div className={`scroll-fade-wrap${scrolledEnd ? ' scrolled-end' : ''}`}>
+        <div ref={scrollRef} style={{ overflowX: 'auto' }} onScroll={handleScroll}>
         <div className="ranking-grid" style={{ minWidth: 960 }}>
 
           {/* ── Header ── */}
@@ -171,31 +197,31 @@ export default function RankingTable({ players, tournament, tournamentName, team
             {/* PLAYER */}
             <div style={{ padding: CELL_PAD, textAlign: 'left', fontSize: 11, color: 'var(--text-3)', fontFamily: 'var(--font-body)', fontWeight: 500, letterSpacing: '0.05em', textTransform: 'uppercase' }}>Player</div>
             {/* RATING */}
-            <div style={numHead('rating')} onClick={() => toggleSort('rating')}>RATING{sortIcon('rating')}</div>
+            <div style={numHead('rating')} onClick={() => toggleSort('rating')} title={COL_TIPS.rating}>RATING{sortIcon('rating')}</div>
             {/* G */}
-            <div style={numHead('games')} onClick={() => toggleSort('games')}>G{sortIcon('games')}</div>
+            <div style={numHead('games')} onClick={() => toggleSort('games')} title={COL_TIPS.games}>G{sortIcon('games')}</div>
             {/* W% */}
-            <div style={numHead('winRate')} onClick={() => toggleSort('winRate')}>W%{sortIcon('winRate')}</div>
+            <div style={numHead('winRate')} onClick={() => toggleSort('winRate')} title={COL_TIPS.winRate}>W%{sortIcon('winRate')}</div>
             {/* KDA */}
-            <div style={numHead('kda')} onClick={() => toggleSort('kda')}>KDA{sortIcon('kda')}</div>
+            <div style={numHead('kda')} onClick={() => toggleSort('kda')} title={COL_TIPS.kda}>KDA{sortIcon('kda')}</div>
             {/* K */}
-            <div style={numHead('avgKills')} onClick={() => toggleSort('avgKills')}>K{sortIcon('avgKills')}</div>
+            <div style={numHead('avgKills')} onClick={() => toggleSort('avgKills')} title={COL_TIPS.avgKills}>K{sortIcon('avgKills')}</div>
             {/* D */}
-            <div style={numHead('avgDeaths')} onClick={() => toggleSort('avgDeaths')}>D{sortIcon('avgDeaths')}</div>
+            <div style={numHead('avgDeaths')} onClick={() => toggleSort('avgDeaths')} title={COL_TIPS.avgDeaths}>D{sortIcon('avgDeaths')}</div>
             {/* A */}
-            <div style={numHead('avgAssists')} onClick={() => toggleSort('avgAssists')}>A{sortIcon('avgAssists')}</div>
+            <div style={numHead('avgAssists')} onClick={() => toggleSort('avgAssists')} title={COL_TIPS.avgAssists}>A{sortIcon('avgAssists')}</div>
             {/* KP% */}
-            <div style={numHead('kp')} onClick={() => toggleSort('kp')}>KP%{sortIcon('kp')}</div>
+            <div style={numHead('kp')} onClick={() => toggleSort('kp')} title={COL_TIPS.kp}>KP%{sortIcon('kp')}</div>
             {/* DPM */}
-            <div style={numHead('dpm')} onClick={() => toggleSort('dpm')}>DPM{sortIcon('dpm')}</div>
+            <div style={numHead('dpm')} onClick={() => toggleSort('dpm')} title={COL_TIPS.dpm}>DPM{sortIcon('dpm')}</div>
             {/* CSM */}
-            <div style={numHead('csm')} onClick={() => toggleSort('csm')}>CSM{sortIcon('csm')}</div>
+            <div style={numHead('csm')} onClick={() => toggleSort('csm')} title={COL_TIPS.csm}>CSM{sortIcon('csm')}</div>
             {/* GPM */}
-            <div style={numHead('gpm')} onClick={() => toggleSort('gpm')}>GPM{sortIcon('gpm')}</div>
+            <div style={numHead('gpm')} onClick={() => toggleSort('gpm')} title={COL_TIPS.gpm}>GPM{sortIcon('gpm')}</div>
             {/* GD15 */}
-            <div style={numHead('gd15')} onClick={() => toggleSort('gd15')}>GD15{sortIcon('gd15')}</div>
+            <div style={numHead('gd15')} onClick={() => toggleSort('gd15')} title={COL_TIPS.gd15}>GD15{sortIcon('gd15')}</div>
             {/* CSD15 */}
-            <div style={numHead('csd15')} onClick={() => toggleSort('csd15')}>CSD15{sortIcon('csd15')}</div>
+            <div style={numHead('csd15')} onClick={() => toggleSort('csd15')} title={COL_TIPS.csd15}>CSD15{sortIcon('csd15')}</div>
           </div>
 
           {/* ── Rows ── */}
@@ -260,6 +286,7 @@ export default function RankingTable({ players, tournament, tournamentName, team
               </div>
             );
           })}
+        </div>
         </div>
       </div>
 

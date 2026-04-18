@@ -56,7 +56,9 @@ const PAGE_ICONS: Record<Page, string> = {
 
 function useTheme() {
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
-    return (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark';
+    const saved = localStorage.getItem('theme') as 'dark' | 'light' | null;
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
   });
 
   useEffect(() => {
@@ -330,8 +332,10 @@ export default function App() {
               <div className="state-center__sub">Coming soon</div>
             </div>
           ) : loading ? (
-            <div className="state-center">
-              <div className="state-center__sub">Loading…</div>
+            <div className="skeleton-table">
+              {Array.from({ length: 15 }).map((_, i) => (
+                <div key={i} className="skeleton skeleton-row" style={{ opacity: 1 - i * 0.045 }} />
+              ))}
             </div>
           ) : (
             <>
