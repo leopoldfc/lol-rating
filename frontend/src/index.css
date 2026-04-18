@@ -1330,7 +1330,7 @@ a:hover { opacity: 0.75; }
 
 .rcard__name {
   font-family: var(--font-display);
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.06em;
   color: var(--text-1);
   white-space: nowrap;
@@ -1340,11 +1340,11 @@ a:hover { opacity: 0.75; }
 
 .rcard__meta {
   font-family: var(--font-mono);
-  font-size: 8px;
-  color: var(--text-4);
-  letter-spacing: 0.07em;
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .rcard__header-right {
@@ -1354,7 +1354,7 @@ a:hover { opacity: 0.75; }
 
 .rcard__lir {
   font-family: var(--font-mono);
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.04em;
@@ -1364,9 +1364,9 @@ a:hover { opacity: 0.75; }
 
 .rcard__lir-label {
   font-family: var(--font-mono);
-  font-size: 8px;
-  color: var(--text-4);
-  letter-spacing: 0.07em;
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -1391,14 +1391,14 @@ a:hover { opacity: 0.75; }
 
 .rrow__role {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .rrow__name {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-1);
   white-space: nowrap;
@@ -1408,17 +1408,18 @@ a:hover { opacity: 0.75; }
 
 .rrow__stats {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   justify-content: flex-end;
 }
 
 .rrow__stat {
   text-align: right;
+  min-width: 32px;
 }
 
 .rrow__stat-val {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-2);
   letter-spacing: -0.02em;
@@ -1427,20 +1428,20 @@ a:hover { opacity: 0.75; }
 
 .rrow__stat-label {
   font-family: var(--font-mono);
-  font-size: 8px;
-  color: var(--text-4);
-  letter-spacing: 0.06em;
+  font-size: 9px;
+  color: var(--text-3);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   display: block;
 }
 
 .rrow__rating {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.03em;
   text-align: right;
-  min-width: 36px;
+  min-width: 40px;
 }
 
 /* Footer */
@@ -1802,7 +1803,9 @@ a:hover { opacity: 0.75; }
 
 .phero-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, 400px);
+  gap: 1px;
+  background: var(--line);
 }
 
 /* ─── Individual player hero card ────────────── */
@@ -1813,10 +1816,8 @@ a:hover { opacity: 0.75; }
   overflow: hidden;
   cursor: pointer;
   background: #050508;
-  border-right: 1px solid var(--line);
   transition: filter var(--t-base);
 }
-.phero:last-child { border-right: none; }
 .phero--empty { cursor: default; }
 .phero:not(.phero--empty):hover .phero__img { transform: translateX(-4px); }
 
@@ -1979,39 +1980,7 @@ a:hover { opacity: 0.75; }
 }
 [data-theme="light"] .phero__name { color: #F0EEE8; }
 
-/* ─── Responsive phero grid ──────────────────── */
-
-/* ≤ 900px : 3 + 2 */
-@media (max-width: 900px) {
-  .phero-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .phero:nth-child(3) { border-right: none; }
-  .phero:nth-child(4),
-  .phero:nth-child(5) { border-top: 1px solid var(--line); }
-  .phero:nth-child(5) { border-right: none; }
-  .phero { height: 220px; }
-}
-
-/* ≤ 580px : 2 + 2 + 1 */
-@media (max-width: 580px) {
-  .phero-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .phero:nth-child(2) { border-right: none; }
-  .phero:nth-child(3),
-  .phero:nth-child(4),
-  .phero:nth-child(5) { border-top: 1px solid var(--line); }
-  .phero:nth-child(4) { border-right: none; }
-  .phero:nth-child(5) {
-    grid-column: 1 / -1;
-    border-right: none;
-  }
-  .phero { height: 200px; }
-  .phero__name { font-size: clamp(22px, 6vw, 34px); }
-  .phero__rating { font-size: clamp(24px, 6vw, 38px); }
-  .phero__content { padding: 12px; max-width: 65%; }
-}
+/* ─── Responsive phero grid — 400px fixe, wrap auto ─────── */
 
 
 /* ─── Burger button (hidden on desktop) ──────── */

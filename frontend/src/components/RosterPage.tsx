@@ -85,7 +85,7 @@ export default function RosterPage({ players, tournament, teamLogos = {}, player
                 </div>
                 <div className="rcard__header-right">
                   <span className="rcard__lir">{teamLIR > 0 ? teamLIR.toFixed(1) : '—'}</span>
-                  <span className="rcard__lir-label">TEAM LIR</span>
+                  <span className="rcard__lir-label">RATING</span>
                 </div>
               </div>
 
