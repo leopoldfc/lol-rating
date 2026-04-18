@@ -208,7 +208,12 @@ export default function App() {
               className={`nav-item${!l.available ? ' nav-item--disabled' : ''}${page !== 'overview' && selection.leagueId === l.id ? ' nav-item--active' : ''}`}
               onClick={() => l.available && handleSetLeague(l.id)}
             >
-              <span className="nav-item__icon" style={{ fontSize: 11 }}>◆</span>
+              <span className="nav-item__icon">
+                {l.logo
+                  ? <img src={l.logo} alt={l.label} style={{ width: 16, height: 16, objectFit: 'contain', verticalAlign: 'middle' }} />
+                  : <span style={{ fontSize: 11 }}>◆</span>
+                }
+              </span>
               {l.label}
               {!l.available && (
                 <span className="nav-item__badge">SOON</span>
@@ -301,9 +306,14 @@ export default function App() {
           <button className="burger-btn" onClick={() => setNavOpen(o => !o)} aria-label="Menu">
             <span /><span /><span />
           </button>
-          <div>
-            <div className="page-header__eyebrow">{pageEyebrow}</div>
-            <h1 className="page-header__title">{pageTitle}</h1>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            {league.logo && (page === 'rankings' || page === 'rosters') && (
+              <img src={league.logo} alt={league.label} style={{ width: 40, height: 40, objectFit: 'contain' }} />
+            )}
+            <div>
+              <div className="page-header__eyebrow">{pageEyebrow}</div>
+              <h1 className="page-header__title">{pageTitle}</h1>
+            </div>
           </div>
         </div>
 

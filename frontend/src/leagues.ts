@@ -11,6 +11,7 @@ export interface LeagueConfig {
   title: string;       // titre header (ex: "LCK 2026")
   file: string;        // chemin du JSON sous /leagues/
   available: boolean;  // false = "coming soon"
+  logo?: string;       // chemin du logo sous /league-logos/
   splits?: SplitConfig[];
 }
 
@@ -29,6 +30,7 @@ export const YEARS: YearConfig[] = [
         title:     'LCK 2025',
         file:      '2025/lck-2025/export.json',
         available: true,
+        logo:      '/league-logos/lck-2025.png',
         splits: [
           { id: 'combined',  label: 'Combined',         tournament: 'LCK 2025'                  },
           { id: 'cup',       label: 'Cup',              tournament: 'LCK Cup 2025'              },
@@ -45,6 +47,7 @@ export const YEARS: YearConfig[] = [
         title:     'LPL 2025',
         file:      '2025/lpl-2025/export.json',
         available: true,
+        logo:      '/league-logos/lpl-2025.png',
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LPL 2025' },
           { id: 'split1comb', label: 'Split 1', tournament: 'LPL 2025 Split 1 Combined', children: [
@@ -72,6 +75,7 @@ export const YEARS: YearConfig[] = [
         title:     'LEC 2025',
         file:      '2025/lec-2025/export.json',
         available: true,
+        logo:      '/league-logos/lec-2025.png',
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LEC 2025' },
           { id: 'winter', label: 'Winter', tournament: 'LEC 2025 Winter', children: [
@@ -97,6 +101,7 @@ export const YEARS: YearConfig[] = [
         title:     'LFL 2025',
         file:      '2025/lfl-2025/export.json',
         available: true,
+        logo:      '/league-logos/lfl-2025.png',
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LFL 2025' },
           { id: 'spring', label: 'Spring', tournament: 'LFL 2025 Spring', children: [
@@ -117,6 +122,7 @@ export const YEARS: YearConfig[] = [
         title:     'First Stand 2025',
         file:      '2025/first-stand-2025/export.json',
         available: true,
+        logo:      '/league-logos/first-stand-2025.png',
       },
       {
         id:        'msi-2025',
@@ -124,6 +130,7 @@ export const YEARS: YearConfig[] = [
         title:     'MSI 2025',
         file:      '2025/msi-2025/export.json',
         available: true,
+        logo:      '/league-logos/msi-2025.png',
       },
       {
         id:        'worlds-2025',
@@ -131,6 +138,7 @@ export const YEARS: YearConfig[] = [
         title:     'Worlds 2025',
         file:      '2025/worlds-2025/export.json',
         available: true,
+        logo:      '/league-logos/worlds-2025.png',
         splits: [
           { id: 'combined', label: 'Combined',   tournament: 'Worlds 2025'            },
           { id: 'playin',   label: 'Play-In',    tournament: 'Worlds 2025 Play-In'    },
@@ -148,6 +156,7 @@ export const YEARS: YearConfig[] = [
         title:     'LCK 2026',
         file:      '2026/lck-2026/export.json',
         available: true,
+        logo:      '/league-logos/lck-2026.png',
         splits: [
           { id: 'combined', label: 'Combined',   tournament: 'LCK 2026'              },
           { id: 'cup',      label: 'Cup',        tournament: 'LCK Cup 2026'          },
@@ -160,6 +169,7 @@ export const YEARS: YearConfig[] = [
         title:     'LPL 2026',
         file:      '2026/lpl-2026/export.json',
         available: true,
+        logo:      '/league-logos/lpl-2026.png',
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LPL 2026' },
           { id: 'split1comb', label: 'Split 1', tournament: 'LPL 2026 Split 1 Combined', children: [
@@ -176,6 +186,7 @@ export const YEARS: YearConfig[] = [
         title:     'LEC 2026',
         file:      '2026/lec-2026/export.json',
         available: true,
+        logo:      '/league-logos/lec-2026.png',
         splits: [
           { id: 'combined', label: 'Combined',      tournament: 'LEC Versus 2026' },
           { id: 'versus',   label: 'Versus',        tournament: 'LEC 2026 Versus', children: [
@@ -192,6 +203,7 @@ export const YEARS: YearConfig[] = [
         title:     'LCS 2026',
         file:      '2026/lcs-2026/export.json',
         available: true,
+        logo:      '/league-logos/lcs-2026.png',
         splits: [
           { id: 'combined', label: 'Combined', tournament: 'LCS 2026'         },
           { id: 'lockin',   label: 'Lock-In',  tournament: 'LCS 2026 Lock-In' },
@@ -204,6 +216,7 @@ export const YEARS: YearConfig[] = [
         title:     'LFL 2026',
         file:      '2026/lfl-2026/export.json',
         available: true,
+        logo:      '/league-logos/lfl-2026.png',
         splits: [
           { id: 'combined',     label: 'Combined',     tournament: 'LFL 2026'              },
           { id: 'spring',       label: 'Spring Split', tournament: 'LFL 2026 Spring Split' },
@@ -216,6 +229,7 @@ export const YEARS: YearConfig[] = [
         title:     'First Stand 2026',
         file:      '2026/first-stand-2026/export.json',
         available: true,
+        logo:      '/league-logos/first-stand-2026.png',
       },
     ],
   },

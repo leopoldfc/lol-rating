@@ -28,6 +28,7 @@ function usePolarTickColor() {
 interface LeagueData {
   id: string;
   label: string;
+  logo?: string;
   players: Player[];
   teamLogos: Record<string, string>;
   playerImages: Record<string, string>;
@@ -43,12 +44,12 @@ interface Props {
 function useAllLeaguesData(yearConfig: YearConfig) {
   const [leaguesData, setLeaguesData] = useState<LeagueData[]>(
     yearConfig.leagues.filter(l => l.available).map(l => ({
-      id: l.id, label: l.label, players: [], teamLogos: {}, playerImages: {}, loading: true, error: false,
+      id: l.id, label: l.label, logo: l.logo, players: [], teamLogos: {}, playerImages: {}, loading: true, error: false,
     }))
   );
   useEffect(() => {
     setLeaguesData(yearConfig.leagues.filter(l => l.available).map(l => ({
-      id: l.id, label: l.label, players: [], teamLogos: {}, playerImages: {}, loading: true, error: false,
+      id: l.id, label: l.label, logo: l.logo, players: [], teamLogos: {}, playerImages: {}, loading: true, error: false,
     })));
     yearConfig.leagues.filter(l => l.available).forEach(league => {
       fetch(`/leagues/${league.file}`)
@@ -211,6 +212,9 @@ function LeagueCard({ ld, onSelect }: { ld: LeagueData; onSelect: () => void; })
     <div style={{ background: 'var(--bg-1)', border: '1px solid var(--line)', borderRadius: 8, overflow: 'hidden' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', height: 46, borderBottom: '1px solid var(--line)', background: 'var(--bg-2)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+          {ld.logo && (
+            <img src={ld.logo} alt={ld.label} style={{ width: 28, height: 28, objectFit: 'contain' }} />
+          )}
           <span style={{ fontFamily: 'var(--font-display)', fontSize: 22, letterSpacing: '0.06em', color: 'var(--text-1)' }}>{ld.label}</span>
           {!ld.loading && !ld.error && (
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: 'var(--text-4)', letterSpacing: '0.10em', textTransform: 'uppercase' }}>{ld.players.length} players</span>

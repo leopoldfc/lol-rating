@@ -1875,6 +1875,13 @@ a:hover { opacity: 0.75; }
 }
 .cpage__radar:focus { outline: none; }
 .cpage__radar *:focus { outline: none; }
+
+/* Supprime l'outline focus sur tous les graphiques recharts */
+.recharts-wrapper:focus,
+.recharts-wrapper *:focus,
+.recharts-surface:focus {
+  outline: none;
+}
 .cpage__radar svg { outline: none; }
 .cpage__radar .recharts-wrapper:focus { outline: none; }
 .cpage__radar .recharts-wrapper,
