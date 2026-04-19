@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "exportedAt": "2026-04-18T23:27:09.997Z",
+    "exportedAt": "2026-04-19T19:00:47.241Z",
     "tournaments": [
       {
         "name": "LEC Versus 2026",
         "league": "LEC",
         "year": 2026,
         "split": "Versus",
-        "scrapedAt": "2026-04-18T23:27:09.997Z"
+        "scrapedAt": "2026-04-19T19:00:47.242Z"
       }
     ]
   },
@@ -32,13 +32,13 @@
       "country": "ES",
       "team": "Movistar KOI",
       "role": "SUP",
-      "rating": 44,
+      "rating": 50.7,
       "confidence": 1,
       "subscores": {
-        "laning": 37.2,
+        "laning": 34.6,
         "damage": 66.9,
-        "presence": 42.3,
-        "efficiency": 42.3
+        "presence": 50,
+        "efficiency": 53.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -110,37 +110,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 10,
-          "winRate": 60,
-          "kda": 3,
-          "avgKills": 0.9,
-          "avgDeaths": 3.4,
-          "avgAssists": 9.3,
-          "csm": 1.1,
-          "gpm": 268,
-          "kp": 66.4,
-          "dmgPct": 8.8,
+          "games": 12,
+          "winRate": 66.7,
+          "kda": 3.4,
+          "avgKills": 0.8,
+          "avgDeaths": 3,
+          "avgAssists": 9.4,
+          "csm": 1.2,
+          "gpm": 272,
+          "kp": 67.6,
+          "dmgPct": 8.9,
           "goldPct": 13.4,
-          "vsPct": 41.8,
-          "dpm": 252,
-          "vspm": 4.42,
-          "avgWpm": 1.96,
-          "avgWcpm": 0.56,
-          "avgVwpm": 0.32,
-          "gd15": -51,
+          "vsPct": 42,
+          "dpm": 262,
+          "vspm": 4.46,
+          "avgWpm": 1.95,
+          "avgWcpm": 0.58,
+          "avgVwpm": 0.31,
+          "gd15": -28,
           "csd15": 2,
-          "xpd15": -204,
-          "fbPct": 20,
-          "fbVictim": 20,
+          "xpd15": -156,
+          "fbPct": 16.7,
+          "fbVictim": 25,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 36.3,
-          "confidence": 0.87,
+          "rating": 43.4,
+          "confidence": 0.96,
           "subscores": {
-            "laning": 48.3,
-            "damage": 85,
-            "presence": 20,
-            "efficiency": 30
+            "laning": 55,
+            "damage": 91,
+            "presence": 25,
+            "efficiency": 45
           }
         },
         "LEC 2026 Versus": {
@@ -178,44 +178,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 33,
-          "winRate": 54.53030303030303,
-          "kda": 3.3757575757575755,
-          "avgKills": 0.6909090909090908,
-          "avgDeaths": 3.1575757575757577,
-          "avgAssists": 9.842424242424242,
-          "csm": 1.1363636363636365,
-          "gpm": 267.93939393939394,
-          "kp": 72.03636363636363,
-          "dmgPct": 8.33939393939394,
-          "goldPct": 13.515151515151516,
-          "vsPct": 42.800000000000004,
-          "dpm": 227.54545454545453,
-          "vspm": 4.492424242424242,
-          "avgWpm": 2.0260606060606063,
-          "avgWcpm": 0.5542424242424243,
-          "avgVwpm": 0.38696969696969696,
-          "gd15": -101.72727272727273,
-          "csd15": 1.3333333333333333,
-          "xpd15": -150.0909090909091,
-          "fbPct": 24.236363636363635,
-          "fbVictim": 15.16060606060606,
+          "games": 35,
+          "winRate": 57.14,
+          "kda": 3.491428571428571,
+          "avgKills": 0.6685714285714285,
+          "avgDeaths": 3.0342857142857143,
+          "avgAssists": 9.845714285714287,
+          "csm": 1.1685714285714286,
+          "gpm": 269.3142857142857,
+          "kp": 72.1257142857143,
+          "dmgPct": 8.4,
+          "goldPct": 13.508571428571429,
+          "vsPct": 42.81142857142857,
+          "dpm": 232.37142857142857,
+          "vspm": 4.502,
+          "avgWpm": 2.0188571428571427,
+          "avgWcpm": 0.5614285714285714,
+          "avgVwpm": 0.37971428571428567,
+          "gd15": -90.94285714285714,
+          "csd15": 1.3714285714285714,
+          "xpd15": -136.71428571428572,
+          "fbPct": 22.86285714285714,
+          "fbVictim": 17.15142857142857,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 44,
+          "rating": 50.7,
           "confidence": 1,
           "subscores": {
-            "laning": 37.2,
+            "laning": 34.6,
             "damage": 66.9,
-            "presence": 42.3,
-            "efficiency": 42.3
+            "presence": 50,
+            "efficiency": 53.8
           }
         }
       },
       "aggregated": {
-        "totalGames": 33,
-        "avgWinRate": 54.53030303030303,
-        "avgKda": 3.3757575757575755
+        "totalGames": 35,
+        "avgWinRate": 57.14,
+        "avgKda": 3.491428571428571
       }
     },
     {
@@ -224,11 +224,11 @@
       "country": "SE",
       "team": "Los Ratones",
       "role": "TOP",
-      "rating": 39,
-      "confidence": 0.36,
+      "rating": 38.8,
+      "confidence": 0.35,
       "subscores": {
         "laning": 4.2,
-        "damage": 34.2,
+        "damage": 29.2,
         "presence": 12.5,
         "efficiency": 25.6
       },
@@ -326,11 +326,11 @@
           "fbVictim": 27.3,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 39,
-          "confidence": 0.36,
+          "rating": 38.8,
+          "confidence": 0.35,
           "subscores": {
             "laning": 4.2,
-            "damage": 34.2,
+            "damage": 29.2,
             "presence": 12.5,
             "efficiency": 25.6
           }
@@ -348,13 +348,13 @@
       "country": "FR",
       "team": "Shifters",
       "role": "JGL",
-      "rating": 31.8,
-      "confidence": 0.59,
+      "rating": 33.1,
+      "confidence": 0.6,
       "subscores": {
-        "laning": 37.5,
-        "damage": 4.2,
-        "presence": 12.5,
-        "efficiency": 27.5
+        "laning": 39.7,
+        "damage": 3.8,
+        "presence": 19.2,
+        "efficiency": 28.1
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -416,13 +416,13 @@
           "fbVictim": 14.3,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 48.9,
-          "confidence": 0.61,
+          "rating": 49.1,
+          "confidence": 0.58,
           "subscores": {
-            "laning": 58.3,
-            "damage": 25,
-            "presence": 85,
-            "efficiency": 15.5
+            "laning": 59.1,
+            "damage": 20.9,
+            "presence": 86.4,
+            "efficiency": 17.3
           }
         },
         "LEC 2026 Versus": {
@@ -484,13 +484,13 @@
           "fbVictim": 11.122222222222222,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 31.8,
-          "confidence": 0.59,
+          "rating": 33.1,
+          "confidence": 0.6,
           "subscores": {
-            "laning": 37.5,
-            "damage": 4.2,
-            "presence": 12.5,
-            "efficiency": 27.5
+            "laning": 39.7,
+            "damage": 3.8,
+            "presence": 19.2,
+            "efficiency": 28.1
           }
         }
       },
@@ -506,12 +506,12 @@
       "country": "DE",
       "team": "G2 Esports",
       "role": "TOP",
-      "rating": 47.9,
+      "rating": 46.3,
       "confidence": 1,
       "subscores": {
         "laning": 34.7,
-        "damage": 42.5,
-        "presence": 62.5,
+        "damage": 34.2,
+        "presence": 70.8,
         "efficiency": 67.1
       },
       "tournaments": {
@@ -608,13 +608,13 @@
           "fbVictim": 30,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 25.4,
-          "confidence": 0.87,
+          "rating": 27.6,
+          "confidence": 0.8,
           "subscores": {
-            "laning": 8.3,
+            "laning": 6.7,
             "damage": 5,
             "presence": 95,
-            "efficiency": 31
+            "efficiency": 34.5
           }
         },
         "LEC 2026 Versus": {
@@ -676,12 +676,12 @@
           "fbVictim": 12.124242424242425,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 47.9,
+          "rating": 46.3,
           "confidence": 1,
           "subscores": {
             "laning": 34.7,
-            "damage": 42.5,
-            "presence": 62.5,
+            "damage": 34.2,
+            "presence": 70.8,
             "efficiency": 67.1
           }
         }
@@ -800,11 +800,11 @@
           "fbVictim": 20,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 66.8,
-          "confidence": 0.43,
+          "rating": 65.4,
+          "confidence": 0.4,
           "subscores": {
-            "laning": 66.7,
-            "damage": 75,
+            "laning": 68.3,
+            "damage": 69,
             "presence": 95,
             "efficiency": 95
           }
@@ -890,10 +890,10 @@
       "country": "FR",
       "team": "Karmine Corp",
       "role": "BOT",
-      "rating": 60.8,
+      "rating": 61.4,
       "confidence": 1,
       "subscores": {
-        "laning": 54.2,
+        "laning": 56.9,
         "damage": 57.5,
         "presence": 20.8,
         "efficiency": 95.8
@@ -992,11 +992,11 @@
           "fbVictim": 40,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 62.4,
-          "confidence": 0.43,
+          "rating": 60.2,
+          "confidence": 0.4,
           "subscores": {
-            "laning": 73.3,
-            "damage": 77,
+            "laning": 70,
+            "damage": 71,
             "presence": 75,
             "efficiency": 88
           }
@@ -1060,10 +1060,10 @@
           "fbVictim": 13.88888888888889,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 60.8,
+          "rating": 61.4,
           "confidence": 1,
           "subscores": {
-            "laning": 54.2,
+            "laning": 56.9,
             "damage": 57.5,
             "presence": 20.8,
             "efficiency": 95.8
@@ -1082,10 +1082,10 @@
       "country": "KR",
       "team": "Karmine Corp",
       "role": "TOP",
-      "rating": 73.9,
+      "rating": 74.8,
       "confidence": 1,
       "subscores": {
-        "laning": 68.1,
+        "laning": 70.8,
         "damage": 75.8,
         "presence": 45.8,
         "efficiency": 90.8
@@ -1184,13 +1184,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 56,
-          "confidence": 0.43,
+          "rating": 56.3,
+          "confidence": 0.4,
           "subscores": {
             "laning": 40,
             "damage": 95,
             "presence": 15,
-            "efficiency": 79.5
+            "efficiency": 86.5
           }
         },
         "LEC 2026 Versus": {
@@ -1252,10 +1252,10 @@
           "fbVictim": 2.7777777777777777,
           "pentaKills": 0,
           "soloKills": 15,
-          "rating": 73.9,
+          "rating": 74.8,
           "confidence": 1,
           "subscores": {
-            "laning": 68.1,
+            "laning": 70.8,
             "damage": 75.8,
             "presence": 45.8,
             "efficiency": 90.8
@@ -1274,13 +1274,13 @@
       "country": "DK",
       "team": "G2 Esports",
       "role": "MID",
-      "rating": 70.4,
+      "rating": 75.3,
       "confidence": 1,
       "subscores": {
         "laning": 93.1,
-        "damage": 49.2,
-        "presence": 70.8,
-        "efficiency": 72.9
+        "damage": 57.5,
+        "presence": 79.2,
+        "efficiency": 75.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -1376,13 +1376,13 @@
           "fbVictim": 10,
           "pentaKills": 1,
           "soloKills": 2,
-          "rating": 52.6,
-          "confidence": 0.87,
+          "rating": 53.7,
+          "confidence": 0.8,
           "subscores": {
             "laning": 71.7,
-            "damage": 31,
+            "damage": 35,
             "presence": 25,
-            "efficiency": 83.3
+            "efficiency": 85
           }
         },
         "LEC 2026 Versus": {
@@ -1444,13 +1444,13 @@
           "fbVictim": 15.154545454545456,
           "pentaKills": 1,
           "soloKills": 11,
-          "rating": 70.4,
+          "rating": 75.3,
           "confidence": 1,
           "subscores": {
             "laning": 93.1,
-            "damage": 49.2,
-            "presence": 70.8,
-            "efficiency": 72.9
+            "damage": 57.5,
+            "presence": 79.2,
+            "efficiency": 75.8
           }
         }
       },
@@ -1466,11 +1466,11 @@
       "country": "CZ",
       "team": "Team Vitality",
       "role": "BOT",
-      "rating": 57.1,
+      "rating": 59.5,
       "confidence": 1,
       "subscores": {
-        "laning": 29.2,
-        "damage": 92.5,
+        "laning": 45.8,
+        "damage": 87.5,
         "presence": 37.5,
         "efficiency": 47.1
       },
@@ -1544,37 +1544,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 16,
-          "winRate": 68.8,
-          "kda": 4.6,
-          "avgKills": 4.6,
-          "avgDeaths": 2,
-          "avgAssists": 4.7,
+          "games": 18,
+          "winRate": 72.2,
+          "kda": 5.1,
+          "avgKills": 4.8,
+          "avgDeaths": 1.9,
+          "avgAssists": 4.8,
           "csm": 9.9,
-          "gpm": 490,
-          "kp": 63.9,
-          "dmgPct": 30.8,
-          "goldPct": 24.8,
-          "vsPct": 13.6,
+          "gpm": 498,
+          "kp": 64.4,
+          "dmgPct": 30.6,
+          "goldPct": 25,
+          "vsPct": 13.8,
           "dpm": 826,
-          "vspm": 1.36,
+          "vspm": 1.38,
           "avgWpm": 0.43,
-          "avgWcpm": 0.39,
+          "avgWcpm": 0.38,
           "avgVwpm": 0.11,
-          "gd15": 49,
-          "csd15": -2,
-          "xpd15": 11,
-          "fbPct": 31.3,
-          "fbVictim": 12.5,
+          "gd15": 196,
+          "csd15": 1,
+          "xpd15": 81,
+          "fbPct": 27.8,
+          "fbVictim": 11.1,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 61.7,
+          "rating": 66.6,
           "confidence": 1,
           "subscores": {
-            "laning": 48.3,
-            "damage": 77,
+            "laning": 71.7,
+            "damage": 73,
             "presence": 55,
-            "efficiency": 57.8
+            "efficiency": 59.5
           }
         },
         "LEC 2026 Versus": {
@@ -1612,44 +1612,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 34,
-          "winRate": 61.785294117647055,
-          "kda": 4.029411764705882,
-          "avgKills": 4.605882352941176,
-          "avgDeaths": 2.4794117647058824,
-          "avgAssists": 4.8,
-          "csm": 9.744117647058825,
-          "gpm": 488.3235294117647,
-          "kp": 61.39705882352941,
-          "dmgPct": 29.591176470588234,
-          "goldPct": 24.670588235294115,
-          "vsPct": 13.24705882352941,
-          "dpm": 860.9705882352941,
-          "vspm": 1.342941176470588,
-          "avgWpm": 0.4491176470588235,
-          "avgWcpm": 0.34441176470588236,
-          "avgVwpm": 0.12911764705882353,
-          "gd15": -78.67647058823529,
-          "csd15": -2.7058823529411766,
-          "xpd15": -30.91176470588235,
-          "fbPct": 29.45,
-          "fbVictim": 8.826470588235296,
+          "games": 36,
+          "winRate": 63.875,
+          "kda": 4.311111111111111,
+          "avgKills": 4.705555555555555,
+          "avgDeaths": 2.4027777777777777,
+          "avgAssists": 4.844444444444444,
+          "csm": 9.752777777777778,
+          "gpm": 492.4166666666667,
+          "kp": 61.78611111111112,
+          "dmgPct": 29.55833333333333,
+          "goldPct": 24.77777777777778,
+          "vsPct": 13.366666666666667,
+          "dpm": 859.0277777777778,
+          "vspm": 1.3538888888888887,
+          "avgWpm": 0.44805555555555565,
+          "avgWcpm": 0.3419444444444444,
+          "avgVwpm": 0.12805555555555553,
+          "gd15": 1.9166666666666667,
+          "csd15": -1.1666666666666667,
+          "xpd15": 6.416666666666667,
+          "fbPct": 27.80277777777778,
+          "fbVictim": 8.330555555555556,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 57.1,
+          "rating": 59.5,
           "confidence": 1,
           "subscores": {
-            "laning": 29.2,
-            "damage": 92.5,
+            "laning": 45.8,
+            "damage": 87.5,
             "presence": 37.5,
             "efficiency": 47.1
           }
         }
       },
       "aggregated": {
-        "totalGames": 34,
-        "avgWinRate": 61.785294117647055,
-        "avgKda": 4.029411764705882
+        "totalGames": 36,
+        "avgWinRate": 63.875,
+        "avgKda": 4.311111111111111
       }
     },
     {
@@ -1659,12 +1659,12 @@
       "team": "Los Ratones",
       "role": "BOT",
       "rating": 42.7,
-      "confidence": 0.36,
+      "confidence": 0.35,
       "subscores": {
         "laning": 37.5,
         "damage": 9.2,
         "presence": 29.2,
-        "efficiency": 50.8
+        "efficiency": 48.3
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -1761,12 +1761,12 @@
           "pentaKills": 0,
           "soloKills": 2,
           "rating": 42.7,
-          "confidence": 0.36,
+          "confidence": 0.35,
           "subscores": {
             "laning": 37.5,
             "damage": 9.2,
             "presence": 29.2,
-            "efficiency": 50.8
+            "efficiency": 48.3
           }
         }
       },
@@ -1782,13 +1782,13 @@
       "country": "ES",
       "team": "Movistar KOI",
       "role": "JGL",
-      "rating": 62.1,
+      "rating": 61.3,
       "confidence": 1,
       "subscores": {
-        "laning": 43.1,
-        "damage": 40.8,
-        "presence": 62.5,
-        "efficiency": 85.4
+        "laning": 44.9,
+        "damage": 42.3,
+        "presence": 57.7,
+        "efficiency": 86.5
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -1860,37 +1860,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 10,
-          "winRate": 60,
-          "kda": 4.2,
-          "avgKills": 3.3,
-          "avgDeaths": 2.6,
-          "avgAssists": 7.6,
+          "games": 12,
+          "winRate": 66.7,
+          "kda": 4.3,
+          "avgKills": 3.1,
+          "avgDeaths": 2.5,
+          "avgAssists": 7.8,
           "csm": 7.5,
-          "gpm": 397,
-          "kp": 69.1,
-          "dmgPct": 15.4,
-          "goldPct": 19.8,
-          "vsPct": 19.4,
-          "dpm": 444,
-          "vspm": 2.06,
-          "avgWpm": 0.45,
-          "avgWcpm": 0.46,
-          "avgVwpm": 0.36,
-          "gd15": -90,
-          "csd15": 8,
-          "xpd15": 236,
-          "fbPct": 40,
+          "gpm": 398,
+          "kp": 69.2,
+          "dmgPct": 15.1,
+          "goldPct": 19.6,
+          "vsPct": 19,
+          "dpm": 451,
+          "vspm": 2.02,
+          "avgWpm": 0.44,
+          "avgWcpm": 0.43,
+          "avgVwpm": 0.37,
+          "gd15": -116,
+          "csd15": 9,
+          "xpd15": 258,
+          "fbPct": 33.3,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 53,
-          "confidence": 0.87,
+          "rating": 55.8,
+          "confidence": 1,
           "subscores": {
-            "laning": 61.7,
-            "damage": 38,
-            "presence": 45,
-            "efficiency": 69.5
+            "laning": 59.1,
+            "damage": 33.6,
+            "presence": 50,
+            "efficiency": 75.7
           }
         },
         "LEC 2026 Versus": {
@@ -1928,44 +1928,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 33,
-          "winRate": 54.53030303030303,
-          "kda": 4.872727272727273,
-          "avgKills": 3.4393939393939394,
-          "avgDeaths": 2.257575757575758,
-          "avgAssists": 7.406060606060606,
-          "csm": 7.178787878787878,
-          "gpm": 399.3636363636364,
-          "kp": 73.02424242424242,
-          "dmgPct": 16.060606060606062,
-          "goldPct": 20.042424242424243,
-          "vsPct": 19.527272727272727,
-          "dpm": 461.1212121212121,
-          "vspm": 2.0599999999999996,
-          "avgWpm": 0.4115151515151515,
-          "avgWcpm": 0.48090909090909095,
-          "avgVwpm": 0.33545454545454545,
-          "gd15": -140.33333333333334,
-          "csd15": 0.15151515151515152,
-          "xpd15": -126.15151515151516,
-          "fbPct": 21.206060606060603,
-          "fbVictim": 9.106060606060606,
+          "games": 35,
+          "winRate": 57.14,
+          "kda": 4.868571428571428,
+          "avgKills": 3.362857142857143,
+          "avgDeaths": 2.242857142857143,
+          "avgAssists": 7.485714285714286,
+          "csm": 7.197142857142857,
+          "gpm": 399.57142857142856,
+          "kp": 72.83428571428571,
+          "dmgPct": 15.920000000000002,
+          "goldPct": 19.96,
+          "vsPct": 19.38285714285714,
+          "dpm": 462.54285714285714,
+          "vspm": 2.0462857142857143,
+          "avgWpm": 0.41028571428571425,
+          "avgWcpm": 0.4694285714285714,
+          "avgVwpm": 0.3402857142857143,
+          "gd15": -146.37142857142857,
+          "csd15": 0.9428571428571428,
+          "xpd15": -97.91428571428571,
+          "fbPct": 19.982857142857142,
+          "fbVictim": 8.585714285714285,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 62.1,
+          "rating": 61.3,
           "confidence": 1,
           "subscores": {
-            "laning": 43.1,
-            "damage": 40.8,
-            "presence": 62.5,
-            "efficiency": 85.4
+            "laning": 44.9,
+            "damage": 42.3,
+            "presence": 57.7,
+            "efficiency": 86.5
           }
         }
       },
       "aggregated": {
-        "totalGames": 33,
-        "avgWinRate": 54.53030303030303,
-        "avgKda": 4.872727272727273
+        "totalGames": 35,
+        "avgWinRate": 57.14,
+        "avgKda": 4.868571428571428
       }
     },
     {
@@ -1974,11 +1974,11 @@
       "country": "GR",
       "team": "Fnatic",
       "role": "TOP",
-      "rating": 33.3,
-      "confidence": 0.82,
+      "rating": 32.7,
+      "confidence": 0.79,
       "subscores": {
         "laning": 18.1,
-        "damage": 54.2,
+        "damage": 49.2,
         "presence": 4.2,
         "efficiency": 26.7
       },
@@ -2076,12 +2076,12 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 41.7,
-          "confidence": 0.87,
+          "rating": 42.2,
+          "confidence": 0.8,
           "subscores": {
-            "laning": 46.7,
-            "damage": 39,
-            "presence": 60,
+            "laning": 48.3,
+            "damage": 35,
+            "presence": 65,
             "efficiency": 25.5
           }
         },
@@ -2144,11 +2144,11 @@
           "fbVictim": 8.004,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 33.3,
-          "confidence": 0.82,
+          "rating": 32.7,
+          "confidence": 0.79,
           "subscores": {
             "laning": 18.1,
-            "damage": 54.2,
+            "damage": 49.2,
             "presence": 4.2,
             "efficiency": 26.7
           }
@@ -2166,10 +2166,10 @@
       "country": "TR",
       "team": "Team Vitality",
       "role": "SUP",
-      "rating": 47.5,
+      "rating": 48.5,
       "confidence": 1,
       "subscores": {
-        "laning": 74.4,
+        "laning": 80.8,
         "damage": 65.4,
         "presence": 3.8,
         "efficiency": 80.8
@@ -2244,37 +2244,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 16,
-          "winRate": 68.8,
-          "kda": 4.4,
-          "avgKills": 0.7,
-          "avgDeaths": 2.3,
-          "avgAssists": 9.3,
+          "games": 18,
+          "winRate": 72.2,
+          "kda": 4.7,
+          "avgKills": 0.9,
+          "avgDeaths": 2.2,
+          "avgAssists": 9.2,
           "csm": 1.1,
-          "gpm": 273,
-          "kp": 66.4,
-          "dmgPct": 7.9,
-          "goldPct": 13.8,
-          "vsPct": 46.6,
-          "dpm": 210,
-          "vspm": 4.68,
-          "avgWpm": 2.21,
-          "avgWcpm": 0.65,
-          "avgVwpm": 0.42,
-          "gd15": 261,
-          "csd15": 1,
-          "xpd15": 132,
-          "fbPct": 37.5,
+          "gpm": 276,
+          "kp": 66,
+          "dmgPct": 8,
+          "goldPct": 13.9,
+          "vsPct": 46.2,
+          "dpm": 215,
+          "vspm": 4.64,
+          "avgWpm": 2.18,
+          "avgWcpm": 0.64,
+          "avgVwpm": 0.41,
+          "gd15": 287,
+          "csd15": 2,
+          "xpd15": 115,
+          "fbPct": 38.9,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 48,
+          "rating": 51.6,
           "confidence": 1,
           "subscores": {
-            "laning": 75,
-            "damage": 25,
-            "presence": 20,
-            "efficiency": 75
+            "laning": 85,
+            "damage": 31,
+            "presence": 15,
+            "efficiency": 85
           }
         },
         "LEC 2026 Versus": {
@@ -2312,34 +2312,34 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 34,
-          "winRate": 61.785294117647055,
-          "kda": 4.15,
-          "avgKills": 0.8294117647058823,
-          "avgDeaths": 2.573529411764706,
-          "avgAssists": 9.738235294117647,
-          "csm": 1.1323529411764706,
-          "gpm": 273.52941176470586,
-          "kp": 66.90882352941176,
-          "dmgPct": 8.1,
-          "goldPct": 13.852941176470589,
-          "vsPct": 46.544117647058826,
-          "dpm": 231.55882352941177,
-          "vspm": 4.730294117647058,
-          "avgWpm": 2.1691176470588234,
-          "avgWcpm": 0.6402941176470589,
-          "avgVwpm": 0.40441176470588236,
-          "gd15": 187.7058823529412,
-          "csd15": 1,
-          "xpd15": 51.3235294117647,
-          "fbPct": 41.16764705882353,
-          "fbVictim": 8.83235294117647,
+          "games": 36,
+          "winRate": 63.875,
+          "kda": 4.313888888888889,
+          "avgKills": 0.9222222222222223,
+          "avgDeaths": 2.5083333333333337,
+          "avgAssists": 9.663888888888888,
+          "csm": 1.1305555555555555,
+          "gpm": 275,
+          "kp": 66.68055555555556,
+          "dmgPct": 8.13888888888889,
+          "goldPct": 13.899999999999999,
+          "vsPct": 46.34722222222222,
+          "dpm": 232.86111111111111,
+          "vspm": 4.7075,
+          "avgWpm": 2.156388888888889,
+          "avgWcpm": 0.6358333333333334,
+          "avgVwpm": 0.4002777777777778,
+          "gd15": 204.77777777777777,
+          "csd15": 1.5,
+          "xpd15": 47.30555555555556,
+          "fbPct": 41.66388888888889,
+          "fbVictim": 8.341666666666667,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 47.5,
+          "rating": 48.5,
           "confidence": 1,
           "subscores": {
-            "laning": 74.4,
+            "laning": 80.8,
             "damage": 65.4,
             "presence": 3.8,
             "efficiency": 80.8
@@ -2347,9 +2347,9 @@
         }
       },
       "aggregated": {
-        "totalGames": 34,
-        "avgWinRate": 61.785294117647055,
-        "avgKda": 4.15
+        "totalGames": 36,
+        "avgWinRate": 63.875,
+        "avgKda": 4.313888888888889
       }
     },
     {
@@ -2361,10 +2361,10 @@
       "rating": 56.7,
       "confidence": 1,
       "subscores": {
-        "laning": 79.2,
+        "laning": 81.9,
         "damage": 50.8,
         "presence": 12.5,
-        "efficiency": 69.2
+        "efficiency": 66.3
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -2460,13 +2460,13 @@
           "fbVictim": 20,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 51.2,
-          "confidence": 0.87,
+          "rating": 51.4,
+          "confidence": 0.8,
           "subscores": {
-            "laning": 58.3,
+            "laning": 61.7,
             "damage": 57,
             "presence": 5,
-            "efficiency": 64.3
+            "efficiency": 62.5
           }
         },
         "LEC 2026 Versus": {
@@ -2531,10 +2531,10 @@
           "rating": 56.7,
           "confidence": 1,
           "subscores": {
-            "laning": 79.2,
+            "laning": 81.9,
             "damage": 50.8,
             "presence": 12.5,
-            "efficiency": 69.2
+            "efficiency": 66.3
           }
         }
       },
@@ -2550,8 +2550,8 @@
       "country": "RO",
       "team": "Karmine Corp Blue",
       "role": "BOT",
-      "rating": 38.8,
-      "confidence": 0.36,
+      "rating": 39.2,
+      "confidence": 0.35,
       "subscores": {
         "laning": 6.9,
         "damage": 42.5,
@@ -2652,8 +2652,8 @@
           "fbVictim": 9.1,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 38.8,
-          "confidence": 0.36,
+          "rating": 39.2,
+          "confidence": 0.35,
           "subscores": {
             "laning": 6.9,
             "damage": 42.5,
@@ -2674,13 +2674,13 @@
       "country": "CZ",
       "team": "Team Vitality",
       "role": "MID",
-      "rating": 40.5,
+      "rating": 38.4,
       "confidence": 1,
       "subscores": {
-        "laning": 31.9,
-        "damage": 72.5,
+        "laning": 34.7,
+        "damage": 65.8,
         "presence": 4.2,
-        "efficiency": 39.6
+        "efficiency": 36.7
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -2752,37 +2752,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 16,
-          "winRate": 68.8,
-          "kda": 3,
-          "avgKills": 3.6,
+          "games": 18,
+          "winRate": 72.2,
+          "kda": 3.1,
+          "avgKills": 3.4,
           "avgDeaths": 2.7,
-          "avgAssists": 4.4,
+          "avgAssists": 4.9,
           "csm": 9.3,
-          "gpm": 412,
-          "kp": 51.3,
-          "dmgPct": 24.5,
-          "goldPct": 20.9,
-          "vsPct": 12,
-          "dpm": 669,
-          "vspm": 1.19,
+          "gpm": 414,
+          "kp": 52.3,
+          "dmgPct": 24,
+          "goldPct": 20.8,
+          "vsPct": 11.8,
+          "dpm": 662,
+          "vspm": 1.17,
           "avgWpm": 0.41,
-          "avgWcpm": 0.22,
+          "avgWcpm": 0.21,
           "avgVwpm": 0.11,
-          "gd15": -88,
-          "csd15": -8,
-          "xpd15": -248,
-          "fbPct": 18.8,
-          "fbVictim": 6.3,
+          "gd15": 8,
+          "csd15": -5,
+          "xpd15": -151,
+          "fbPct": 22.2,
+          "fbVictim": 5.6,
           "pentaKills": 0,
-          "soloKills": 4,
-          "rating": 39.1,
+          "soloKills": 5,
+          "rating": 36,
           "confidence": 1,
           "subscores": {
-            "laning": 31.7,
-            "damage": 53,
+            "laning": 35,
+            "damage": 43,
             "presence": 15,
-            "efficiency": 49
+            "efficiency": 45.5
           }
         },
         "LEC 2026 Versus": {
@@ -2820,44 +2820,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 34,
-          "winRate": 61.785294117647055,
-          "kda": 2.7294117647058824,
-          "avgKills": 3.2676470588235293,
-          "avgDeaths": 3.161764705882353,
-          "avgAssists": 5.079411764705883,
-          "csm": 9.38529411764706,
-          "gpm": 417.52941176470586,
-          "kp": 55.31470588235294,
-          "dmgPct": 24.78529411764706,
-          "goldPct": 21.179411764705883,
-          "vsPct": 11.658823529411764,
-          "dpm": 725.7352941176471,
-          "vspm": 1.1708823529411765,
-          "avgWpm": 0.4123529411764706,
-          "avgWcpm": 0.20882352941176469,
-          "avgVwpm": 0.10705882352941176,
-          "gd15": -151.2058823529412,
-          "csd15": -6.382352941176471,
-          "xpd15": -195.14705882352942,
-          "fbPct": 26.511764705882356,
-          "fbVictim": 5.908823529411764,
+          "games": 36,
+          "winRate": 63.875,
+          "kda": 2.7944444444444443,
+          "avgKills": 3.186111111111111,
+          "avgDeaths": 3.136111111111111,
+          "avgAssists": 5.291666666666667,
+          "csm": 9.380555555555556,
+          "gpm": 418.22222222222223,
+          "kp": 55.59166666666667,
+          "dmgPct": 24.519444444444446,
+          "goldPct": 21.113888888888894,
+          "vsPct": 11.577777777777776,
+          "dpm": 719.0833333333334,
+          "vspm": 1.1619444444444444,
+          "avgWpm": 0.4122222222222222,
+          "avgWcpm": 0.20444444444444443,
+          "avgVwpm": 0.10722222222222222,
+          "gd15": -99.69444444444444,
+          "csd15": -4.972222222222222,
+          "xpd15": -149.58333333333334,
+          "fbPct": 27.783333333333335,
+          "fbVictim": 5.580555555555555,
           "pentaKills": 0,
-          "soloKills": 7,
-          "rating": 40.5,
+          "soloKills": 8,
+          "rating": 38.4,
           "confidence": 1,
           "subscores": {
-            "laning": 31.9,
-            "damage": 72.5,
+            "laning": 34.7,
+            "damage": 65.8,
             "presence": 4.2,
-            "efficiency": 39.6
+            "efficiency": 36.7
           }
         }
       },
       "aggregated": {
-        "totalGames": 34,
-        "avgWinRate": 61.785294117647055,
-        "avgKda": 2.7294117647058824
+        "totalGames": 36,
+        "avgWinRate": 63.875,
+        "avgKda": 2.7944444444444443
       }
     },
     {
@@ -2866,13 +2866,13 @@
       "country": "KR",
       "team": "Team Heretics",
       "role": "BOT",
-      "rating": 37,
-      "confidence": 0.98,
+      "rating": 33.5,
+      "confidence": 1,
       "subscores": {
-        "laning": 62.5,
+        "laning": 59.7,
         "damage": 7.5,
-        "presence": 54.2,
-        "efficiency": 41.7
+        "presence": 45.8,
+        "efficiency": 36.3
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -2944,37 +2944,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 14,
-          "winRate": 21.4,
-          "kda": 2.3,
-          "avgKills": 2.9,
-          "avgDeaths": 2.8,
-          "avgAssists": 3.4,
-          "csm": 10.5,
-          "gpm": 452,
-          "kp": 67.5,
-          "dmgPct": 26.5,
-          "goldPct": 25.1,
-          "vsPct": 12.7,
-          "dpm": 641,
-          "vspm": 1.14,
+          "games": 16,
+          "winRate": 18.8,
+          "kda": 2.1,
+          "avgKills": 2.8,
+          "avgDeaths": 2.9,
+          "avgAssists": 3.1,
+          "csm": 10.4,
+          "gpm": 448,
+          "kp": 66.3,
+          "dmgPct": 25.9,
+          "goldPct": 25,
+          "vsPct": 12.6,
+          "dpm": 623,
+          "vspm": 1.13,
           "avgWpm": 0.41,
           "avgWcpm": 0.3,
           "avgVwpm": 0.12,
-          "gd15": 137,
-          "csd15": 2,
-          "xpd15": -112,
-          "fbPct": 57.1,
-          "fbVictim": 14.3,
+          "gd15": 19,
+          "csd15": 0,
+          "xpd15": -91,
+          "fbPct": 50,
+          "fbVictim": 18.8,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 41.2,
+          "rating": 31.3,
           "confidence": 1,
           "subscores": {
-            "laning": 51.7,
-            "damage": 23,
+            "laning": 40,
+            "damage": 9,
             "presence": 65,
-            "efficiency": 41.8
+            "efficiency": 33.8
           }
         },
         "LEC 2026 Versus": {
@@ -3012,44 +3012,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 30,
-          "winRate": 33.30333333333333,
-          "kda": 2.85,
-          "avgKills": 3.283333333333333,
-          "avgDeaths": 2.5433333333333334,
-          "avgAssists": 3.5600000000000005,
-          "csm": 10.466666666666667,
-          "gpm": 468.06666666666666,
-          "kp": 64.84666666666666,
-          "dmgPct": 25.45,
-          "goldPct": 25.336666666666666,
-          "vsPct": 13.223333333333333,
-          "dpm": 624.6333333333333,
-          "vspm": 1.2373333333333332,
-          "avgWpm": 0.42833333333333334,
-          "avgWcpm": 0.31799999999999995,
-          "avgVwpm": 0.13966666666666666,
-          "gd15": 92.26666666666667,
-          "csd15": 1.7333333333333334,
-          "xpd15": -3.7666666666666666,
-          "fbPct": 39.99333333333333,
-          "fbVictim": 13.343333333333334,
+          "games": 32,
+          "winRate": 31.259375,
+          "kda": 2.715625,
+          "avgKills": 3.209375,
+          "avgDeaths": 2.609375,
+          "avgAssists": 3.4000000000000004,
+          "csm": 10.41875,
+          "gpm": 465.0625,
+          "kp": 64.4125,
+          "dmgPct": 25.215625,
+          "goldPct": 25.271875,
+          "vsPct": 13.140625,
+          "dpm": 616.65625,
+          "vspm": 1.2262499999999998,
+          "avgWpm": 0.4271875,
+          "avgWcpm": 0.316875,
+          "avgVwpm": 0.1384375,
+          "gd15": 36.0625,
+          "csd15": 0.75,
+          "xpd15": -0.03125,
+          "fbPct": 37.5125,
+          "fbVictim": 15.653125,
           "pentaKills": 3,
           "soloKills": 4,
-          "rating": 37,
-          "confidence": 0.98,
+          "rating": 33.5,
+          "confidence": 1,
           "subscores": {
-            "laning": 62.5,
+            "laning": 59.7,
             "damage": 7.5,
-            "presence": 54.2,
-            "efficiency": 41.7
+            "presence": 45.8,
+            "efficiency": 36.3
           }
         }
       },
       "aggregated": {
-        "totalGames": 30,
-        "avgWinRate": 33.30333333333333,
-        "avgKda": 2.85
+        "totalGames": 32,
+        "avgWinRate": 31.259375,
+        "avgKda": 2.715625
       }
     },
     {
@@ -3058,13 +3058,13 @@
       "country": "FR",
       "team": "GIANTX",
       "role": "JGL",
-      "rating": 48.2,
+      "rating": 51.1,
       "confidence": 1,
       "subscores": {
-        "laning": 65.3,
-        "damage": 22.5,
-        "presence": 45.8,
-        "efficiency": 59.6
+        "laning": 65.4,
+        "damage": 20.8,
+        "presence": 50,
+        "efficiency": 65.4
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -3136,37 +3136,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 13,
-          "winRate": 69.2,
-          "kda": 4.7,
+          "games": 15,
+          "winRate": 60,
+          "kda": 4.5,
           "avgKills": 3,
           "avgDeaths": 2.1,
-          "avgAssists": 6.8,
-          "csm": 7.4,
-          "gpm": 395,
-          "kp": 67.2,
-          "dmgPct": 17.4,
-          "goldPct": 20.2,
-          "vsPct": 14.6,
-          "dpm": 444,
+          "avgAssists": 6.3,
+          "csm": 7.5,
+          "gpm": 392,
+          "kp": 67.1,
+          "dmgPct": 17.6,
+          "goldPct": 20.4,
+          "vsPct": 14.9,
+          "dpm": 438,
           "vspm": 1.48,
           "avgWpm": 0.25,
-          "avgWcpm": 0.32,
-          "avgVwpm": 0.2,
-          "gd15": 183,
-          "csd15": 5,
-          "xpd15": 315,
-          "fbPct": 30.8,
-          "fbVictim": 7.7,
+          "avgWcpm": 0.34,
+          "avgVwpm": 0.19,
+          "gd15": 195,
+          "csd15": 4,
+          "xpd15": 287,
+          "fbPct": 33.3,
+          "fbVictim": 6.7,
           "pentaKills": 0,
-          "soloKills": 0,
-          "rating": 54.5,
+          "soloKills": 1,
+          "rating": 55.4,
           "confidence": 1,
           "subscores": {
-            "laning": 78.3,
-            "damage": 46,
-            "presence": 25,
-            "efficiency": 82.8
+            "laning": 75.8,
+            "damage": 39.1,
+            "presence": 31.8,
+            "efficiency": 83.6
           }
         },
         "LEC 2026 Versus": {
@@ -3204,44 +3204,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 35,
-          "winRate": 54.27142857142857,
-          "kda": 3.7885714285714283,
-          "avgKills": 2.874285714285714,
-          "avgDeaths": 2.54,
-          "avgAssists": 6.297142857142856,
-          "csm": 7.117142857142857,
-          "gpm": 383.0571428571429,
-          "kp": 72.95142857142858,
-          "dmgPct": 16.80285714285714,
-          "goldPct": 19.665714285714284,
-          "vsPct": 15.165714285714284,
-          "dpm": 416.9714285714286,
-          "vspm": 1.6057142857142859,
+          "games": 37,
+          "winRate": 51.34864864864865,
+          "kda": 3.7567567567567566,
+          "avgKills": 2.881081081081081,
+          "avgDeaths": 2.516216216216216,
+          "avgAssists": 6.121621621621622,
+          "csm": 7.172972972972972,
+          "gpm": 382.4864864864865,
+          "kp": 72.6,
+          "dmgPct": 16.916216216216217,
+          "goldPct": 19.77567567567568,
+          "vsPct": 15.256756756756756,
+          "dpm": 416,
+          "vspm": 1.5989189189189188,
           "avgWpm": 0.25,
-          "avgWcpm": 0.364,
-          "avgVwpm": 0.20314285714285713,
-          "gd15": 56.97142857142857,
-          "csd15": 1.8571428571428572,
-          "xpd15": 114.17142857142858,
-          "fbPct": 34.28857142857143,
-          "fbVictim": 8.58,
+          "avgWcpm": 0.36972972972972973,
+          "avgVwpm": 0.1989189189189189,
+          "gd15": 68.64864864864865,
+          "csd15": 1.6216216216216217,
+          "xpd15": 113.67567567567568,
+          "fbPct": 35.11351351351352,
+          "fbVictim": 8.127027027027026,
           "pentaKills": 1,
-          "soloKills": 1,
-          "rating": 48.2,
+          "soloKills": 2,
+          "rating": 51.1,
           "confidence": 1,
           "subscores": {
-            "laning": 65.3,
-            "damage": 22.5,
-            "presence": 45.8,
-            "efficiency": 59.6
+            "laning": 65.4,
+            "damage": 20.8,
+            "presence": 50,
+            "efficiency": 65.4
           }
         }
       },
       "aggregated": {
-        "totalGames": 35,
-        "avgWinRate": 54.27142857142857,
-        "avgKda": 3.7885714285714283
+        "totalGames": 37,
+        "avgWinRate": 51.34864864864865,
+        "avgKda": 3.7567567567567566
       }
     },
     {
@@ -3250,13 +3250,13 @@
       "country": "CZ",
       "team": "GIANTX",
       "role": "MID",
-      "rating": 71.7,
+      "rating": 64.5,
       "confidence": 1,
       "subscores": {
-        "laning": 68.1,
-        "damage": 74.2,
+        "laning": 62.5,
+        "damage": 64.2,
         "presence": 45.8,
-        "efficiency": 92.9
+        "efficiency": 81.7
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -3328,37 +3328,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 13,
-          "winRate": 69.2,
-          "kda": 7.4,
-          "avgKills": 5,
-          "avgDeaths": 1.4,
-          "avgAssists": 5.2,
-          "csm": 9.2,
-          "gpm": 430,
-          "kp": 68.4,
-          "dmgPct": 27.2,
-          "goldPct": 21.9,
-          "vsPct": 13.6,
-          "dpm": 719,
-          "vspm": 1.37,
-          "avgWpm": 0.32,
-          "avgWcpm": 0.35,
-          "avgVwpm": 0.17,
-          "gd15": 356,
-          "csd15": 5,
-          "xpd15": 389,
-          "fbPct": 23.1,
-          "fbVictim": 7.7,
+          "games": 15,
+          "winRate": 60,
+          "kda": 5.5,
+          "avgKills": 4.5,
+          "avgDeaths": 1.7,
+          "avgAssists": 5,
+          "csm": 9.1,
+          "gpm": 419,
+          "kp": 66.7,
+          "dmgPct": 26.4,
+          "goldPct": 21.7,
+          "vsPct": 13.1,
+          "dpm": 685,
+          "vspm": 1.31,
+          "avgWpm": 0.31,
+          "avgWcpm": 0.32,
+          "avgVwpm": 0.16,
+          "gd15": 205,
+          "csd15": 2,
+          "xpd15": 253,
+          "fbPct": 20,
+          "fbVictim": 13.3,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 80.8,
+          "rating": 76.3,
           "confidence": 1,
           "subscores": {
             "laning": 71.7,
-            "damage": 81,
+            "damage": 73,
             "presence": 95,
-            "efficiency": 78.3
+            "efficiency": 70
           }
         },
         "LEC 2026 Versus": {
@@ -3396,44 +3396,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 35,
-          "winRate": 54.27142857142857,
-          "kda": 4.634285714285714,
-          "avgKills": 3.1457142857142855,
-          "avgDeaths": 2.0285714285714285,
-          "avgAssists": 5.105714285714285,
-          "csm": 9.67142857142857,
-          "gpm": 425.2857142857143,
-          "kp": 64.28285714285714,
-          "dmgPct": 26.822857142857142,
-          "goldPct": 21.805714285714288,
-          "vsPct": 13.505714285714284,
-          "dpm": 682.5428571428571,
-          "vspm": 1.4265714285714286,
-          "avgWpm": 0.40800000000000003,
-          "avgWcpm": 0.30914285714285716,
-          "avgVwpm": 0.15742857142857142,
-          "gd15": 136.31428571428572,
-          "csd15": -1.2857142857142858,
-          "xpd15": 124.37142857142857,
-          "fbPct": 20.02,
-          "fbVictim": 8.58,
+          "games": 37,
+          "winRate": 51.34864864864865,
+          "kda": 4.013513513513513,
+          "avgKills": 3.0432432432432432,
+          "avgDeaths": 2.1162162162162166,
+          "avgAssists": 5.02972972972973,
+          "csm": 9.605405405405405,
+          "gpm": 421.0810810810811,
+          "kp": 63.81621621621621,
+          "dmgPct": 26.51891891891892,
+          "goldPct": 21.72972972972973,
+          "vsPct": 13.308108108108108,
+          "dpm": 670.7297297297297,
+          "vspm": 1.399189189189189,
+          "avgWpm": 0.3991891891891892,
+          "avgWcpm": 0.2991891891891892,
+          "avgVwpm": 0.15405405405405403,
+          "gd15": 86.97297297297297,
+          "csd15": -2.1621621621621623,
+          "xpd15": 83.54054054054055,
+          "fbPct": 18.92972972972973,
+          "fbVictim": 10.802702702702703,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 71.7,
+          "rating": 64.5,
           "confidence": 1,
           "subscores": {
-            "laning": 68.1,
-            "damage": 74.2,
+            "laning": 62.5,
+            "damage": 64.2,
             "presence": 45.8,
-            "efficiency": 92.9
+            "efficiency": 81.7
           }
         }
       },
       "aggregated": {
-        "totalGames": 35,
-        "avgWinRate": 54.27142857142857,
-        "avgKda": 4.634285714285714
+        "totalGames": 37,
+        "avgWinRate": 51.34864864864865,
+        "avgKda": 4.013513513513513
       }
     },
     {
@@ -3442,13 +3442,13 @@
       "country": "HR",
       "team": "SK Gaming",
       "role": "BOT",
-      "rating": 55.5,
-      "confidence": 0.89,
+      "rating": 55.9,
+      "confidence": 0.86,
       "subscores": {
         "laning": 37.5,
         "damage": 79.2,
         "presence": 79.2,
-        "efficiency": 29.2
+        "efficiency": 31.7
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -3510,13 +3510,13 @@
           "fbVictim": 12.5,
           "pentaKills": 1,
           "soloKills": 3,
-          "rating": 56.1,
+          "rating": 57.1,
           "confidence": 1,
           "subscores": {
-            "laning": 11.7,
-            "damage": 91,
+            "laning": 8.3,
+            "damage": 95,
             "presence": 95,
-            "efficiency": 28.5
+            "efficiency": 30.3
           }
         },
         "LEC 2026 Versus": {
@@ -3578,13 +3578,13 @@
           "fbVictim": 11.114814814814816,
           "pentaKills": 2,
           "soloKills": 7,
-          "rating": 55.5,
-          "confidence": 0.89,
+          "rating": 55.9,
+          "confidence": 0.86,
           "subscores": {
             "laning": 37.5,
             "damage": 79.2,
             "presence": 79.2,
-            "efficiency": 29.2
+            "efficiency": 31.7
           }
         }
       },
@@ -3600,13 +3600,13 @@
       "country": "KR",
       "team": "GIANTX",
       "role": "SUP",
-      "rating": 58.4,
+      "rating": 53.6,
       "confidence": 1,
       "subscores": {
-        "laning": 62.8,
+        "laning": 60.3,
         "damage": 60.8,
-        "presence": 50,
-        "efficiency": 65.4
+        "presence": 42.3,
+        "efficiency": 61.5
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -3678,37 +3678,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 13,
-          "winRate": 69.2,
-          "kda": 4.7,
-          "avgKills": 0.5,
-          "avgDeaths": 2.2,
-          "avgAssists": 9.9,
+          "games": 15,
+          "winRate": 60,
+          "kda": 4,
+          "avgKills": 0.6,
+          "avgDeaths": 2.5,
+          "avgAssists": 9.2,
           "csm": 1.1,
-          "gpm": 272,
-          "kp": 70.8,
+          "gpm": 269,
+          "kp": 69.5,
           "dmgPct": 9,
-          "goldPct": 13.9,
-          "vsPct": 44.7,
-          "dpm": 230,
-          "vspm": 4.53,
-          "avgWpm": 2.12,
-          "avgWcpm": 0.53,
-          "avgVwpm": 0.39,
-          "gd15": 23,
-          "csd15": 2,
-          "xpd15": 73,
-          "fbPct": 23.1,
-          "fbVictim": 15.4,
+          "goldPct": 14,
+          "vsPct": 45.4,
+          "dpm": 226,
+          "vspm": 4.54,
+          "avgWpm": 2.14,
+          "avgWcpm": 0.52,
+          "avgVwpm": 0.41,
+          "gd15": -47,
+          "csd15": 1,
+          "xpd15": 66,
+          "fbPct": 20,
+          "fbVictim": 13.3,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 61.1,
+          "rating": 54.9,
           "confidence": 1,
           "subscores": {
-            "laning": 68.3,
-            "damage": 71,
+            "laning": 56.7,
+            "damage": 61,
             "presence": 35,
-            "efficiency": 85
+            "efficiency": 75
           }
         },
         "LEC 2026 Versus": {
@@ -3746,44 +3746,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 35,
-          "winRate": 54.27142857142857,
-          "kda": 3.537142857142857,
-          "avgKills": 0.5314285714285715,
-          "avgDeaths": 2.702857142857143,
-          "avgAssists": 8.705714285714286,
+          "games": 37,
+          "winRate": 51.34864864864865,
+          "kda": 3.316216216216216,
+          "avgKills": 0.5702702702702703,
+          "avgDeaths": 2.7972972972972974,
+          "avgAssists": 8.486486486486486,
           "csm": 1.1,
-          "gpm": 266.9714285714286,
-          "kp": 72.68571428571428,
-          "dmgPct": 8.591428571428573,
-          "goldPct": 13.742857142857142,
-          "vsPct": 44.60571428571428,
-          "dpm": 214.28571428571428,
-          "vspm": 4.702857142857144,
-          "avgWpm": 2.1954285714285717,
-          "avgWcpm": 0.5551428571428572,
-          "avgVwpm": 0.4025714285714286,
-          "gd15": 39.34285714285714,
-          "csd15": -0.2,
-          "xpd15": 71.11428571428571,
-          "fbPct": 28.6,
-          "fbVictim": 8.58,
+          "gpm": 266.02702702702703,
+          "kp": 72.05675675675676,
+          "dmgPct": 8.613513513513515,
+          "goldPct": 13.791891891891892,
+          "vsPct": 44.894594594594594,
+          "dpm": 213.51351351351352,
+          "vspm": 4.697567567567567,
+          "avgWpm": 2.1994594594594594,
+          "avgWcpm": 0.5497297297297298,
+          "avgVwpm": 0.41,
+          "gd15": 10.08108108108108,
+          "csd15": -0.4864864864864865,
+          "xpd15": 68.37837837837837,
+          "fbPct": 27.04594594594595,
+          "fbVictim": 8.097297297297297,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 58.4,
+          "rating": 53.6,
           "confidence": 1,
           "subscores": {
-            "laning": 62.8,
+            "laning": 60.3,
             "damage": 60.8,
-            "presence": 50,
-            "efficiency": 65.4
+            "presence": 42.3,
+            "efficiency": 61.5
           }
         }
       },
       "aggregated": {
-        "totalGames": 35,
-        "avgWinRate": 54.27142857142857,
-        "avgKda": 3.537142857142857
+        "totalGames": 37,
+        "avgWinRate": 51.34864864864865,
+        "avgKda": 3.316216216216216
       }
     },
     {
@@ -3792,8 +3792,8 @@
       "country": "FR",
       "team": "Karmine Corp Blue",
       "role": "MID",
-      "rating": 43.5,
-      "confidence": 0.36,
+      "rating": 43.7,
+      "confidence": 0.35,
       "subscores": {
         "laning": 6.9,
         "damage": 52.5,
@@ -3894,8 +3894,8 @@
           "fbVictim": 27.3,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 43.5,
-          "confidence": 0.36,
+          "rating": 43.7,
+          "confidence": 0.35,
           "subscores": {
             "laning": 6.9,
             "damage": 52.5,
@@ -3916,13 +3916,13 @@
       "country": "KR",
       "team": "Karmine Corp",
       "role": "MID",
-      "rating": 53.7,
+      "rating": 58.4,
       "confidence": 1,
       "subscores": {
-        "laning": 79.2,
-        "damage": 40.8,
+        "laning": 81.9,
+        "damage": 49.2,
         "presence": 12.5,
-        "efficiency": 76.7
+        "efficiency": 82.5
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -4018,13 +4018,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 47.1,
-          "confidence": 0.43,
+          "rating": 47.7,
+          "confidence": 0.4,
           "subscores": {
             "laning": 81.7,
             "damage": 9,
             "presence": 5,
-            "efficiency": 77
+            "efficiency": 80.5
           }
         },
         "LEC 2026 Versus": {
@@ -4086,13 +4086,13 @@
           "fbVictim": 8.333333333333334,
           "pentaKills": 0,
           "soloKills": 7,
-          "rating": 53.7,
+          "rating": 58.4,
           "confidence": 1,
           "subscores": {
-            "laning": 79.2,
-            "damage": 40.8,
+            "laning": 81.9,
+            "damage": 49.2,
             "presence": 12.5,
-            "efficiency": 76.7
+            "efficiency": 82.5
           }
         }
       },
@@ -4108,10 +4108,10 @@
       "country": "NO",
       "team": "SK Gaming",
       "role": "MID",
-      "rating": 35.8,
-      "confidence": 0.89,
+      "rating": 36.8,
+      "confidence": 0.86,
       "subscores": {
-        "laning": 54.2,
+        "laning": 56.9,
         "damage": 24.2,
         "presence": 37.5,
         "efficiency": 22.5
@@ -4176,13 +4176,13 @@
           "fbVictim": 12.5,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 33.3,
+          "rating": 33.6,
           "confidence": 1,
           "subscores": {
             "laning": 40,
             "damage": 29,
             "presence": 45,
-            "efficiency": 22.3
+            "efficiency": 23.8
           }
         },
         "LEC 2026 Versus": {
@@ -4244,10 +4244,10 @@
           "fbVictim": 11.114814814814816,
           "pentaKills": 0,
           "soloKills": 7,
-          "rating": 35.8,
-          "confidence": 0.89,
+          "rating": 36.8,
+          "confidence": 0.86,
           "subscores": {
-            "laning": 54.2,
+            "laning": 56.9,
             "damage": 24.2,
             "presence": 37.5,
             "efficiency": 22.5
@@ -4266,13 +4266,13 @@
       "country": "GR",
       "team": "G2 Esports",
       "role": "SUP",
-      "rating": 47.5,
+      "rating": 45.8,
       "confidence": 1,
       "subscores": {
         "laning": 70.5,
-        "damage": 90,
+        "damage": 86.9,
         "presence": 19.2,
-        "efficiency": 57.7
+        "efficiency": 53.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -4368,13 +4368,13 @@
           "fbVictim": 10,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 35.2,
-          "confidence": 0.87,
+          "rating": 34.7,
+          "confidence": 0.8,
           "subscores": {
-            "laning": 55,
-            "damage": 35,
+            "laning": 56.7,
+            "damage": 29,
             "presence": 5,
-            "efficiency": 55
+            "efficiency": 50
           }
         },
         "LEC 2026 Versus": {
@@ -4436,13 +4436,13 @@
           "fbVictim": 18.203030303030303,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 47.5,
+          "rating": 45.8,
           "confidence": 1,
           "subscores": {
             "laning": 70.5,
-            "damage": 90,
+            "damage": 86.9,
             "presence": 19.2,
-            "efficiency": 57.7
+            "efficiency": 53.8
           }
         }
       },
@@ -4560,13 +4560,13 @@
           "fbVictim": 10,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 43.5,
-          "confidence": 0.87,
+          "rating": 41.9,
+          "confidence": 0.8,
           "subscores": {
             "laning": 31.7,
             "damage": 5,
             "presence": 45,
-            "efficiency": 55
+            "efficiency": 47.5
           }
         },
         "LEC 2026 Versus": {
@@ -4650,13 +4650,13 @@
       "country": "TR",
       "team": "GIANTX",
       "role": "TOP",
-      "rating": 45.8,
+      "rating": 45.1,
       "confidence": 1,
       "subscores": {
         "laning": 59.7,
         "damage": 4.2,
         "presence": 87.5,
-        "efficiency": 59.6
+        "efficiency": 56.7
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -4728,37 +4728,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 13,
-          "winRate": 69.2,
-          "kda": 3.6,
-          "avgKills": 2.9,
-          "avgDeaths": 2.2,
-          "avgAssists": 4.8,
+          "games": 15,
+          "winRate": 60,
+          "kda": 3.1,
+          "avgKills": 2.7,
+          "avgDeaths": 2.3,
+          "avgAssists": 4.6,
           "csm": 9.2,
-          "gpm": 408,
-          "kp": 52.8,
-          "dmgPct": 21.7,
-          "goldPct": 20.9,
+          "gpm": 404,
+          "kp": 52.4,
+          "dmgPct": 21.9,
+          "goldPct": 21,
           "vsPct": 12.7,
-          "dpm": 555,
-          "vspm": 1.28,
+          "dpm": 549,
+          "vspm": 1.27,
           "avgWpm": 0.37,
-          "avgWcpm": 0.25,
+          "avgWcpm": 0.24,
           "avgVwpm": 0.15,
-          "gd15": 260,
-          "csd15": 5,
-          "xpd15": 289,
-          "fbPct": 7.7,
-          "fbVictim": 7.7,
+          "gd15": 195,
+          "csd15": 4,
+          "xpd15": 248,
+          "fbPct": 13.3,
+          "fbVictim": 6.7,
           "pentaKills": 0,
-          "soloKills": 1,
-          "rating": 61.1,
+          "soloKills": 2,
+          "rating": 57.2,
           "confidence": 1,
           "subscores": {
             "laning": 75,
             "damage": 21,
             "presence": 85,
-            "efficiency": 80.3
+            "efficiency": 64.5
           }
         },
         "LEC 2026 Versus": {
@@ -4796,44 +4796,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 35,
-          "winRate": 54.27142857142857,
-          "kda": 2.8771428571428577,
-          "avgKills": 2.3657142857142857,
-          "avgDeaths": 2.5771428571428574,
-          "avgAssists": 4.768571428571429,
-          "csm": 8.854285714285714,
-          "gpm": 397.3142857142857,
-          "kp": 54.08857142857143,
-          "dmgPct": 20.85142857142857,
-          "goldPct": 20.39714285714286,
-          "vsPct": 12.417142857142858,
-          "dpm": 519.1714285714286,
-          "vspm": 1.3051428571428572,
-          "avgWpm": 0.35742857142857143,
-          "avgWcpm": 0.228,
-          "avgVwpm": 0.15314285714285716,
-          "gd15": 46.6,
-          "csd15": 3.1142857142857143,
-          "xpd15": 112.05714285714286,
-          "fbPct": 8.58,
-          "fbVictim": 11.44,
+          "games": 37,
+          "winRate": 51.34864864864865,
+          "kda": 2.7135135135135138,
+          "avgKills": 2.3135135135135134,
+          "avgDeaths": 2.597297297297297,
+          "avgAssists": 4.6891891891891895,
+          "csm": 8.872972972972974,
+          "gpm": 396.27027027027026,
+          "kp": 53.85675675675675,
+          "dmgPct": 20.97837837837838,
+          "goldPct": 20.464864864864865,
+          "vsPct": 12.432432432432432,
+          "dpm": 518.6756756756756,
+          "vspm": 1.2997297297297299,
+          "avgWpm": 0.3581081081081081,
+          "avgWcpm": 0.22513513513513514,
+          "avgVwpm": 0.15297297297297296,
+          "gd15": 31.783783783783782,
+          "csd15": 2.810810810810811,
+          "xpd15": 105,
+          "fbPct": 10.802702702702703,
+          "fbVictim": 10.832432432432432,
           "pentaKills": 0,
-          "soloKills": 6,
-          "rating": 45.8,
+          "soloKills": 7,
+          "rating": 45.1,
           "confidence": 1,
           "subscores": {
             "laning": 59.7,
             "damage": 4.2,
             "presence": 87.5,
-            "efficiency": 59.6
+            "efficiency": 56.7
           }
         }
       },
       "aggregated": {
-        "totalGames": 35,
-        "avgWinRate": 54.27142857142857,
-        "avgKda": 2.8771428571428577
+        "totalGames": 37,
+        "avgWinRate": 51.34864864864865,
+        "avgKda": 2.7135135135135138
       }
     },
     {
@@ -4842,13 +4842,13 @@
       "country": "LT",
       "team": "Team Vitality",
       "role": "JGL",
-      "rating": 29,
+      "rating": 33.8,
       "confidence": 1,
       "subscores": {
-        "laning": 34.7,
-        "damage": 22.5,
-        "presence": 4.2,
-        "efficiency": 59.6
+        "laning": 37.2,
+        "damage": 20.8,
+        "presence": 11.5,
+        "efficiency": 66.9
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -4920,37 +4920,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 16,
-          "winRate": 68.8,
-          "kda": 4.4,
-          "avgKills": 2.8,
-          "avgDeaths": 2.1,
-          "avgAssists": 6.3,
+          "games": 18,
+          "winRate": 72.2,
+          "kda": 4.8,
+          "avgKills": 2.9,
+          "avgDeaths": 2,
+          "avgAssists": 6.7,
           "csm": 6.7,
-          "gpm": 380,
-          "kp": 62.2,
-          "dmgPct": 14.1,
-          "goldPct": 19.2,
-          "vsPct": 16.1,
-          "dpm": 367,
-          "vspm": 1.61,
-          "avgWpm": 0.33,
-          "avgWcpm": 0.33,
-          "avgVwpm": 0.23,
-          "gd15": 70,
+          "gpm": 385,
+          "kp": 63.9,
+          "dmgPct": 14.3,
+          "goldPct": 19.3,
+          "vsPct": 16.4,
+          "dpm": 379,
+          "vspm": 1.64,
+          "avgWpm": 0.32,
+          "avgWcpm": 0.34,
+          "avgVwpm": 0.22,
+          "gd15": 31,
           "csd15": -4,
-          "xpd15": -251,
-          "fbPct": 50,
+          "xpd15": -235,
+          "fbPct": 44.4,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 30.6,
+          "rating": 36.7,
           "confidence": 1,
           "subscores": {
-            "laning": 40,
-            "damage": 11,
-            "presence": 5,
-            "efficiency": 68.8
+            "laning": 39.4,
+            "damage": 15.5,
+            "presence": 13.6,
+            "efficiency": 76.4
           }
         },
         "LEC 2026 Versus": {
@@ -4988,44 +4988,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 34,
-          "winRate": 61.785294117647055,
-          "kda": 4,
-          "avgKills": 3.3088235294117645,
-          "avgDeaths": 2.45,
-          "avgAssists": 6.329411764705882,
-          "csm": 6.7,
-          "gpm": 383.70588235294116,
-          "kp": 66.15294117647058,
-          "dmgPct": 14.773529411764704,
-          "goldPct": 19.36176470588235,
-          "vsPct": 16.194117647058825,
-          "dpm": 438.94117647058823,
-          "vspm": 1.631470588235294,
-          "avgWpm": 0.34500000000000003,
-          "avgWcpm": 0.3373529411764706,
-          "avgVwpm": 0.24705882352941178,
-          "gd15": -73.55882352941177,
-          "csd15": -5.5,
-          "xpd15": -374.7647058823529,
-          "fbPct": 52.91764705882353,
+          "games": 36,
+          "winRate": 63.875,
+          "kda": 4.222222222222222,
+          "avgKills": 3.3305555555555557,
+          "avgDeaths": 2.3805555555555555,
+          "avgAssists": 6.527777777777778,
+          "csm": 6.699999999999999,
+          "gpm": 386,
+          "kp": 66.78333333333333,
+          "dmgPct": 14.836111111111112,
+          "goldPct": 19.40277777777778,
+          "vsPct": 16.33888888888889,
+          "dpm": 440.94444444444446,
+          "vspm": 1.6452777777777776,
+          "avgWpm": 0.33916666666666667,
+          "avgWcpm": 0.3419444444444444,
+          "avgVwpm": 0.2411111111111111,
+          "gd15": -85.08333333333333,
+          "csd15": -5.416666666666667,
+          "xpd15": -359.8888888888889,
+          "fbPct": 49.955555555555556,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 5,
-          "rating": 29,
+          "rating": 33.8,
           "confidence": 1,
           "subscores": {
-            "laning": 34.7,
-            "damage": 22.5,
-            "presence": 4.2,
-            "efficiency": 59.6
+            "laning": 37.2,
+            "damage": 20.8,
+            "presence": 11.5,
+            "efficiency": 66.9
           }
         }
       },
       "aggregated": {
-        "totalGames": 34,
-        "avgWinRate": 61.785294117647055,
-        "avgKda": 4
+        "totalGames": 36,
+        "avgWinRate": 63.875,
+        "avgKda": 4.222222222222222
       }
     },
     {
@@ -5034,13 +5034,13 @@
       "country": "UA",
       "team": "Natus Vincere",
       "role": "TOP",
-      "rating": 61.3,
-      "confidence": 1,
+      "rating": 63.3,
+      "confidence": 0.98,
       "subscores": {
         "laning": 59.7,
-        "damage": 67.5,
+        "damage": 72.5,
         "presence": 95.8,
-        "efficiency": 42.1
+        "efficiency": 45
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -5136,13 +5136,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 50,
+          "rating": 54.1,
           "confidence": 1,
           "subscores": {
-            "laning": 60,
-            "damage": 31,
+            "laning": 63.3,
+            "damage": 35,
             "presence": 75,
-            "efficiency": 48.8
+            "efficiency": 55.8
           }
         },
         "LEC 2026 Versus": {
@@ -5204,13 +5204,13 @@
           "fbVictim": 6.458064516129032,
           "pentaKills": 0,
           "soloKills": 9,
-          "rating": 61.3,
-          "confidence": 1,
+          "rating": 63.3,
+          "confidence": 0.98,
           "subscores": {
             "laning": 59.7,
-            "damage": 67.5,
+            "damage": 72.5,
             "presence": 95.8,
-            "efficiency": 42.1
+            "efficiency": 45
           }
         }
       },
@@ -5226,10 +5226,10 @@
       "country": "SI",
       "team": "SK Gaming",
       "role": "SUP",
-      "rating": 21.4,
+      "rating": 21.8,
       "confidence": 1,
       "subscores": {
-        "laning": 34.6,
+        "laning": 37.2,
         "damage": 40.8,
         "presence": 26.9,
         "efficiency": 3.8
@@ -5294,11 +5294,11 @@
           "fbVictim": 18.8,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 36.6,
+          "rating": 37,
           "confidence": 1,
           "subscores": {
-            "laning": 26.7,
-            "damage": 45,
+            "laning": 25,
+            "damage": 51,
             "presence": 55,
             "efficiency": 17.5
           }
@@ -5362,10 +5362,10 @@
           "fbVictim": 14.848148148148148,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 21.4,
+          "rating": 21.8,
           "confidence": 1,
           "subscores": {
-            "laning": 34.6,
+            "laning": 37.2,
             "damage": 40.8,
             "presence": 26.9,
             "efficiency": 3.8
@@ -5384,13 +5384,13 @@
       "country": "ES",
       "team": "Movistar KOI",
       "role": "TOP",
-      "rating": 28.5,
+      "rating": 37.1,
       "confidence": 1,
       "subscores": {
         "laning": 18.1,
-        "damage": 19.2,
+        "damage": 47.5,
         "presence": 20.8,
-        "efficiency": 57.5
+        "efficiency": 57.9
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -5462,37 +5462,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 10,
-          "winRate": 60,
+          "games": 12,
+          "winRate": 66.7,
           "kda": 2.6,
-          "avgKills": 2.7,
-          "avgDeaths": 2.6,
-          "avgAssists": 4,
-          "csm": 8.6,
-          "gpm": 391,
-          "kp": 37.9,
-          "dmgPct": 21,
-          "goldPct": 19.5,
-          "vsPct": 14.4,
-          "dpm": 594,
-          "vspm": 1.55,
+          "avgKills": 2.6,
+          "avgDeaths": 2.5,
+          "avgAssists": 3.9,
+          "csm": 8.5,
+          "gpm": 389,
+          "kp": 39.3,
+          "dmgPct": 21.6,
+          "goldPct": 19.2,
+          "vsPct": 14.3,
+          "dpm": 630,
+          "vspm": 1.54,
           "avgWpm": 0.52,
-          "avgWcpm": 0.15,
+          "avgWcpm": 0.14,
           "avgVwpm": 0.15,
-          "gd15": -398,
-          "csd15": -11,
-          "xpd15": -325,
-          "fbPct": 10,
-          "fbVictim": 20,
+          "gd15": -217,
+          "csd15": -7,
+          "xpd15": -187,
+          "fbPct": 16.7,
+          "fbVictim": 16.7,
           "pentaKills": 0,
-          "soloKills": 2,
-          "rating": 33.8,
-          "confidence": 0.87,
+          "soloKills": 4,
+          "rating": 39,
+          "confidence": 0.96,
           "subscores": {
-            "laning": 16.7,
-            "damage": 47,
+            "laning": 25,
+            "damage": 61,
             "presence": 5,
-            "efficiency": 43.8
+            "efficiency": 44
           }
         },
         "LEC 2026 Versus": {
@@ -5530,44 +5530,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 33,
-          "winRate": 54.53030303030303,
-          "kda": 2.8575757575757574,
-          "avgKills": 2.2333333333333334,
-          "avgDeaths": 2.512121212121212,
-          "avgAssists": 4.675757575757576,
-          "csm": 8.690909090909091,
-          "gpm": 385.8484848484849,
-          "kp": 47.445454545454545,
-          "dmgPct": 20.37878787878788,
-          "goldPct": 19.48787878787879,
-          "vsPct": 13.803030303030303,
-          "dpm": 560.3030303030303,
-          "vspm": 1.4527272727272726,
-          "avgWpm": 0.4748484848484849,
-          "avgWcpm": 0.18454545454545454,
-          "avgVwpm": 0.1293939393939394,
-          "gd15": -371.2121212121212,
-          "csd15": -8.242424242424242,
-          "xpd15": -284.6060606060606,
-          "fbPct": 3.0303030303030303,
-          "fbVictim": 9.07878787878788,
+          "games": 35,
+          "winRate": 57.14,
+          "kda": 2.842857142857143,
+          "avgKills": 2.225714285714286,
+          "avgDeaths": 2.482857142857143,
+          "avgAssists": 4.602857142857143,
+          "csm": 8.651428571428571,
+          "gpm": 385.45714285714286,
+          "kp": 47.379999999999995,
+          "dmgPct": 20.62,
+          "goldPct": 19.385714285714286,
+          "vsPct": 13.802857142857144,
+          "dpm": 574.5714285714286,
+          "vspm": 1.4548571428571428,
+          "avgWpm": 0.4774285714285715,
+          "avgWcpm": 0.17914285714285713,
+          "avgVwpm": 0.1305714285714286,
+          "gd15": -310.6857142857143,
+          "csd15": -7.0285714285714285,
+          "xpd15": -239.6,
+          "fbPct": 5.725714285714285,
+          "fbVictim": 8.571428571428571,
           "pentaKills": 0,
-          "soloKills": 5,
-          "rating": 28.5,
+          "soloKills": 7,
+          "rating": 37.1,
           "confidence": 1,
           "subscores": {
             "laning": 18.1,
-            "damage": 19.2,
+            "damage": 47.5,
             "presence": 20.8,
-            "efficiency": 57.5
+            "efficiency": 57.9
           }
         }
       },
       "aggregated": {
-        "totalGames": 33,
-        "avgWinRate": 54.53030303030303,
-        "avgKda": 2.8575757575757574
+        "totalGames": 35,
+        "avgWinRate": 57.14,
+        "avgKda": 2.842857142857143
       }
     },
     {
@@ -5576,13 +5576,13 @@
       "country": "TR",
       "team": "Team Vitality",
       "role": "TOP",
-      "rating": 74.5,
+      "rating": 73.7,
       "confidence": 1,
       "subscores": {
         "laning": 95.8,
         "damage": 70.8,
         "presence": 54.2,
-        "efficiency": 57.1
+        "efficiency": 54.2
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -5654,37 +5654,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 16,
-          "winRate": 68.8,
-          "kda": 3.5,
-          "avgKills": 2.9,
+          "games": 18,
+          "winRate": 72.2,
+          "kda": 3.4,
+          "avgKills": 2.8,
           "avgDeaths": 2.2,
-          "avgAssists": 4.9,
-          "csm": 9,
-          "gpm": 419,
-          "kp": 48.9,
-          "dmgPct": 22.7,
-          "goldPct": 21.3,
-          "vsPct": 11.7,
-          "dpm": 615,
-          "vspm": 1.17,
-          "avgWpm": 0.37,
+          "avgAssists": 4.8,
+          "csm": 9.1,
+          "gpm": 421,
+          "kp": 47.6,
+          "dmgPct": 23,
+          "goldPct": 21.1,
+          "vsPct": 11.8,
+          "dpm": 628,
+          "vspm": 1.19,
+          "avgWpm": 0.38,
           "avgWcpm": 0.18,
           "avgVwpm": 0.14,
-          "gd15": 551,
-          "csd15": 9,
-          "xpd15": 521,
-          "fbPct": 37.5,
-          "fbVictim": 6.3,
+          "gd15": 515,
+          "csd15": 8,
+          "xpd15": 466,
+          "fbPct": 33.3,
+          "fbVictim": 11.1,
           "pentaKills": 0,
-          "soloKills": 10,
-          "rating": 70.4,
+          "soloKills": 11,
+          "rating": 67.9,
           "confidence": 1,
           "subscores": {
             "laning": 91.7,
-            "damage": 49,
-            "presence": 60,
-            "efficiency": 70.5
+            "damage": 43,
+            "presence": 45,
+            "efficiency": 73.8
           }
         },
         "LEC 2026 Versus": {
@@ -5722,44 +5722,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 34,
-          "winRate": 61.785294117647055,
-          "kda": 3.064705882352941,
-          "avgKills": 3.0294117647058822,
-          "avgDeaths": 2.7,
-          "avgAssists": 4.876470588235295,
-          "csm": 8.779411764705882,
-          "gpm": 411.8529411764706,
-          "kp": 49.411764705882355,
-          "dmgPct": 22.78235294117647,
-          "goldPct": 20.935294117647057,
-          "vsPct": 12.376470588235295,
-          "dpm": 669.8529411764706,
-          "vspm": 1.2538235294117646,
-          "avgWpm": 0.39882352941176474,
-          "avgWcpm": 0.165,
-          "avgVwpm": 0.14970588235294116,
-          "gd15": 573.3529411764706,
-          "csd15": 10.294117647058824,
-          "xpd15": 450.20588235294116,
-          "fbPct": 20.591176470588238,
-          "fbVictim": 5.908823529411764,
+          "games": 36,
+          "winRate": 63.875,
+          "kda": 3.0388888888888888,
+          "avgKills": 2.9722222222222223,
+          "avgDeaths": 2.6722222222222225,
+          "avgAssists": 4.827777777777778,
+          "csm": 8.841666666666665,
+          "gpm": 413.25,
+          "kp": 48.733333333333334,
+          "dmgPct": 22.927777777777777,
+          "goldPct": 20.855555555555554,
+          "vsPct": 12.38888888888889,
+          "dpm": 673.3055555555555,
+          "vspm": 1.2591666666666665,
+          "avgWpm": 0.40222222222222226,
+          "avgWcpm": 0.16583333333333336,
+          "avgVwpm": 0.1491666666666667,
+          "gd15": 554.1111111111111,
+          "csd15": 9.722222222222221,
+          "xpd15": 426.6388888888889,
+          "fbPct": 19.430555555555557,
+          "fbVictim": 8.330555555555556,
           "pentaKills": 0,
-          "soloKills": 19,
-          "rating": 74.5,
+          "soloKills": 20,
+          "rating": 73.7,
           "confidence": 1,
           "subscores": {
             "laning": 95.8,
             "damage": 70.8,
             "presence": 54.2,
-            "efficiency": 57.1
+            "efficiency": 54.2
           }
         }
       },
       "aggregated": {
-        "totalGames": 34,
-        "avgWinRate": 61.785294117647055,
-        "avgKda": 3.064705882352941
+        "totalGames": 36,
+        "avgWinRate": 63.875,
+        "avgKda": 3.0388888888888888
       }
     },
     {
@@ -5768,10 +5768,10 @@
       "country": "SI",
       "team": "Los Ratones",
       "role": "MID",
-      "rating": 57.1,
-      "confidence": 0.36,
+      "rating": 56.6,
+      "confidence": 0.35,
       "subscores": {
-        "laning": 40.3,
+        "laning": 37.5,
         "damage": 85.8,
         "presence": 87.5,
         "efficiency": 65.4
@@ -5870,10 +5870,10 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 57.1,
-          "confidence": 0.36,
+          "rating": 56.6,
+          "confidence": 0.35,
           "subscores": {
-            "laning": 40.3,
+            "laning": 37.5,
             "damage": 85.8,
             "presence": 87.5,
             "efficiency": 65.4
@@ -5892,13 +5892,13 @@
       "country": "KR",
       "team": "GIANTX",
       "role": "BOT",
-      "rating": 47.7,
+      "rating": 44.3,
       "confidence": 1,
       "subscores": {
-        "laning": 68.1,
+        "laning": 56.9,
         "damage": 34.2,
         "presence": 62.5,
-        "efficiency": 37.5
+        "efficiency": 35
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -5970,37 +5970,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 13,
-          "winRate": 69.2,
-          "kda": 3,
-          "avgKills": 2.9,
-          "avgDeaths": 3.2,
-          "avgAssists": 6.4,
-          "csm": 9.7,
-          "gpm": 453,
-          "kp": 60.7,
-          "dmgPct": 24.7,
-          "goldPct": 23.1,
-          "vsPct": 14.3,
-          "dpm": 635,
-          "vspm": 1.44,
-          "avgWpm": 0.5,
-          "avgWcpm": 0.33,
+          "games": 15,
+          "winRate": 60,
+          "kda": 2.7,
+          "avgKills": 2.8,
+          "avgDeaths": 3.3,
+          "avgAssists": 5.9,
+          "csm": 9.5,
+          "gpm": 442,
+          "kp": 59.3,
+          "dmgPct": 25.1,
+          "goldPct": 22.9,
+          "vsPct": 14,
+          "dpm": 629,
+          "vspm": 1.4,
+          "avgWpm": 0.49,
+          "avgWcpm": 0.32,
           "avgVwpm": 0.19,
-          "gd15": -160,
-          "csd15": 0,
-          "xpd15": 22,
-          "fbPct": 15.4,
-          "fbVictim": 23.1,
+          "gd15": -322,
+          "csd15": -3,
+          "xpd15": -67,
+          "fbPct": 13.3,
+          "fbVictim": 20,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 28.4,
+          "rating": 24.7,
           "confidence": 1,
           "subscores": {
-            "laning": 45,
-            "damage": 25,
+            "laning": 25,
+            "damage": 31,
             "presence": 25,
-            "efficiency": 18.5
+            "efficiency": 15.5
           }
         },
         "LEC 2026 Versus": {
@@ -6038,44 +6038,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 35,
-          "winRate": 54.27142857142857,
-          "kda": 3.5342857142857143,
-          "avgKills": 3.5285714285714285,
-          "avgDeaths": 2.5714285714285716,
-          "avgAssists": 5.08,
-          "csm": 10.045714285714286,
-          "gpm": 476.25714285714287,
-          "kp": 65.32000000000001,
-          "dmgPct": 26.93142857142857,
-          "goldPct": 24.42,
-          "vsPct": 14.3,
-          "dpm": 679.6285714285714,
-          "vspm": 1.4965714285714284,
-          "avgWpm": 0.4968571428571429,
-          "avgWcpm": 0.35514285714285715,
-          "avgVwpm": 0.20257142857142857,
-          "gd15": 88.28571428571429,
-          "csd15": 3.142857142857143,
-          "xpd15": -2.5142857142857142,
-          "fbPct": 25.740000000000002,
-          "fbVictim": 14.3,
+          "games": 37,
+          "winRate": 51.34864864864865,
+          "kda": 3.383783783783784,
+          "avgKills": 3.454054054054054,
+          "avgDeaths": 2.6459459459459462,
+          "avgAssists": 4.948648648648649,
+          "csm": 9.945945945945946,
+          "gpm": 470.5405405405405,
+          "kp": 64.5027027027027,
+          "dmgPct": 26.972972972972972,
+          "goldPct": 24.267567567567568,
+          "vsPct": 14.17837837837838,
+          "dpm": 674.7837837837837,
+          "vspm": 1.4772972972972973,
+          "avgWpm": 0.49297297297297304,
+          "avgWcpm": 0.34972972972972977,
+          "avgVwpm": 0.2018918918918919,
+          "gd15": 9.18918918918919,
+          "csd15": 1.7567567567567568,
+          "xpd15": -37.270270270270274,
+          "fbPct": 24.32972972972973,
+          "fbVictim": 13.518918918918919,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 47.7,
+          "rating": 44.3,
           "confidence": 1,
           "subscores": {
-            "laning": 68.1,
+            "laning": 56.9,
             "damage": 34.2,
             "presence": 62.5,
-            "efficiency": 37.5
+            "efficiency": 35
           }
         }
       },
       "aggregated": {
-        "totalGames": 35,
-        "avgWinRate": 54.27142857142857,
-        "avgKda": 3.5342857142857143
+        "totalGames": 37,
+        "avgWinRate": 51.34864864864865,
+        "avgKda": 3.383783783783784
       }
     },
     {
@@ -6084,13 +6084,13 @@
       "country": "KR",
       "team": "Shifters",
       "role": "BOT",
-      "rating": 47.8,
-      "confidence": 0.59,
+      "rating": 48.6,
+      "confidence": 0.57,
       "subscores": {
-        "laning": 41.7,
+        "laning": 38.9,
         "damage": 75.8,
-        "presence": 45.8,
-        "efficiency": 9.6
+        "presence": 54.2,
+        "efficiency": 12.5
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -6152,13 +6152,13 @@
           "fbVictim": 14.3,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 31.1,
-          "confidence": 0.61,
+          "rating": 33.8,
+          "confidence": 0.56,
           "subscores": {
             "laning": 18.3,
-            "damage": 31,
+            "damage": 35,
             "presence": 15,
-            "efficiency": 5
+            "efficiency": 8
           }
         },
         "LEC 2026 Versus": {
@@ -6220,13 +6220,13 @@
           "fbVictim": 11.122222222222222,
           "pentaKills": 1,
           "soloKills": 4,
-          "rating": 47.8,
-          "confidence": 0.59,
+          "rating": 48.6,
+          "confidence": 0.57,
           "subscores": {
-            "laning": 41.7,
+            "laning": 38.9,
             "damage": 75.8,
-            "presence": 45.8,
-            "efficiency": 9.6
+            "presence": 54.2,
+            "efficiency": 12.5
           }
         }
       },
@@ -6242,13 +6242,13 @@
       "country": "TR",
       "team": "Natus Vincere",
       "role": "SUP",
-      "rating": 65.3,
+      "rating": 64,
       "confidence": 1,
       "subscores": {
         "laning": 34.6,
         "damage": 45.4,
         "presence": 88.5,
-        "efficiency": 57.7
+        "efficiency": 53.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -6344,13 +6344,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 64.6,
+          "rating": 62.8,
           "confidence": 1,
           "subscores": {
             "laning": 41.7,
             "damage": 68,
             "presence": 85,
-            "efficiency": 50
+            "efficiency": 45
           }
         },
         "LEC 2026 Versus": {
@@ -6412,13 +6412,13 @@
           "fbVictim": 6.458064516129032,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 65.3,
+          "rating": 64,
           "confidence": 1,
           "subscores": {
             "laning": 34.6,
             "damage": 45.4,
             "presence": 88.5,
-            "efficiency": 57.7
+            "efficiency": 53.8
           }
         }
       },
@@ -6434,12 +6434,12 @@
       "country": "KR",
       "team": "Natus Vincere",
       "role": "MID",
-      "rating": 42.1,
-      "confidence": 1,
+      "rating": 41.3,
+      "confidence": 0.98,
       "subscores": {
-        "laning": 62.5,
+        "laning": 65.3,
         "damage": 12.5,
-        "presence": 29.2,
+        "presence": 20.8,
         "efficiency": 67.5
       },
       "tournaments": {
@@ -6536,13 +6536,13 @@
           "fbVictim": 30.8,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 48.7,
+          "rating": 52,
           "confidence": 1,
           "subscores": {
-            "laning": 50,
-            "damage": 51,
+            "laning": 46.7,
+            "damage": 65,
             "presence": 55,
-            "efficiency": 39.8
+            "efficiency": 39.5
           }
         },
         "LEC 2026 Versus": {
@@ -6604,12 +6604,12 @@
           "fbVictim": 22.603225806451615,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 42.1,
-          "confidence": 1,
+          "rating": 41.3,
+          "confidence": 0.98,
           "subscores": {
-            "laning": 62.5,
+            "laning": 65.3,
             "damage": 12.5,
-            "presence": 29.2,
+            "presence": 20.8,
             "efficiency": 67.5
           }
         }
@@ -6626,11 +6626,11 @@
       "country": "FR",
       "team": "Karmine Corp Blue",
       "role": "SUP",
-      "rating": 36.2,
+      "rating": 36,
       "confidence": 0.41,
       "subscores": {
         "laning": 6.4,
-        "damage": 23.8,
+        "damage": 19.2,
         "presence": 11.5,
         "efficiency": 23.1
       },
@@ -6728,11 +6728,11 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 36.2,
+          "rating": 36,
           "confidence": 0.41,
           "subscores": {
             "laning": 6.4,
-            "damage": 23.8,
+            "damage": 19.2,
             "presence": 11.5,
             "efficiency": 23.1
           }
@@ -6750,13 +6750,13 @@
       "country": "ES",
       "team": "Fnatic",
       "role": "JGL",
-      "rating": 52.6,
-      "confidence": 0.82,
+      "rating": 52.3,
+      "confidence": 0.83,
       "subscores": {
-        "laning": 20.8,
-        "damage": 69.2,
-        "presence": 79.2,
-        "efficiency": 28.3
+        "laning": 21.8,
+        "damage": 59.2,
+        "presence": 80.8,
+        "efficiency": 31.2
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -6852,13 +6852,13 @@
           "fbVictim": 10,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 53.3,
-          "confidence": 0.87,
+          "rating": 54.9,
+          "confidence": 0.83,
           "subscores": {
-            "laning": 33.3,
-            "damage": 79,
-            "presence": 75,
-            "efficiency": 22.5
+            "laning": 36.4,
+            "damage": 77.3,
+            "presence": 77.3,
+            "efficiency": 26.4
           }
         },
         "LEC 2026 Versus": {
@@ -6920,13 +6920,13 @@
           "fbVictim": 16.008,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 52.6,
-          "confidence": 0.82,
+          "rating": 52.3,
+          "confidence": 0.83,
           "subscores": {
-            "laning": 20.8,
-            "damage": 69.2,
-            "presence": 79.2,
-            "efficiency": 28.3
+            "laning": 21.8,
+            "damage": 59.2,
+            "presence": 80.8,
+            "efficiency": 31.2
           }
         }
       },
@@ -6942,12 +6942,12 @@
       "country": "SE",
       "team": "Los Ratones",
       "role": "SUP",
-      "rating": 64.2,
+      "rating": 63.6,
       "confidence": 0.41,
       "subscores": {
         "laning": 75.6,
         "damage": 91.5,
-        "presence": 76.9,
+        "presence": 73.1,
         "efficiency": 96.2
       },
       "tournaments": {
@@ -7044,12 +7044,12 @@
           "fbVictim": 9.1,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 64.2,
+          "rating": 63.6,
           "confidence": 0.41,
           "subscores": {
             "laning": 75.6,
             "damage": 91.5,
-            "presence": 76.9,
+            "presence": 73.1,
             "efficiency": 96.2
           }
         }
@@ -7066,13 +7066,13 @@
       "country": "TR",
       "team": "Natus Vincere",
       "role": "JGL",
-      "rating": 84.6,
+      "rating": 84.3,
       "confidence": 1,
       "subscores": {
-        "laning": 87.5,
-        "damage": 80.8,
-        "presence": 95.8,
-        "efficiency": 72.5
+        "laning": 88.5,
+        "damage": 79.2,
+        "presence": 96.2,
+        "efficiency": 71.9
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -7168,13 +7168,13 @@
           "fbVictim": 23.1,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 67.4,
+          "rating": 69.2,
           "confidence": 1,
           "subscores": {
-            "laning": 65,
-            "damage": 69,
-            "presence": 65,
-            "efficiency": 70.5
+            "laning": 68.2,
+            "damage": 68.2,
+            "presence": 68.2,
+            "efficiency": 71.6
           }
         },
         "LEC 2026 Versus": {
@@ -7236,13 +7236,13 @@
           "fbVictim": 22.603225806451615,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 84.6,
+          "rating": 84.3,
           "confidence": 1,
           "subscores": {
-            "laning": 87.5,
-            "damage": 80.8,
-            "presence": 95.8,
-            "efficiency": 72.5
+            "laning": 88.5,
+            "damage": 79.2,
+            "presence": 96.2,
+            "efficiency": 71.9
           }
         }
       },
@@ -7258,11 +7258,11 @@
       "country": "KR",
       "team": "Shifters",
       "role": "TOP",
-      "rating": 53.5,
-      "confidence": 0.59,
+      "rating": 53.1,
+      "confidence": 0.57,
       "subscores": {
-        "laning": 84.7,
-        "damage": 22.5,
+        "laning": 87.5,
+        "damage": 17.5,
         "presence": 29.2,
         "efficiency": 66.7
       },
@@ -7326,13 +7326,13 @@
           "fbVictim": 14.3,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 59.2,
-          "confidence": 0.61,
+          "rating": 58.9,
+          "confidence": 0.56,
           "subscores": {
             "laning": 81.7,
-            "damage": 75,
+            "damage": 79,
             "presence": 25,
-            "efficiency": 46.3
+            "efficiency": 44.5
           }
         },
         "LEC 2026 Versus": {
@@ -7394,11 +7394,11 @@
           "fbVictim": 5.561111111111112,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 53.5,
-          "confidence": 0.59,
+          "rating": 53.1,
+          "confidence": 0.57,
           "subscores": {
-            "laning": 84.7,
-            "damage": 22.5,
+            "laning": 87.5,
+            "damage": 17.5,
             "presence": 29.2,
             "efficiency": 66.7
           }
@@ -7416,8 +7416,8 @@
       "country": "KR",
       "team": "Natus Vincere",
       "role": "BOT",
-      "rating": 63.6,
-      "confidence": 1,
+      "rating": 63.4,
+      "confidence": 0.98,
       "subscores": {
         "laning": 95.8,
         "damage": 39.2,
@@ -7518,13 +7518,13 @@
           "fbVictim": 7.7,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 39.2,
+          "rating": 38.4,
           "confidence": 1,
           "subscores": {
-            "laning": 58.3,
+            "laning": 53.3,
             "damage": 17,
             "presence": 45,
-            "efficiency": 47.8
+            "efficiency": 49.5
           }
         },
         "LEC 2026 Versus": {
@@ -7586,8 +7586,8 @@
           "fbVictim": 6.458064516129032,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 63.6,
-          "confidence": 1,
+          "rating": 63.4,
+          "confidence": 0.98,
           "subscores": {
             "laning": 95.8,
             "damage": 39.2,
@@ -7608,13 +7608,13 @@
       "country": "TR",
       "team": "Team Heretics",
       "role": "MID",
-      "rating": 45.2,
-      "confidence": 0.98,
+      "rating": 43.3,
+      "confidence": 1,
       "subscores": {
         "laning": 20.8,
         "damage": 47.5,
-        "presence": 79.2,
-        "efficiency": 39.2
+        "presence": 70.8,
+        "efficiency": 38.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -7686,37 +7686,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 14,
-          "winRate": 21.4,
-          "kda": 2.6,
+          "games": 16,
+          "winRate": 18.8,
+          "kda": 2.4,
           "avgKills": 2.6,
           "avgDeaths": 2.3,
-          "avgAssists": 3.3,
-          "csm": 8.6,
+          "avgAssists": 2.9,
+          "csm": 8.7,
           "gpm": 366,
-          "kp": 60,
-          "dmgPct": 25.7,
-          "goldPct": 20.3,
-          "vsPct": 11.9,
-          "dpm": 614,
-          "vspm": 1.07,
-          "avgWpm": 0.35,
-          "avgWcpm": 0.18,
+          "kp": 57.9,
+          "dmgPct": 25.9,
+          "goldPct": 20.5,
+          "vsPct": 11.6,
+          "dpm": 610,
+          "vspm": 1.04,
+          "avgWpm": 0.36,
+          "avgWcpm": 0.17,
           "avgVwpm": 0.15,
-          "gd15": -487,
+          "gd15": -473,
           "csd15": -9,
-          "xpd15": -323,
-          "fbPct": 21.4,
-          "fbVictim": 7.1,
+          "xpd15": -260,
+          "fbPct": 18.8,
+          "fbVictim": 6.3,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 30.2,
+          "rating": 31.8,
           "confidence": 1,
           "subscores": {
             "laning": 11.7,
-            "damage": 43,
+            "damage": 47,
             "presence": 35,
-            "efficiency": 29.5
+            "efficiency": 31
           }
         },
         "LEC 2026 Versus": {
@@ -7754,44 +7754,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 30,
-          "winRate": 33.30333333333333,
-          "kda": 3.216666666666667,
-          "avgKills": 2.93,
-          "avgDeaths": 2.243333333333333,
-          "avgAssists": 4.109999999999999,
-          "csm": 8.83,
-          "gpm": 380.7,
-          "kp": 67.25666666666667,
-          "dmgPct": 25.780000000000005,
-          "goldPct": 20.61,
-          "vsPct": 11.94,
-          "dpm": 627.1,
-          "vspm": 1.1170000000000002,
-          "avgWpm": 0.35233333333333333,
-          "avgWcpm": 0.18933333333333333,
-          "avgVwpm": 0.138,
-          "gd15": -303.96666666666664,
-          "csd15": -7.833333333333333,
-          "xpd15": -280.6,
-          "fbPct": 26.666666666666668,
-          "fbVictim": 3.313333333333333,
+          "games": 32,
+          "winRate": 31.259375,
+          "kda": 3.078125,
+          "avgKills": 2.909375,
+          "avgDeaths": 2.246875,
+          "avgAssists": 3.859375,
+          "csm": 8.865625,
+          "gpm": 379.78125,
+          "kp": 65.753125,
+          "dmgPct": 25.875,
+          "goldPct": 20.690625,
+          "vsPct": 11.7875,
+          "dpm": 624.28125,
+          "vspm": 1.0990625,
+          "avgWpm": 0.3571875,
+          "avgWcpm": 0.18375000000000002,
+          "avgVwpm": 0.13874999999999998,
+          "gd15": -308.40625,
+          "csd15": -7.90625,
+          "xpd15": -251.75,
+          "fbPct": 25.0375,
+          "fbVictim": 3.15,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 45.2,
-          "confidence": 0.98,
+          "rating": 43.3,
+          "confidence": 1,
           "subscores": {
             "laning": 20.8,
             "damage": 47.5,
-            "presence": 79.2,
-            "efficiency": 39.2
+            "presence": 70.8,
+            "efficiency": 38.8
           }
         }
       },
       "aggregated": {
-        "totalGames": 30,
-        "avgWinRate": 33.30333333333333,
-        "avgKda": 3.216666666666667
+        "totalGames": 32,
+        "avgWinRate": 31.259375,
+        "avgKda": 3.078125
       }
     },
     {
@@ -7800,13 +7800,13 @@
       "country": "FR",
       "team": "Team Heretics",
       "role": "JGL",
-      "rating": 49.2,
-      "confidence": 0.98,
+      "rating": 53,
+      "confidence": 1,
       "subscores": {
-        "laning": 51.4,
-        "damage": 57.5,
-        "presence": 54.2,
-        "efficiency": 36.7
+        "laning": 52.6,
+        "damage": 53.1,
+        "presence": 65.4,
+        "efficiency": 38.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -7902,13 +7902,13 @@
           "fbVictim": 7.1,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 27.4,
+          "rating": 30.7,
           "confidence": 1,
           "subscores": {
-            "laning": 36.7,
-            "damage": 9,
-            "presence": 35,
-            "efficiency": 26
+            "laning": 39.4,
+            "damage": 8.2,
+            "presence": 40.9,
+            "efficiency": 29.5
           }
         },
         "LEC 2026 Versus": {
@@ -7970,13 +7970,13 @@
           "fbVictim": 13.316666666666666,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 49.2,
-          "confidence": 0.98,
+          "rating": 53,
+          "confidence": 1,
           "subscores": {
-            "laning": 51.4,
-            "damage": 57.5,
-            "presence": 54.2,
-            "efficiency": 36.7
+            "laning": 52.6,
+            "damage": 53.1,
+            "presence": 65.4,
+            "efficiency": 38.8
           }
         }
       },
@@ -7992,13 +7992,13 @@
       "country": "FR",
       "team": "SK Gaming",
       "role": "JGL",
-      "rating": 38.4,
-      "confidence": 0.89,
+      "rating": 40,
+      "confidence": 0.9,
       "subscores": {
-        "laning": 12.5,
+        "laning": 14.1,
         "damage": 60.8,
-        "presence": 37.5,
-        "efficiency": 32.5
+        "presence": 42.3,
+        "efficiency": 32.7
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -8060,13 +8060,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 5,
-          "rating": 57.9,
+          "rating": 58.3,
           "confidence": 1,
           "subscores": {
-            "laning": 6.7,
-            "damage": 80,
-            "presence": 95,
-            "efficiency": 25.5
+            "laning": 9.1,
+            "damage": 78.2,
+            "presence": 95.5,
+            "efficiency": 26.4
           }
         },
         "LEC 2026 Versus": {
@@ -8128,13 +8128,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 5,
-          "rating": 38.4,
-          "confidence": 0.89,
+          "rating": 40,
+          "confidence": 0.9,
           "subscores": {
-            "laning": 12.5,
+            "laning": 14.1,
             "damage": 60.8,
-            "presence": 37.5,
-            "efficiency": 32.5
+            "presence": 42.3,
+            "efficiency": 32.7
           }
         }
       },
@@ -8150,13 +8150,13 @@
       "country": "FR",
       "team": "G2 Esports",
       "role": "JGL",
-      "rating": 90.9,
+      "rating": 90.2,
       "confidence": 1,
       "subscores": {
-        "laning": 93.1,
-        "damage": 95.8,
-        "presence": 87.5,
-        "efficiency": 90.4
+        "laning": 93.6,
+        "damage": 93.1,
+        "presence": 88.5,
+        "efficiency": 88.5
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -8252,13 +8252,13 @@
           "fbVictim": 10,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 56.5,
-          "confidence": 0.87,
+          "rating": 57.6,
+          "confidence": 0.83,
           "subscores": {
-            "laning": 68.3,
-            "damage": 71,
-            "presence": 55,
-            "efficiency": 46
+            "laning": 71.2,
+            "damage": 64.5,
+            "presence": 59.1,
+            "efficiency": 49.5
           }
         },
         "LEC 2026 Versus": {
@@ -8320,13 +8320,13 @@
           "fbVictim": 3.0303030303030303,
           "pentaKills": 0,
           "soloKills": 5,
-          "rating": 90.9,
+          "rating": 90.2,
           "confidence": 1,
           "subscores": {
-            "laning": 93.1,
-            "damage": 95.8,
-            "presence": 87.5,
-            "efficiency": 90.4
+            "laning": 93.6,
+            "damage": 93.1,
+            "presence": 88.5,
+            "efficiency": 88.5
           }
         }
       },
@@ -8500,13 +8500,13 @@
       "country": "ES",
       "team": "Movistar KOI",
       "role": "BOT",
-      "rating": 67.9,
+      "rating": 71,
       "confidence": 1,
       "subscores": {
-        "laning": 40.3,
-        "damage": 80.8,
+        "laning": 37.5,
+        "damage": 85.8,
         "presence": 87.5,
-        "efficiency": 65.8
+        "efficiency": 73.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -8578,37 +8578,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 10,
-          "winRate": 60,
-          "kda": 5.8,
-          "avgKills": 4.5,
-          "avgDeaths": 1.7,
-          "avgAssists": 5.4,
-          "csm": 10.4,
-          "gpm": 522,
-          "kp": 61.8,
-          "dmgPct": 27.6,
-          "goldPct": 25.9,
-          "vsPct": 11.9,
-          "dpm": 827,
-          "vspm": 1.26,
-          "avgWpm": 0.37,
-          "avgWcpm": 0.32,
-          "avgVwpm": 0.09,
-          "gd15": -49,
-          "csd15": 1,
-          "xpd15": -38,
-          "fbPct": 10,
+          "games": 12,
+          "winRate": 66.7,
+          "kda": 6.7,
+          "avgKills": 4.8,
+          "avgDeaths": 1.5,
+          "avgAssists": 5.3,
+          "csm": 10.7,
+          "gpm": 533,
+          "kp": 62.7,
+          "dmgPct": 27.9,
+          "goldPct": 26.1,
+          "vsPct": 12.3,
+          "dpm": 859,
+          "vspm": 1.31,
+          "avgWpm": 0.38,
+          "avgWcpm": 0.33,
+          "avgVwpm": 0.1,
+          "gd15": 94,
+          "csd15": 3,
+          "xpd15": -42,
+          "fbPct": 8.3,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 57.3,
-          "confidence": 0.87,
+          "rating": 65.5,
+          "confidence": 0.96,
           "subscores": {
-            "laning": 45,
-            "damage": 63,
+            "laning": 61.7,
+            "damage": 69,
             "presence": 35,
-            "efficiency": 79.3
+            "efficiency": 85.5
           }
         },
         "LEC 2026 Versus": {
@@ -8646,44 +8646,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 33,
-          "winRate": 54.53030303030303,
-          "kda": 4.845454545454546,
-          "avgKills": 4.8999999999999995,
-          "avgDeaths": 2.018181818181818,
-          "avgAssists": 4.748484848484848,
-          "csm": 10.396969696969698,
-          "gpm": 518.8787878787879,
-          "kp": 65.77575757575758,
-          "dmgPct": 30.060606060606062,
-          "goldPct": 25.975757575757576,
-          "vsPct": 11.230303030303029,
-          "dpm": 859,
-          "vspm": 1.18,
-          "avgWpm": 0.34909090909090906,
-          "avgWcpm": 0.31333333333333335,
-          "avgVwpm": 0.07636363636363636,
-          "gd15": -68.78787878787878,
-          "csd15": -0.09090909090909091,
-          "xpd15": -35.81818181818182,
-          "fbPct": 12.136363636363637,
-          "fbVictim": 9.084848484848486,
+          "games": 35,
+          "winRate": 57.14,
+          "kda": 5.208571428571429,
+          "avgKills": 4.9799999999999995,
+          "avgDeaths": 1.9314285714285713,
+          "avgAssists": 4.751428571428572,
+          "csm": 10.5,
+          "gpm": 522.8285714285714,
+          "kp": 65.85714285714286,
+          "dmgPct": 30.02285714285714,
+          "goldPct": 26.040000000000003,
+          "vsPct": 11.405714285714286,
+          "dpm": 868.1428571428571,
+          "vspm": 1.2017142857142855,
+          "avgWpm": 0.35371428571428576,
+          "avgWcpm": 0.3171428571428571,
+          "avgVwpm": 0.08057142857142859,
+          "gd15": -18.62857142857143,
+          "csd15": 0.6571428571428571,
+          "xpd15": -37.31428571428572,
+          "fbPct": 11.431428571428572,
+          "fbVictim": 8.565714285714286,
           "pentaKills": 1,
           "soloKills": 5,
-          "rating": 67.9,
+          "rating": 71,
           "confidence": 1,
           "subscores": {
-            "laning": 40.3,
-            "damage": 80.8,
+            "laning": 37.5,
+            "damage": 85.8,
             "presence": 87.5,
-            "efficiency": 65.8
+            "efficiency": 73.8
           }
         }
       },
       "aggregated": {
-        "totalGames": 33,
-        "avgWinRate": 54.53030303030303,
-        "avgKda": 4.845454545454546
+        "totalGames": 35,
+        "avgWinRate": 57.14,
+        "avgKda": 5.208571428571429
       }
     },
     {
@@ -8692,8 +8692,8 @@
       "country": "IT",
       "team": "Karmine Corp Blue",
       "role": "TOP",
-      "rating": 44.2,
-      "confidence": 0.36,
+      "rating": 44.4,
+      "confidence": 0.35,
       "subscores": {
         "laning": 34.7,
         "damage": 50.8,
@@ -8794,8 +8794,8 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 44.2,
-          "confidence": 0.36,
+          "rating": 44.4,
+          "confidence": 0.35,
           "subscores": {
             "laning": 34.7,
             "damage": 50.8,
@@ -8816,12 +8816,12 @@
       "country": "PL",
       "team": "Team Heretics",
       "role": "TOP",
-      "rating": 70.6,
-      "confidence": 0.98,
+      "rating": 64.3,
+      "confidence": 1,
       "subscores": {
-        "laning": 76.4,
-        "damage": 62.5,
-        "presence": 79.2,
+        "laning": 70.8,
+        "damage": 52.5,
+        "presence": 62.5,
         "efficiency": 70
       },
       "tournaments": {
@@ -8894,37 +8894,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 14,
-          "winRate": 21.4,
-          "kda": 2.4,
+          "games": 16,
+          "winRate": 18.8,
+          "kda": 2.1,
           "avgKills": 1.7,
-          "avgDeaths": 2,
-          "avgAssists": 3,
-          "csm": 9,
-          "gpm": 380,
-          "kp": 48.8,
-          "dmgPct": 24.3,
-          "goldPct": 21.1,
-          "vsPct": 12.2,
-          "dpm": 593,
-          "vspm": 1.08,
-          "avgWpm": 0.39,
-          "avgWcpm": 0.12,
-          "avgVwpm": 0.15,
-          "gd15": 92,
-          "csd15": 0,
-          "xpd15": 57,
+          "avgDeaths": 2.1,
+          "avgAssists": 2.7,
+          "csm": 8.9,
+          "gpm": 376,
+          "kp": 46.7,
+          "dmgPct": 23.5,
+          "goldPct": 21,
+          "vsPct": 12.3,
+          "dpm": 569,
+          "vspm": 1.09,
+          "avgWpm": 0.38,
+          "avgWcpm": 0.13,
+          "avgVwpm": 0.14,
+          "gd15": -5,
+          "csd15": -2,
+          "xpd15": -13,
           "fbPct": 0,
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 5,
-          "rating": 59.7,
+          "rating": 49.7,
           "confidence": 1,
           "subscores": {
-            "laning": 60,
-            "damage": 61,
-            "presence": 45,
-            "efficiency": 63.5
+            "laning": 51.7,
+            "damage": 45,
+            "presence": 35,
+            "efficiency": 58.5
           }
         },
         "LEC 2026 Versus": {
@@ -8962,44 +8962,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 30,
-          "winRate": 33.30333333333333,
-          "kda": 2.45,
-          "avgKills": 1.7966666666666669,
-          "avgDeaths": 2.183333333333333,
-          "avgAssists": 3.57,
-          "csm": 9.01,
-          "gpm": 382.8666666666667,
-          "kp": 51.99666666666667,
-          "dmgPct": 23.40666666666667,
-          "goldPct": 20.793333333333333,
-          "vsPct": 12.623333333333333,
-          "dpm": 584.4333333333333,
-          "vspm": 1.176,
-          "avgWpm": 0.43666666666666665,
-          "avgWcpm": 0.12066666666666667,
-          "avgVwpm": 0.11633333333333334,
-          "gd15": 127.43333333333334,
-          "csd15": 2.566666666666667,
-          "xpd15": 194.36666666666667,
-          "fbPct": 6.673333333333333,
-          "fbVictim": 3.3366666666666664,
+          "games": 32,
+          "winRate": 31.259375,
+          "kda": 2.296875,
+          "avgKills": 1.790625,
+          "avgDeaths": 2.221875,
+          "avgAssists": 3.384375,
+          "csm": 8.959375000000001,
+          "gpm": 380.6875,
+          "kp": 50.746875,
+          "dmgPct": 23.0625,
+          "goldPct": 20.7625,
+          "vsPct": 12.646875000000001,
+          "dpm": 572.96875,
+          "vspm": 1.175,
+          "avgWpm": 0.42874999999999996,
+          "avgWcpm": 0.125625,
+          "avgVwpm": 0.11343750000000001,
+          "gd15": 76.71875,
+          "csd15": 1.40625,
+          "xpd15": 150.78125,
+          "fbPct": 6.25625,
+          "fbVictim": 3.128125,
           "pentaKills": 0,
           "soloKills": 7,
-          "rating": 70.6,
-          "confidence": 0.98,
+          "rating": 64.3,
+          "confidence": 1,
           "subscores": {
-            "laning": 76.4,
-            "damage": 62.5,
-            "presence": 79.2,
+            "laning": 70.8,
+            "damage": 52.5,
+            "presence": 62.5,
             "efficiency": 70
           }
         }
       },
       "aggregated": {
-        "totalGames": 30,
-        "avgWinRate": 33.30333333333333,
-        "avgKda": 2.45
+        "totalGames": 32,
+        "avgWinRate": 31.259375,
+        "avgKda": 2.296875
       }
     },
     {
@@ -9008,11 +9008,11 @@
       "country": "PL",
       "team": "Shifters",
       "role": "SUP",
-      "rating": 58.9,
+      "rating": 58.5,
       "confidence": 0.67,
       "subscores": {
-        "laning": 62.8,
-        "damage": 74.6,
+        "laning": 60.3,
+        "damage": 71.5,
         "presence": 96.2,
         "efficiency": 23.1
       },
@@ -9076,12 +9076,12 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 47.8,
-          "confidence": 0.61,
+          "rating": 45.7,
+          "confidence": 0.56,
           "subscores": {
             "laning": 51.7,
             "damage": 60,
-            "presence": 75,
+            "presence": 65,
             "efficiency": 7.5
           }
         },
@@ -9144,11 +9144,11 @@
           "fbVictim": 5.561111111111111,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 58.9,
+          "rating": 58.5,
           "confidence": 0.67,
           "subscores": {
-            "laning": 62.8,
-            "damage": 74.6,
+            "laning": 60.3,
+            "damage": 71.5,
             "presence": 96.2,
             "efficiency": 23.1
           }
@@ -9166,10 +9166,10 @@
       "country": "DE",
       "team": "Fnatic",
       "role": "BOT",
-      "rating": 56.7,
-      "confidence": 0.82,
+      "rating": 56,
+      "confidence": 0.79,
       "subscores": {
-        "laning": 47.2,
+        "laning": 44.4,
         "damage": 30.8,
         "presence": 95.8,
         "efficiency": 85
@@ -9268,13 +9268,13 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 64.1,
-          "confidence": 0.87,
+          "rating": 63.7,
+          "confidence": 0.8,
           "subscores": {
             "laning": 90,
-            "damage": 39,
+            "damage": 43,
             "presence": 85,
-            "efficiency": 69.3
+            "efficiency": 67.5
           }
         },
         "LEC 2026 Versus": {
@@ -9336,10 +9336,10 @@
           "fbVictim": 4.004,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 56.7,
-          "confidence": 0.82,
+          "rating": 56,
+          "confidence": 0.79,
           "subscores": {
-            "laning": 47.2,
+            "laning": 44.4,
             "damage": 30.8,
             "presence": 95.8,
             "efficiency": 85
@@ -9358,13 +9358,13 @@
       "country": "RS",
       "team": "Los Ratones",
       "role": "JGL",
-      "rating": 38.7,
-      "confidence": 0.36,
+      "rating": 39.3,
+      "confidence": 0.37,
       "subscores": {
-        "laning": 6.9,
-        "damage": 24.2,
-        "presence": 20.8,
-        "efficiency": 18.3
+        "laning": 7.7,
+        "damage": 22.3,
+        "presence": 26.9,
+        "efficiency": 19.6
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -9460,13 +9460,13 @@
           "fbVictim": 27.3,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 38.7,
-          "confidence": 0.36,
+          "rating": 39.3,
+          "confidence": 0.37,
           "subscores": {
-            "laning": 6.9,
-            "damage": 24.2,
-            "presence": 20.8,
-            "efficiency": 18.3
+            "laning": 7.7,
+            "damage": 22.3,
+            "presence": 26.9,
+            "efficiency": 19.6
           }
         }
       },
@@ -9482,8 +9482,8 @@
       "country": "GR",
       "team": "Fnatic",
       "role": "MID",
-      "rating": 46.4,
-      "confidence": 0.82,
+      "rating": 46.6,
+      "confidence": 0.79,
       "subscores": {
         "laning": 9.7,
         "damage": 45.8,
@@ -9584,13 +9584,13 @@
           "fbVictim": 10,
           "pentaKills": 0,
           "soloKills": 2,
-          "rating": 41.9,
-          "confidence": 0.87,
+          "rating": 43.8,
+          "confidence": 0.8,
           "subscores": {
             "laning": 8.3,
-            "damage": 37,
+            "damage": 45,
             "presence": 75,
-            "efficiency": 50
+            "efficiency": 46.8
           }
         },
         "LEC 2026 Versus": {
@@ -9652,8 +9652,8 @@
           "fbVictim": 8.004,
           "pentaKills": 0,
           "soloKills": 6,
-          "rating": 46.4,
-          "confidence": 0.82,
+          "rating": 46.6,
+          "confidence": 0.79,
           "subscores": {
             "laning": 9.7,
             "damage": 45.8,
@@ -9674,13 +9674,13 @@
       "country": "DK",
       "team": "SK Gaming",
       "role": "TOP",
-      "rating": 57.4,
-      "confidence": 0.89,
+      "rating": 58.4,
+      "confidence": 0.86,
       "subscores": {
         "laning": 45.8,
         "damage": 95.8,
-        "presence": 70.8,
-        "efficiency": 25.8
+        "presence": 79.2,
+        "efficiency": 28.3
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -9742,13 +9742,13 @@
           "fbVictim": 12.5,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 36.3,
+          "rating": 38.8,
           "confidence": 1,
           "subscores": {
-            "laning": 20,
-            "damage": 77,
-            "presence": 35,
-            "efficiency": 11
+            "laning": 16.7,
+            "damage": 81,
+            "presence": 55,
+            "efficiency": 12.5
           }
         },
         "LEC 2026 Versus": {
@@ -9810,13 +9810,13 @@
           "fbVictim": 7.407407407407407,
           "pentaKills": 0,
           "soloKills": 4,
-          "rating": 57.4,
-          "confidence": 0.89,
+          "rating": 58.4,
+          "confidence": 0.86,
           "subscores": {
             "laning": 45.8,
             "damage": 95.8,
-            "presence": 70.8,
-            "efficiency": 25.8
+            "presence": 79.2,
+            "efficiency": 28.3
           }
         }
       },
@@ -9832,13 +9832,13 @@
       "country": "SE",
       "team": "Karmine Corp",
       "role": "JGL",
-      "rating": 59,
+      "rating": 60.4,
       "confidence": 1,
       "subscores": {
-        "laning": 76.4,
-        "damage": 72.5,
-        "presence": 29.2,
-        "efficiency": 76.2
+        "laning": 75.6,
+        "damage": 71.5,
+        "presence": 34.6,
+        "efficiency": 75.4
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -9934,13 +9934,13 @@
           "fbVictim": 20,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 49.7,
-          "confidence": 0.43,
+          "rating": 50.9,
+          "confidence": 0.42,
           "subscores": {
-            "laning": 51.7,
-            "damage": 72,
-            "presence": 15,
-            "efficiency": 73
+            "laning": 57.6,
+            "damage": 70.9,
+            "presence": 22.7,
+            "efficiency": 70.9
           }
         },
         "LEC 2026 Versus": {
@@ -10002,13 +10002,13 @@
           "fbVictim": 2.7777777777777777,
           "pentaKills": 0,
           "soloKills": 7,
-          "rating": 59,
+          "rating": 60.4,
           "confidence": 1,
           "subscores": {
-            "laning": 76.4,
-            "damage": 72.5,
-            "presence": 29.2,
-            "efficiency": 76.2
+            "laning": 75.6,
+            "damage": 71.5,
+            "presence": 34.6,
+            "efficiency": 75.4
           }
         }
       },
@@ -10024,13 +10024,13 @@
       "country": "US",
       "team": "Karmine Corp Blue",
       "role": "JGL",
-      "rating": 49.7,
-      "confidence": 0.36,
+      "rating": 50.2,
+      "confidence": 0.37,
       "subscores": {
-        "laning": 70.8,
-        "damage": 49.2,
-        "presence": 70.8,
-        "efficiency": 12.9
+        "laning": 70.5,
+        "damage": 45.4,
+        "presence": 73.1,
+        "efficiency": 18.1
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -10126,13 +10126,13 @@
           "fbVictim": 9.1,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 49.7,
-          "confidence": 0.36,
+          "rating": 50.2,
+          "confidence": 0.37,
           "subscores": {
-            "laning": 70.8,
-            "damage": 49.2,
-            "presence": 70.8,
-            "efficiency": 12.9
+            "laning": 70.5,
+            "damage": 45.4,
+            "presence": 73.1,
+            "efficiency": 18.1
           }
         }
       },
@@ -10148,13 +10148,13 @@
       "country": "CA",
       "team": "Movistar KOI",
       "role": "MID",
-      "rating": 61.4,
+      "rating": 63.4,
       "confidence": 1,
       "subscores": {
-        "laning": 90.3,
-        "damage": 74.2,
-        "presence": 20.8,
-        "efficiency": 49.6
+        "laning": 87.5,
+        "damage": 70.8,
+        "presence": 29.2,
+        "efficiency": 57.9
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -10226,37 +10226,37 @@
           }
         },
         "LEC 2026 Spring Season": {
-          "games": 10,
-          "winRate": 60,
-          "kda": 3.7,
-          "avgKills": 4,
-          "avgDeaths": 2.8,
-          "avgAssists": 6.4,
-          "csm": 9.7,
-          "gpm": 430,
-          "kp": 66.3,
-          "dmgPct": 27.2,
-          "goldPct": 21.4,
-          "vsPct": 12.5,
-          "dpm": 785,
+          "games": 12,
+          "winRate": 66.7,
+          "kda": 4.1,
+          "avgKills": 3.9,
+          "avgDeaths": 2.5,
+          "avgAssists": 6.3,
+          "csm": 9.9,
+          "gpm": 443,
+          "kp": 66.2,
+          "dmgPct": 26.5,
+          "goldPct": 21.8,
+          "vsPct": 12.4,
+          "dpm": 783,
           "vspm": 1.31,
-          "avgWpm": 0.48,
+          "avgWpm": 0.47,
           "avgWcpm": 0.21,
-          "avgVwpm": 0.11,
-          "gd15": 749,
-          "csd15": 23,
-          "xpd15": 869,
-          "fbPct": 40,
-          "fbVictim": 10,
+          "avgVwpm": 0.1,
+          "gd15": 687,
+          "csd15": 21,
+          "xpd15": 694,
+          "fbPct": 33.3,
+          "fbVictim": 8.3,
           "pentaKills": 0,
-          "soloKills": 10,
-          "rating": 79.4,
-          "confidence": 0.87,
+          "soloKills": 12,
+          "rating": 78.4,
+          "confidence": 0.96,
           "subscores": {
             "laning": 95,
-            "damage": 95,
+            "damage": 75,
             "presence": 85,
-            "efficiency": 58.3
+            "efficiency": 65.3
           }
         },
         "LEC 2026 Versus": {
@@ -10294,44 +10294,44 @@
           }
         },
         "LEC Versus 2026": {
-          "games": 33,
-          "winRate": 54.53030303030303,
-          "kda": 3.015151515151515,
-          "avgKills": 3.033333333333333,
-          "avgDeaths": 3.196969696969697,
-          "avgAssists": 6.233333333333334,
-          "csm": 9.624242424242425,
-          "gpm": 416.3333333333333,
-          "kp": 60.800000000000004,
-          "dmgPct": 25.16060606060606,
-          "goldPct": 20.945454545454545,
-          "vsPct": 12.70909090909091,
-          "dpm": 699.3636363636364,
-          "vspm": 1.331818181818182,
-          "avgWpm": 0.47939393939393943,
-          "avgWcpm": 0.23121212121212123,
-          "avgVwpm": 0.10303030303030304,
-          "gd15": 264.3939393939394,
-          "csd15": 10.696969696969697,
-          "xpd15": 269,
-          "fbPct": 21.227272727272727,
-          "fbVictim": 24.23939393939394,
+          "games": 35,
+          "winRate": 57.14,
+          "kda": 3.1914285714285713,
+          "avgKills": 3.0542857142857143,
+          "avgDeaths": 3.0714285714285716,
+          "avgAssists": 6.208571428571429,
+          "csm": 9.697142857142858,
+          "gpm": 421.57142857142856,
+          "kp": 61.080000000000005,
+          "dmgPct": 25.037142857142857,
+          "goldPct": 21.108571428571427,
+          "vsPct": 12.662857142857144,
+          "dpm": 703.5714285714286,
+          "vspm": 1.3305714285714285,
+          "avgWpm": 0.476,
+          "avgWcpm": 0.23,
+          "avgVwpm": 0.10000000000000002,
+          "gd15": 270.8285714285714,
+          "csd15": 10.714285714285714,
+          "xpd15": 243.28571428571428,
+          "fbPct": 20.002857142857142,
+          "fbVictim": 22.84285714285714,
           "pentaKills": 0,
-          "soloKills": 13,
-          "rating": 61.4,
+          "soloKills": 15,
+          "rating": 63.4,
           "confidence": 1,
           "subscores": {
-            "laning": 90.3,
-            "damage": 74.2,
-            "presence": 20.8,
-            "efficiency": 49.6
+            "laning": 87.5,
+            "damage": 70.8,
+            "presence": 29.2,
+            "efficiency": 57.9
           }
         }
       },
       "aggregated": {
-        "totalGames": 33,
-        "avgWinRate": 54.53030303030303,
-        "avgKda": 3.015151515151515
+        "totalGames": 35,
+        "avgWinRate": 57.14,
+        "avgKda": 3.1914285714285713
       }
     },
     {
@@ -10340,13 +10340,13 @@
       "country": "FR",
       "team": "Shifters",
       "role": "MID",
-      "rating": 40.6,
-      "confidence": 0.59,
+      "rating": 41.1,
+      "confidence": 0.57,
       "subscores": {
         "laning": 43.1,
-        "damage": 20.8,
+        "damage": 24.2,
         "presence": 62.5,
-        "efficiency": 18.3
+        "efficiency": 15.8
       },
       "tournaments": {
         "LEC 2026 Versus Season": {
@@ -10408,11 +10408,11 @@
           "fbVictim": 0,
           "pentaKills": 0,
           "soloKills": 1,
-          "rating": 48.2,
-          "confidence": 0.61,
+          "rating": 49.7,
+          "confidence": 0.56,
           "subscores": {
             "laning": 38.3,
-            "damage": 71,
+            "damage": 79,
             "presence": 65,
             "efficiency": 12.8
           }
@@ -10476,13 +10476,13 @@
           "fbVictim": 5.561111111111111,
           "pentaKills": 0,
           "soloKills": 3,
-          "rating": 40.6,
-          "confidence": 0.59,
+          "rating": 41.1,
+          "confidence": 0.57,
           "subscores": {
             "laning": 43.1,
-            "damage": 20.8,
+            "damage": 24.2,
             "presence": 62.5,
-            "efficiency": 18.3
+            "efficiency": 15.8
           }
         }
       },
@@ -10493,92 +10493,182 @@
       }
     },
     {
+      "id": 4348,
+      "name": "Daglas",
+      "country": "PL",
+      "team": "Team Heretics",
+      "role": "JGL",
+      "rating": 48.7,
+      "confidence": 0.07,
+      "subscores": {
+        "laning": 38.5,
+        "damage": 77.7,
+        "presence": 3.8,
+        "efficiency": 26.9
+      },
+      "tournaments": {
+        "LEC 2026 Spring Season": {
+          "games": 2,
+          "winRate": 0,
+          "kda": 1.3,
+          "avgKills": 0.5,
+          "avgDeaths": 3,
+          "avgAssists": 3.5,
+          "csm": 6.6,
+          "gpm": 332,
+          "kp": 63.3,
+          "dmgPct": 21.3,
+          "goldPct": 19.4,
+          "vsPct": 17.7,
+          "dpm": 469,
+          "vspm": 1.6,
+          "avgWpm": 0.25,
+          "avgWcpm": 0.49,
+          "avgVwpm": 0.14,
+          "gd15": 248,
+          "csd15": -12,
+          "xpd15": -368,
+          "fbPct": 50,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 46.4,
+          "confidence": 0.17,
+          "subscores": {
+            "laning": 34.8,
+            "damage": 73.6,
+            "presence": 4.5,
+            "efficiency": 22.7
+          }
+        },
+        "LEC Versus 2026": {
+          "games": 2,
+          "winRate": 0,
+          "kda": 1.3,
+          "avgKills": 0.5,
+          "avgDeaths": 3,
+          "avgAssists": 3.5,
+          "csm": 6.6,
+          "gpm": 332,
+          "kp": 63.3,
+          "dmgPct": 21.3,
+          "goldPct": 19.4,
+          "vsPct": 17.7,
+          "dpm": 469,
+          "vspm": 1.6,
+          "avgWpm": 0.25,
+          "avgWcpm": 0.49,
+          "avgVwpm": 0.14,
+          "gd15": 248,
+          "csd15": -12,
+          "xpd15": -368,
+          "fbPct": 50,
+          "fbVictim": 0,
+          "pentaKills": 0,
+          "soloKills": 0,
+          "rating": 48.7,
+          "confidence": 0.07,
+          "subscores": {
+            "laning": 38.5,
+            "damage": 77.7,
+            "presence": 3.8,
+            "efficiency": 26.9
+          }
+        }
+      },
+      "aggregated": {
+        "totalGames": 2,
+        "avgWinRate": 0,
+        "avgKda": 1.3
+      }
+    },
+    {
       "id": 4572,
       "name": "Way",
       "country": "KR",
       "team": "Team Heretics",
       "role": "SUP",
-      "rating": 53.9,
-      "confidence": 0.52,
+      "rating": 55.9,
+      "confidence": 0.59,
       "subscores": {
-        "laning": 43.6,
-        "damage": 40.8,
-        "presence": 76.9,
+        "laning": 42.3,
+        "damage": 51.5,
+        "presence": 80.8,
         "efficiency": 46.2
       },
       "tournaments": {
         "LEC 2026 Spring Season": {
-          "games": 14,
-          "winRate": 21.4,
+          "games": 16,
+          "winRate": 18.8,
           "kda": 2.4,
-          "avgKills": 0.2,
-          "avgDeaths": 2.9,
-          "avgAssists": 6.6,
+          "avgKills": 0.3,
+          "avgDeaths": 2.8,
+          "avgAssists": 6.4,
           "csm": 1,
           "gpm": 243,
-          "kp": 75.9,
-          "dmgPct": 8.5,
-          "goldPct": 13.5,
-          "vsPct": 45.4,
-          "dpm": 194,
-          "vspm": 4.01,
-          "avgWpm": 1.95,
-          "avgWcpm": 0.47,
+          "kp": 77.7,
+          "dmgPct": 8.9,
+          "goldPct": 13.6,
+          "vsPct": 45.8,
+          "dpm": 202,
+          "vspm": 4.06,
+          "avgWpm": 1.96,
+          "avgWcpm": 0.48,
           "avgVwpm": 0.39,
-          "gd15": -191,
-          "csd15": 1,
-          "xpd15": 22,
-          "fbPct": 57.1,
-          "fbVictim": 7.1,
+          "gd15": -179,
+          "csd15": 0,
+          "xpd15": 9,
+          "fbPct": 56.3,
+          "fbVictim": 6.3,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 44.9,
+          "rating": 49.1,
           "confidence": 1,
           "subscores": {
-            "laning": 35,
-            "damage": 31,
-            "presence": 65,
-            "efficiency": 30
+            "laning": 28.3,
+            "damage": 35,
+            "presence": 75,
+            "efficiency": 32.5
           }
         },
         "LEC Versus 2026": {
-          "games": 14,
-          "winRate": 21.4,
+          "games": 16,
+          "winRate": 18.8,
           "kda": 2.4,
-          "avgKills": 0.2,
-          "avgDeaths": 2.9,
-          "avgAssists": 6.6,
+          "avgKills": 0.3,
+          "avgDeaths": 2.8,
+          "avgAssists": 6.4,
           "csm": 1,
           "gpm": 243,
-          "kp": 75.9,
-          "dmgPct": 8.5,
-          "goldPct": 13.5,
-          "vsPct": 45.4,
-          "dpm": 194,
-          "vspm": 4.01,
-          "avgWpm": 1.95,
-          "avgWcpm": 0.47000000000000003,
+          "kp": 77.7,
+          "dmgPct": 8.9,
+          "goldPct": 13.6,
+          "vsPct": 45.8,
+          "dpm": 202,
+          "vspm": 4.06,
+          "avgWpm": 1.96,
+          "avgWcpm": 0.48,
           "avgVwpm": 0.39,
-          "gd15": -191,
-          "csd15": 1,
-          "xpd15": 22,
-          "fbPct": 57.1,
-          "fbVictim": 7.1,
+          "gd15": -179,
+          "csd15": 0,
+          "xpd15": 9,
+          "fbPct": 56.3,
+          "fbVictim": 6.3,
           "pentaKills": 0,
           "soloKills": 0,
-          "rating": 53.9,
-          "confidence": 0.52,
+          "rating": 55.9,
+          "confidence": 0.59,
           "subscores": {
-            "laning": 43.6,
-            "damage": 40.8,
-            "presence": 76.9,
+            "laning": 42.3,
+            "damage": 51.5,
+            "presence": 80.8,
             "efficiency": 46.2
           }
         }
       },
       "aggregated": {
-        "totalGames": 14,
-        "avgWinRate": 21.4,
+        "totalGames": 16,
+        "avgWinRate": 18.8,
         "avgKda": 2.4
       }
     }
