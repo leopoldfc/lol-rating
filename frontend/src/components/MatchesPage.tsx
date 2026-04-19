@@ -1,91 +1,157 @@
 import { useEffect, useState } from 'react';
+import type { LeagueConfig } from '../leagues';
 
 const LS_KEY = '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z';
 const LS_BASE = 'https://esports-api.lolesports.com/persisted/gw';
 const LS_HEADERS = { 'x-api-key': LS_KEY };
 
-const LEAGUES = [
-  { id: '98767991310872058', name: 'LCK' },
-  { id: '98767991314006698', name: 'LPL' },
-  { id: '98767991302996019', name: 'LEC' },
-  { id: '98767991299243165', name: 'LCS' },
-  { id: '113464388705111224', name: 'First Stand' },
-];
-
 interface MatchTeam { name: string; code: string; image: string; wins: number; }
 interface Match {
   id: string; startTime: string;
   state: 'completed' | 'inProgress' | 'unstarted';
-  blockName: string; league: string;
+  blockName: string; leagueLabel: string; leagueLogo?: string;
   teamA: MatchTeam; teamB: MatchTeam; bestOf: number;
 }
 
 type MatchFilter = 'all' | 'upcoming' | 'completed';
 
-function formatMatchTime(dateStr: string): string {
+function formatDayLabel(dateStr: string): string {
   const d = new Date(dateStr);
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ' · ' +
-    d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  const today = new Date();
+  const tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1);
+  const yesterday = new Date(today); yesterday.setDate(today.getDate() - 1);
+  const sameDay = (a: Date, b: Date) =>
+    a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+  if (sameDay(d, today)) return 'Today';
+  if (sameDay(d, tomorrow)) return 'Tomorrow';
+  if (sameDay(d, yesterday)) return 'Yesterday';
+  return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 }
 
-function MatchCard({ match }: { match: Match }) {
+function formatDayKey(dateStr: string): string {
+  const d = new Date(dateStr);
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function formatTime(dateStr: string): string {
+  const d = new Date(dateStr);
+  return d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+}
+
+function MatchRow({ match }: { match: Match }) {
   const isLive = match.state === 'inProgress';
   const isDone = match.state === 'completed';
   const aWin = isDone && match.teamA.wins > match.teamB.wins;
   const bWin = isDone && match.teamB.wins > match.teamA.wins;
 
   return (
-    <div className="match-card">
-      <div className="match-card__header">
-        <span className="match-card__league">{match.league}</span>
-        <span className="match-card__block">{match.blockName}</span>
-      </div>
-      <div className="match-card__teams">
-        <div className={`match-card__team${aWin ? ' match-card__team--winner' : ''}${bWin ? ' match-card__team--loser' : ''}`}>
-          <img src={match.teamA.image} alt={match.teamA.code} className="match-card__logo" />
-          <span className="match-card__code">{match.teamA.code}</span>
-          {isDone && <span className="match-card__score">{match.teamA.wins}</span>}
+    <div className={`mrow${isLive ? ' mrow--live' : ''}${isDone ? ' mrow--done' : ''}`}>
+      {/* Left: time + league */}
+      <div className="mrow__meta">
+        <span className="mrow__time">
+          {isLive ? <span className="mrow__live-dot" /> : null}
+          {isLive ? 'LIVE' : formatTime(match.startTime)}
+        </span>
+        <div className="mrow__league">
+          {match.leagueLogo && <img src={match.leagueLogo} alt={match.leagueLabel} className="mrow__league-logo" />}
+          <span className="mrow__league-label">{match.leagueLabel}</span>
         </div>
-        <div className="match-card__vs">{isDone ? '—' : 'VS'}</div>
-        <div className={`match-card__team match-card__team--right${bWin ? ' match-card__team--winner' : ''}${aWin ? ' match-card__team--loser' : ''}`}>
-          {isDone && <span className="match-card__score">{match.teamB.wins}</span>}
-          <span className="match-card__code">{match.teamB.code}</span>
-          <img src={match.teamB.image} alt={match.teamB.code} className="match-card__logo" />
-        </div>
+        <span className="mrow__block">{match.blockName}</span>
       </div>
-      <div className="match-card__footer">
-        <span className="match-card__time">{isLive ? 'In Progress' : formatMatchTime(match.startTime)}</span>
-        <span className="match-card__bo">BO{match.bestOf}</span>
+
+      {/* Center: teams + score */}
+      <div className="mrow__matchup">
+        {/* Team A */}
+        <div className={`mrow__team mrow__team--a${aWin ? ' mrow__team--win' : ''}${bWin ? ' mrow__team--loss' : ''}`}>
+          <span className="mrow__code">{match.teamA.code}</span>
+          <img src={match.teamA.image} alt={match.teamA.code} className="mrow__logo" />
+        </div>
+
+        {/* Score / VS */}
+        <div className="mrow__center">
+          {isDone ? (
+            <div className="mrow__score">
+              <span className={aWin ? 'mrow__score-num mrow__score-num--win' : 'mrow__score-num'}>{match.teamA.wins}</span>
+              <span className="mrow__score-sep">:</span>
+              <span className={bWin ? 'mrow__score-num mrow__score-num--win' : 'mrow__score-num'}>{match.teamB.wins}</span>
+            </div>
+          ) : (
+            <span className="mrow__vs">VS</span>
+          )}
+          <span className="mrow__bo">BO{match.bestOf}</span>
+        </div>
+
+        {/* Team B */}
+        <div className={`mrow__team mrow__team--b${bWin ? ' mrow__team--win' : ''}${aWin ? ' mrow__team--loss' : ''}`}>
+          <img src={match.teamB.image} alt={match.teamB.code} className="mrow__logo" />
+          <span className="mrow__code">{match.teamB.code}</span>
+        </div>
       </div>
     </div>
   );
 }
 
-export default function MatchesPage() {
+interface Props { leagues: LeagueConfig[]; year: number; }
+
+export default function MatchesPage({ leagues, year }: Props) {
+  const fetchableLeagues = leagues.filter(l => l.lolEsportsId);
   const [matches, setMatches] = useState<Match[]>([]);
   const [loading, setLoading] = useState(true);
+  const [refreshKey, setRefreshKey] = useState(0);
   const [matchFilter, setMatchFilter] = useState<MatchFilter>('all');
   const [leagueFilter, setLeagueFilter] = useState<string>('all');
 
   useEffect(() => {
+    setMatches([]); setLoading(true); setLeagueFilter('all');
+    const yearStart = new Date(`${year}-01-01T00:00:00Z`).getTime();
+    const yearEnd   = new Date(`${year}-12-31T23:59:59Z`).getTime();
     const fetchAll = async () => {
       const all: Match[] = [];
-      await Promise.all(LEAGUES.map(async league => {
+      await Promise.all(fetchableLeagues.map(async league => {
         try {
-          const res = await fetch(`${LS_BASE}/getSchedule?hl=en-US&leagueId=${league.id}`, { headers: LS_HEADERS });
+          const seen = new Set<string>();
+          let olderToken: string | null = null;
+          let fetchedFuture = false;
+
+          const parseEvents = (events: any[]) => {
+            for (const e of events) {
+              if (e.type !== 'match' || e.match?.teams?.length !== 2) continue;
+              if (seen.has(e.match.id)) continue;
+              seen.add(e.match.id);
+              const [a, b] = e.match.teams;
+              all.push({
+                id: e.match.id, startTime: e.startTime, state: e.state,
+                blockName: e.blockName ?? '', leagueLabel: league.label, leagueLogo: league.logo,
+                teamA: { name: a.name, code: a.code, image: a.image, wins: a.result?.gameWins ?? 0 },
+                teamB: { name: b.name, code: b.code, image: b.image, wins: b.result?.gameWins ?? 0 },
+                bestOf: e.match.strategy?.count ?? 1,
+              });
+            }
+          };
+
+          // First page (includes future + recent past)
+          const res = await fetch(`${LS_BASE}/getSchedule?hl=en-US&leagueId=${league.lolEsportsId}`, { headers: LS_HEADERS });
           const json = await res.json();
-          const events: any[] = json.data?.schedule?.events ?? [];
-          for (const e of events) {
-            if (e.type !== 'match' || e.match?.teams?.length !== 2) continue;
-            const [a, b] = e.match.teams;
-            all.push({
-              id: e.match.id, startTime: e.startTime, state: e.state,
-              blockName: e.blockName ?? '', league: league.name,
-              teamA: { name: a.name, code: a.code, image: a.image, wins: a.result?.gameWins ?? 0 },
-              teamB: { name: b.name, code: b.code, image: b.image, wins: b.result?.gameWins ?? 0 },
-              bestOf: e.match.strategy?.count ?? 1,
-            });
+          const schedule = json.data?.schedule;
+          parseEvents(schedule?.events ?? []);
+          olderToken = schedule?.pages?.older ?? null;
+          fetchedFuture = true;
+
+          // Paginate older until we reach start of selected year
+          while (olderToken) {
+            const r = await fetch(
+              `${LS_BASE}/getSchedule?hl=en-US&leagueId=${league.lolEsportsId}&pageToken=${encodeURIComponent(olderToken)}`,
+              { headers: LS_HEADERS }
+            );
+            const j = await r.json();
+            const s = j.data?.schedule;
+            const events: any[] = s?.events ?? [];
+            parseEvents(events);
+            olderToken = s?.pages?.older ?? null;
+            const oldest = events[events.length - 1];
+            if (oldest && new Date(oldest.startTime).getTime() < yearStart) break;
           }
+          void fetchedFuture;
         } catch {}
       }));
       all.sort((a, b) => {
@@ -94,57 +160,92 @@ export default function MatchesPage() {
         if (a.state === 'unstarted') return new Date(a.startTime).getTime() - new Date(b.startTime).getTime();
         return new Date(b.startTime).getTime() - new Date(a.startTime).getTime();
       });
-      setMatches(all);
-      setLoading(false);
+      setMatches(all); setLoading(false);
     };
     fetchAll();
-  }, []);
+  }, [leagues.map(l => l.id).join(','), year, refreshKey]);
 
   const filtered = matches.filter(m => {
     if (m.state === 'inProgress') return false;
-    if (leagueFilter !== 'all' && m.league !== leagueFilter) return false;
+    const t = new Date(m.startTime).getTime();
+    if (t < new Date(`${year}-01-01T00:00:00Z`).getTime()) return false;
+    if (t > new Date(`${year}-12-31T23:59:59Z`).getTime()) return false;
+    if (leagueFilter !== 'all' && m.leagueLabel !== leagueFilter) return false;
     if (matchFilter === 'upcoming') return m.state === 'unstarted';
     if (matchFilter === 'completed') return m.state === 'completed';
     return true;
   });
 
-  return (
-    <>
-      <div className="ranking-toolbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10, marginBottom: 16 }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          <div className="filters" style={{ marginBottom: 0 }}>
-            {(['all', 'upcoming', 'completed'] as MatchFilter[]).map(f => (
-              <button key={f} className={`filter-btn ${matchFilter === f ? 'filter-btn--active' : ''}`} onClick={() => setMatchFilter(f)}>
-                {f.charAt(0).toUpperCase() + f.slice(1)}
-              </button>
-            ))}
-          </div>
-          <div className="filters" style={{ marginBottom: 0 }}>
-            <button className={`filter-btn ${leagueFilter === 'all' ? 'filter-btn--active' : ''}`} onClick={() => setLeagueFilter('all')}>All</button>
-            {LEAGUES.map(l => (
-              <button key={l.id} className={`filter-btn ${leagueFilter === l.name ? 'filter-btn--active' : ''}`} onClick={() => setLeagueFilter(l.name)}>{l.name}</button>
-            ))}
-          </div>
-        </div>
-        <span style={{ fontSize: 11, color: 'var(--text-4)', fontFamily: 'var(--font-mono)' }}>
-          {filtered.length} matches
-        </span>
-      </div>
+  // Group by day
+  const groups = new Map<string, { label: string; matches: Match[] }>();
+  for (const m of filtered) {
+    const key = formatDayKey(m.startTime);
+    if (!groups.has(key)) groups.set(key, { label: formatDayLabel(m.startTime), matches: [] });
+    groups.get(key)!.matches.push(m);
+  }
+  const dayGroups = Array.from(groups.entries());
 
-      {loading ? (
-        <div className="skeleton-table">
-          {Array.from({ length: 10 }).map((_, i) => (
-            <div key={i} className="skeleton skeleton-row" style={{ height: 90, opacity: 1 - i * 0.08 }} />
+  return (
+    <div className="matches-page">
+      {/* Toolbar */}
+      <div className="matches-toolbar">
+        <div className="matches-filters">
+          {(['all', 'upcoming', 'completed'] as MatchFilter[]).map(f => (
+            <button key={f} className={`mfilter-btn${matchFilter === f ? ' mfilter-btn--active' : ''}`} onClick={() => setMatchFilter(f)}>
+              {f === 'all' ? 'All' : f === 'upcoming' ? 'Upcoming' : 'Results'}
+            </button>
           ))}
         </div>
+        <div className="matches-filters matches-filters--leagues">
+          <button className={`mfilter-btn${leagueFilter === 'all' ? ' mfilter-btn--active' : ''}`} onClick={() => setLeagueFilter('all')}>All</button>
+          {fetchableLeagues.map(l => (
+            <button key={l.id} className={`mfilter-btn${leagueFilter === l.label ? ' mfilter-btn--active' : ''}`} onClick={() => setLeagueFilter(l.label)}>
+              {l.logo && <img src={l.logo} alt={l.label} className="mfilter-btn__logo" />}
+              {l.label}
+            </button>
+          ))}
+        </div>
+        <span className="matches-count">{filtered.length} matches</span>
+        <button
+          className="mfilter-btn"
+          onClick={() => setRefreshKey(k => k + 1)}
+          disabled={loading}
+          title="Refresh matches"
+          style={{ marginLeft: 4, opacity: loading ? 0.4 : 1 }}
+        >
+          {loading ? '↻' : '↻'} Refresh
+        </button>
+      </div>
+
+      {/* Content */}
+      {loading ? (
+        <div className="matches-skeleton">
+          {Array.from({ length: 3 }).map((_, g) => (
+            <div key={g} className="matches-skeleton__group">
+              <div className="skeleton" style={{ height: 16, width: 120, marginBottom: 12, borderRadius: 3 }} />
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="skeleton skeleton-row" style={{ height: 56, marginBottom: 4, opacity: 1 - i * 0.15 }} />
+              ))}
+            </div>
+          ))}
+        </div>
+      ) : filtered.length === 0 ? (
+        <div className="matches-empty">No matches found</div>
       ) : (
-        <div className="matches-grid">
-          {filtered.length === 0
-            ? <div style={{ color: 'var(--text-3)', fontSize: 13, padding: '40px 0', textAlign: 'center' }}>No matches</div>
-            : filtered.map(m => <MatchCard key={m.id} match={m} />)
-          }
+        <div className="matches-days">
+          {dayGroups.map(([key, group]) => (
+            <div key={key} className="matches-day">
+              <div className="matches-day__header">
+                <span className="matches-day__label">{group.label}</span>
+                <span className="matches-day__count">{group.matches.length}</span>
+              </div>
+              <div className="matches-day__list">
+                {group.matches.map(m => <MatchRow key={m.id} match={m} />)}
+              </div>
+            </div>
+          ))}
         </div>
       )}
-    </>
+    </div>
   );
 }

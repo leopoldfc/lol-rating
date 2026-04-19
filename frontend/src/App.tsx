@@ -244,35 +244,6 @@ export default function App() {
           </button>
         </div>
 
-        <div className="sidebar__divider" />
-
-        {/* Leagues */}
-        <div className="sidebar__section">
-          <div className="sidebar__section-label">Leagues</div>
-          {leagues.map(l => (
-            <button
-              key={l.id}
-              className={`nav-item${!l.available ? ' nav-item--disabled' : ''}${page !== 'overview' && selection.leagueId === l.id ? ' nav-item--active' : ''}`}
-              onClick={() => l.available && handleSetLeague(l.id)}
-            >
-              <span className="nav-item__icon">
-                {l.logo
-                  ? <img src={l.logo} alt={l.label} style={{ width: 16, height: 16, objectFit: 'contain', verticalAlign: 'middle' }} />
-                  : <span style={{ fontSize: 11 }}>◆</span>
-                }
-              </span>
-              <span className="nav-item__label">{l.label}</span>
-              {!l.available ? (
-                <span className="nav-item__badge">SOON</span>
-              ) : l.region ? (
-                <span className="nav-item__region">{l.region}</span>
-              ) : null}
-              {error && selection.leagueId === l.id && (
-                <span className="nav-item__badge nav-item__badge--error">ERR</span>
-              )}
-            </button>
-          ))}
-        </div>
 
         {/* Splits — shown whenever the selected league has splits */}
         {league.splits && league.splits.length > 0 && (
@@ -343,6 +314,23 @@ export default function App() {
       {/* ── Main ─────────────────────────────────── */}
       <div className="main-content">
 
+        {/* League top bar */}
+        <div className="league-topbar">
+          {leagues.map(l => (
+            <button
+              key={l.id}
+              className={`league-tab${!l.available ? ' league-tab--disabled' : ''}${selection.leagueId === l.id && page !== 'overview' ? ' league-tab--active' : ''}`}
+              onClick={() => l.available && handleSetLeague(l.id)}
+            >
+              {l.logo && <img src={l.logo} alt={l.label} className="league-tab__logo" />}
+              <span className="league-tab__label">{l.label}</span>
+              {l.region && <span className="league-tab__region">{l.region}</span>}
+              {!l.available && <span className="league-tab__badge">SOON</span>}
+              {error && selection.leagueId === l.id && <span className="league-tab__badge league-tab__badge--error">ERR</span>}
+            </button>
+          ))}
+        </div>
+
         {/* Page header */}
         <div className="page-header">
           <button className="burger-btn" onClick={() => setNavOpen(o => !o)} aria-label="Menu">
@@ -384,7 +372,7 @@ export default function App() {
 
         <main className="page">
           {page === 'matches' ? (
-            <MatchesPage />
+            <MatchesPage leagues={leagues} year={selection.year} />
           ) : page === 'news' ? (
             <NewsPage />
           ) : page === 'about' ? (
