@@ -7,11 +7,10 @@ import RosterPage from './components/RosterPage';
 import YearOverview from './components/YearOverview';
 import AboutPage from './components/AboutPage';
 import ComparePage from './components/ComparePage';
-import NewsPage from './components/NewsPage';
 import MatchesPage from './components/MatchesPage';
 import { YEARS, type LeagueConfig, type SplitConfig } from './leagues';
 
-type Page = 'overview' | 'rankings' | 'rosters' | 'compare' | 'matches' | 'news' | 'about';
+type Page = 'overview' | 'rankings' | 'rosters' | 'compare' | 'matches' | 'about';
 
 type ScrapeStatus = 'idle' | 'running' | 'done' | 'error';
 
@@ -81,7 +80,6 @@ const NAV_ICONS: Record<Page, JSX.Element> = {
   rosters:  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="5" cy="4.5" r="2" stroke="currentColor" strokeWidth="1.2"/><path d="M1 12c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/><circle cx="10.5" cy="4.5" r="1.5" stroke="currentColor" strokeWidth="1.1"/><path d="M12 12c0-1.7-1.1-3.1-2.5-3.5" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/></svg>,
   compare:  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9.5 2.5 12 5l-2.5 2.5M4.5 11.5 2 9l2.5-2.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 5H5a3 3 0 0 0 0 6M2 9h7a3 3 0 0 0 0-6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>,
   matches:  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5.5" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.2"/><rect x="7.5" y="1" width="5.5" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.2"/></svg>,
-  news:     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="2" width="12" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.2"/><path d="M4 5.5h6M4 7.5h4" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round"/></svg>,
   about:    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" strokeWidth="1.2"/><path d="M7 6.5v4M7 4.5v.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>,
 };
 
@@ -91,7 +89,6 @@ const PAGE_NUMS: Record<Page, string> = {
   rosters:  '3',
   compare:  '4',
   matches:  '5',
-  news:     '6',
   about:    '',
 };
 
@@ -164,7 +161,6 @@ export default function App() {
     : page === 'about' ? 'Rating.GG'
     : page === 'compare' ? t.compare
     : page === 'matches' ? t.matches
-    : page === 'news' ? t.news
     : league.title;
 
   const pageEyebrow = page === 'overview'
@@ -173,7 +169,6 @@ export default function App() {
     : page === 'rosters' ? t.teamRosters
     : page === 'compare' ? t.playerComparison
     : page === 'matches' ? t.scheduleResults
-    : page === 'news' ? t.latestNews
     : t.howItWorks;
 
   return (
@@ -261,14 +256,6 @@ export default function App() {
             <span className="nav-item__icon">{NAV_ICONS.matches}</span>
             <span className="nav-item__label">{t.matches}</span>
             {PAGE_NUMS.matches && <span className="nav-item__num">{PAGE_NUMS.matches}</span>}
-          </button>
-          <button
-            className={`nav-item${page === 'news' ? ' nav-item--active' : ''}`}
-            onClick={() => { setPage('news'); closeNav(); }}
-          >
-            <span className="nav-item__icon">{NAV_ICONS.news}</span>
-            <span className="nav-item__label">{t.news}</span>
-            {PAGE_NUMS.news && <span className="nav-item__num">{PAGE_NUMS.news}</span>}
           </button>
           <button
             className={`nav-item${page === 'about' ? ' nav-item--active' : ''}`}
@@ -467,8 +454,6 @@ export default function App() {
         <main className="page">
           {page === 'matches' ? (
             <MatchesPage leagues={leagues} year={selection.year} selectedLeagueLabel={league.lolEsportsId ? league.label : null} />
-          ) : page === 'news' ? (
-            <NewsPage />
           ) : page === 'about' ? (
             <AboutPage />
           ) : page === 'compare' ? (
